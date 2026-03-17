@@ -11,8 +11,7 @@ $auth     = requireAuth();
 $userId   = (int) $auth['user_id'];
 $category = $_GET['category'] ?? '';
 
-$allowed = ['grundwortschatz', 'aufbauwortschatz', 'unregelmaessige_verben'];
-if (!in_array($category, $allowed, true)) {
+if ($category === '' || mb_strlen($category) > 100) {
     jsonResponse(['error' => 'Ungültige Kategorie'], 400);
 }
 

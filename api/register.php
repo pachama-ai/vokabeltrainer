@@ -15,10 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $body = json_decode(file_get_contents('php://input'), true);
+$username = trim($body['username'] ?? '');
 $email    = trim($body['email']    ?? '');
 $password = trim($body['password'] ?? '');
 
 // Validierung
+if ($username !== '' && strlen($username) > 80) {
+    jsonResponse(['error' => 'Benutzername zu lang (max. 80 Zeichen)'], 400);
+}
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     jsonResponse(['error' => 'Ungültige E-Mail-Adresse'], 400);
 }
@@ -38,13 +42,13 @@ try {
 
     // User anlegen
     $hash = password_hash($password, PASSWORD_BCRYPT);
-    $stmt = $db->prepare('INSERT INTO users (email, password_hash) VALUES (?, ?)');
-    $stmt->execute([$email, $hash]);
+    $stmt = $db->prepare('INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)');
+    $stmt->execute([$username !== '' ? $username : null, $email, $hash]);
     $userId = (int) $db->lastInsertId();
 
     // Direkt einloggen — Token zurückgeben
     $token = jwtCreate($userId, $email);
-    jsonResponse(['token' => $token, 'user_id' => $userId, 'email' => $email]);
+    jsonResponse(['token' => $token, 'user_id' => $userId, 'email' => $email, 'username' => $username]);
 
 } catch (PDOException $e) {
     jsonResponse(['error' => 'Datenbankfehler'], 500);

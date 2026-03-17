@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react'
 import {
   isLoggedIn, getSavedUser, logout,
-  checkDecay, getStats, getWords, submitAnswer, addWords,
+  checkDecay, getStats, getWords, submitAnswer, addWords, getCategories,
 } from './api/vocabApi'
 import LoginScreen from './components/LoginScreen'
 import CategoryScreen from './components/CategoryScreen'
 import LearningScreen from './components/LearningScreen'
 import AddWordsDialog from './components/AddWordsDialog'
+import SettingsScreen from './components/SettingsScreen'
+import AddCategoryScreen from './components/AddCategoryScreen'
+import VocabManagerScreen from './components/VocabManagerScreen'
 
-// Screens: 'login' | 'categories' | 'add-words' | 'learning'
+// Screens: 'login' | 'categories' | 'add-words' | 'learning' | 'settings'
 
 export default function App() {
   const [user, setUser]               = useState(null)
@@ -19,12 +22,15 @@ export default function App() {
   const [allStats, setAllStats]         = useState(null)
   const [totalMastered, setMastered]    = useState(0)
   const [statsLoading, setStatsLoading] = useState(false)
+  const [customCats, setCustomCats]     = useState([]) // extra Kategorien aus DB
 
   // Daten für LearningScreen / AddWordsDialog
   const [words, setWords]              = useState([])
   const [categoryCounts, setCounts]    = useState([0,0,0,0,0,0])
   const [availableCount, setAvailable] = useState(0)
   const [categoryLoading, setCatLoad]  = useState(false)
+  const [learnSettings, setLearnSettings] = useState(null)
+  const [manageInitialCat, setManageInitialCat] = useState('all')
 
   // ── Beim Start: eingeloggter User? ───────────────────────────────────────
   useEffect(() => {
@@ -37,28 +43,47 @@ export default function App() {
   }, [])
 
   async function initAfterLogin() {
-    try { await checkDecay() } catch { /* ignorieren */ }
+    try { await checkDecay() } catch (err) {
+      if (err?.status === 401) { handleLogout(); return }
+    }
     loadAllStats()
   }
 
   // ── Statistik aller Kategorien laden ─────────────────────────────────────
+  const BUILTIN_CATS = ['grundwortschatz', 'aufbauwortschatz', 'unregelmaessige_verben']
+
   async function loadAllStats() {
     setStatsLoading(true)
     try {
-      const [s1, s2, s3, total] = await Promise.all([
+      const [catRes, s1, s2, s3, total] = await Promise.all([
+        getCategories(),
         getStats('grundwortschatz'),
         getStats('aufbauwortschatz'),
         getStats('unregelmaessige_verben'),
         getStats(),
       ])
-      setAllStats({
+
+      const extras = (catRes.categories ?? []).filter(c => !BUILTIN_CATS.includes(c))
+      setCustomCats(extras)
+
+      const stats = {
         grundwortschatz:        { counts: s1.counts, total: s1.total },
         aufbauwortschatz:       { counts: s2.counts, total: s2.total },
         unregelmaessige_verben: { counts: s3.counts, total: s3.total },
-      })
+      }
+      // Stats für custom Kategorien laden
+      if (extras.length > 0) {
+        const extraStats = await Promise.all(extras.map(c => getStats(c)))
+        extras.forEach((c, i) => {
+          stats[c] = { counts: extraStats[i].counts, total: extraStats[i].total }
+        })
+      }
+
+      setAllStats(stats)
       setMastered(total.mastered)
-    } catch { /* still ignorieren */ }
-    finally { setStatsLoading(false) }
+    } catch (err) {
+      if (err?.status === 401) { handleLogout(); return }
+    } finally { setStatsLoading(false) }
   }
 
   // ── Login ─────────────────────────────────────────────────────────────────
@@ -76,11 +101,25 @@ export default function App() {
     setScreen('login')
   }
 
+  // ── Einstellungen ───────────────────────────────────────────────────────
+  function handleSettings() {
+    setScreen('settings')
+  }
+
+  function handleBackFromSettings() {
+    setScreen('categories')
+  }
+
   // ── Kategorie auswählen ───────────────────────────────────────────────────
-  async function handleSelectCategory(category) {
+  async function handleSelectCategory(category, settings = null) {
     setCategory(category)
+    setLearnSettings(settings)
     setCatLoad(true)
     try {
+      // Neue Wörter hinzufügen falls gewünscht
+      if (settings?.newCount > 0) {
+        await addWords(category, settings.newCount)
+      }
       const [wordList, stats] = await Promise.all([
         getWords(category),
         getStats(category),
@@ -92,6 +131,7 @@ export default function App() {
       const active = stats.counts[1] + stats.counts[2] + stats.counts[3] + stats.counts[4]
       setScreen(active === 0 ? 'add-words' : 'learning')
     } catch (err) {
+      if (err?.status === 401) { handleLogout(); return }
       alert('Fehler beim Laden: ' + err.message)
     } finally {
       setCatLoad(false)
@@ -133,6 +173,10 @@ export default function App() {
     return <LoginScreen onLoginSuccess={handleLoginSuccess} />
   }
 
+  if (screen === 'settings') {
+    return <SettingsScreen onBack={handleBackFromSettings} onLogout={handleLogout} />
+  }
+
   if (screen === 'learning') {
     return (
       <LearningScreen
@@ -141,6 +185,10 @@ export default function App() {
         counts={categoryCounts}
         onAnswer={handleAnswer}
         onBack={goBack}
+        learnSettings={learnSettings}
+        activeCatId={activeCategory}
+        onSettings={handleSettings}
+        customCats={customCats}
       />
     )
   }
@@ -156,13 +204,42 @@ export default function App() {
     )
   }
 
+  if (screen === 'manage') {
+    return (
+      <VocabManagerScreen
+        initialCategory={manageInitialCat}
+        customCats={customCats}
+        onBack={() => { setScreen('categories'); loadAllStats() }}
+        onSettings={handleSettings}
+      />
+    )
+  }
+
+  if (screen === 'add-category') {
+    return (
+      <AddCategoryScreen
+        onBack={() => setScreen('categories')}
+        onSettings={handleSettings}
+        customCats={customCats}
+        onSaved={async (categoryName) => {
+          setScreen('categories')
+          await loadAllStats()
+        }}
+      />
+    )
+  }
+
   return (
     <CategoryScreen
       allStats={allStats}
       totalMastered={totalMastered}
       loading={statsLoading || categoryLoading}
+      customCats={customCats}
       onSelectCategory={handleSelectCategory}
       onLogout={handleLogout}
+      onSettings={handleSettings}
+      onAddCategory={() => setScreen('add-category')}
+      onManage={(cat) => { setManageInitialCat(cat); setScreen('manage') }}
     />
   )
 }

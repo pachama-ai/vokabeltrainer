@@ -1,24 +1,41 @@
-import { useState } from 'react'
-import { login, register } from '../api/vocabApi'
-
-// Props:
-//   onLoginSuccess: (user) => void
+﻿import { useState } from 'react'
+import { login, register, requestPasswordReset } from '../api/vocabApi'
+import './LoginScreen.css'
 
 export default function LoginScreen({ onLoginSuccess }) {
   const [mode, setMode] = useState('login') // 'login' | 'register'
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [view, setView] = useState('auth')  // 'auth' | 'forgot'
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState(() => localStorage.getItem('vocab_saved_email') ?? '')
+  const [password, setPassword] = useState(() => localStorage.getItem('vocab_saved_pw') ?? '')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [rememberMe, setRememberMe] = useState(() => !!localStorage.getItem('vocab_saved_email'))
+  const [info, setInfo] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
-  async function handleSubmit(e) {
+  function switchMode(newMode) {
+    setMode(newMode)
+    setError('')
+    setInfo('')
+    setUsername('')
+    setPassword('')
+    setConfirmPassword('')
+  }
+
+  async function handleLoginSubmit(e) {
     e.preventDefault()
     setError('')
     setLoading(true)
     try {
-      const data = mode === 'login'
-        ? await login(email, password)
-        : await register(email, password)
+      const data = await login(email, password, rememberMe)
+      if (rememberMe) {
+        localStorage.setItem('vocab_saved_email', email)
+        localStorage.setItem('vocab_saved_pw', password)
+      } else {
+        localStorage.removeItem('vocab_saved_email')
+        localStorage.removeItem('vocab_saved_pw')
+      }
       onLoginSuccess({ user_id: data.user_id, email: data.email })
     } catch (err) {
       setError(err.message)
@@ -27,54 +44,188 @@ export default function LoginScreen({ onLoginSuccess }) {
     }
   }
 
+  async function handleRegisterSubmit(e) {
+    e.preventDefault()
+    setError('')
+    if (password !== confirmPassword) {
+      setError('Passwords do not match.')
+      return
+    }
+    if (password.length < 8) {
+      setError('Password must be at least 8 characters long.')
+      return
+    }
+    if (/\s/.test(password)) {
+      setError('Password cannot contain spaces.')
+      return
+    }
+    if (!/[a-z]/.test(password) || !/[A-Z]/.test(password)) {
+      setError('Password must include lower and upper case characters.')
+      return
+    }
+    if (!/[0-9!@#$%^&*()_\-+=\[\]{};:'"\\|,.<>/?]/.test(password)) {
+      setError('Password must include at least 1 number or symbol.')
+      return
+    }
+    setLoading(true)
+    try {
+      const data = await register(username, email, password, false)
+      onLoginSuccess({ user_id: data.user_id, email: data.email })
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  async function handleForgotSubmit(e) {
+    e.preventDefault()
+    setError('')
+    setInfo('')
+    setLoading(true)
+    try {
+      const data = await requestPasswordReset(email)
+      setInfo(data.message ?? 'If an account with this email exists, a reset password has been sent.')
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  // ── SVG-Icons ──────────────────────────────────────────────
+  const IconUser = (
+    <svg viewBox="0 0 24 24" role="presentation">
+      <circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="none" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  )
+  const IconMail = (
+    <svg viewBox="0 0 24 24" role="presentation">
+      <path d="M3 6h18v12H3z" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M4 7l8 7 8-7" fill="none" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  )
+  const IconLock = (
+    <svg viewBox="0 0 24 24" role="presentation">
+      <rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  )
+
   return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center p-6">
-      <div className="bg-slate-800 rounded-2xl p-8 max-w-sm w-full">
-        <h1 className="text-3xl font-bold mb-2 text-center">Vokabeltrainer</h1>
-        <p className="text-slate-400 text-center mb-8 text-sm">
-          {mode === 'login' ? 'Einloggen um weiterzumachen' : 'Neuen Account erstellen'}
-        </p>
+    <div className="login-page">
+      <div className="login-card">
+        <div className="mascot-frame" aria-hidden="true">
+          <div className="mascot-placeholder" />
+        </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            type="email"
-            placeholder="E-Mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="px-4 py-3 rounded-xl bg-slate-700 border-2 border-slate-600 focus:border-blue-500 outline-none transition-colors"
-          />
-          <input
-            type="password"
-            placeholder="Passwort"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            minLength={6}
-            className="px-4 py-3 rounded-xl bg-slate-700 border-2 border-slate-600 focus:border-blue-500 outline-none transition-colors"
-          />
+        {/* ── LOGIN ── */}
+        {view === 'auth' && mode === 'login' && (
+          <form onSubmit={handleLoginSubmit} className="login-form" noValidate>
+            <label className="login-field">
+              <span className="field-icon" aria-hidden="true">{IconMail}</span>
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                placeholder="E-Mail" required autoComplete="email" />
+            </label>
 
-          {error && (
-            <p className="text-red-400 text-sm text-center">{error}</p>
-          )}
+            <label className="login-field">
+              <span className="field-icon" aria-hidden="true">{IconLock}</span>
+              <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
+                placeholder="Passwort" required minLength={6} autoComplete="current-password" />
+            </label>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-semibold transition-colors disabled:opacity-50"
-          >
-            {loading ? 'Bitte warten...' : mode === 'login' ? 'Einloggen' : 'Registrieren'}
+            <div className="login-options">
+              <label className="remember-me">
+                <input type="checkbox" checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)} />
+                <span>Remember me</span>
+              </label>
+              <button type="button" className="forgot-password"
+                onClick={() => { setView('forgot'); setError(''); setInfo('') }}>
+                Forgot Password?
+              </button>
+            </div>
+
+            {error && <p className="login-error">{error}</p>}
+            {info  && <p className="login-info">{info}</p>}
+
+            <button type="submit" disabled={loading} className="login-submit">
+              {loading ? 'PLEASE WAIT\u2026' : 'LOGIN'}
+            </button>
+
+            <button type="button" className="register-switch" onClick={() => switchMode('register')}>
+              Don't have an account? <span>REGISTER</span>
+            </button>
+          </form>
+        )}
+
+        {/* ── REGISTER ── */}
+        {view === 'auth' && mode === 'register' && (
+          <>
+            <p className="flow-title">SIGN UP</p>
+            <form onSubmit={handleRegisterSubmit} className="login-form login-form--register" noValidate>
+              <label className="login-field">
+                <span className="field-icon" aria-hidden="true">{IconUser}</span>
+                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Username" autoComplete="username" />
+              </label>
+
+              <label className="login-field">
+                <span className="field-icon" aria-hidden="true">{IconMail}</span>
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                  placeholder="E-Mail" required autoComplete="email" />
+              </label>
+
+              <label className="login-field">
+                <span className="field-icon" aria-hidden="true">{IconLock}</span>
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password" required minLength={6} autoComplete="new-password" />
+              </label>
+
+              <label className="login-field">
+                <span className="field-icon" aria-hidden="true">{IconLock}</span>
+                <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="Confirm Password" required minLength={6} autoComplete="new-password" />
+              </label>
+
+              {error && <p className="login-error">{error}</p>}
+
+              <button type="submit" disabled={loading} className="login-submit login-submit-small">
+                {loading ? 'PLEASE WAIT\u2026' : 'CREATE ACCOUNT'}
+              </button>
+
+              <button type="button" className="register-switch" onClick={() => switchMode('login')}>
+                Already have an account? <span>LOGIN</span>
+              </button>
+            </form>
+          </>
+        )}
+
+        {/* ── FORGOT PASSWORD ── */}
+        {view === 'forgot' && (
+          <form onSubmit={handleForgotSubmit} className="login-form" noValidate>
+            <p className="flow-title">FORGOT PASSWORD</p>
+            <label className="login-field">
+              <span className="field-icon" aria-hidden="true">{IconMail}</span>
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email" required autoComplete="email" />
+            </label>
+
+            {error && <p className="login-error">{error}</p>}
+            {info  && <p className="login-info">{info}</p>}
+
+            <button type="submit" disabled={loading} className="login-submit login-submit-small">
+              {loading ? 'PLEASE WAIT\u2026' : 'SEND RESET LINK'}
+            </button>
+          </form>
+        )}
+
+        {view !== 'auth' && (
+          <button type="button" className="register-switch"
+            onClick={() => { setView('auth'); setError(''); setInfo('') }}>
+            <span>BACK TO LOGIN</span>
           </button>
-        </form>
-
-        <button
-          onClick={() => { setMode(mode === 'login' ? 'register' : 'login'); setError('') }}
-          className="w-full mt-4 text-slate-400 hover:text-slate-200 text-sm transition-colors"
-        >
-          {mode === 'login'
-            ? 'Noch kein Account? Jetzt registrieren'
-            : 'Schon registriert? Einloggen'}
-        </button>
+        )}
       </div>
     </div>
   )

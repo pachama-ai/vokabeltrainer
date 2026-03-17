@@ -1,0 +1,29 @@
+<?php
+// Lokale Konfiguration. Datei kopieren nach: api/config.local.php
+// Diese Datei NICHT committen, da sie Zugangsdaten enthalten kann.
+
+return [
+    // Datenbank
+    'DB_HOST' => 'localhost',
+    'DB_NAME' => 'vocab_app',
+    'DB_NAME_FALLBACK' => 'vokabeltrainer',
+    'DB_USER' => 'root',
+    'DB_PASS' => '',
+
+    // Frontend-URL fuer den Reset-Link
+    'APP_BASE_URL' => 'http://localhost:5174',
+
+    // Absender
+    'MAIL_FROM_ADDRESS' => 'no-reply@deine-domain.de',
+    'MAIL_FROM_NAME' => 'Vokabeltrainer',
+
+    // SMTP aktivieren
+    'SMTP_ENABLED' => '1',
+    'SMTP_HOST' => 'smtp.dein-anbieter.de',
+    'SMTP_PORT' => 587,
+    'SMTP_SECURE' => 'tls', // tls | ssl | none
+    'SMTP_USER' => 'smtp-benutzer',
+    'SMTP_PASS' => 'smtp-passwort',
+    'SMTP_TIMEOUT_SECONDS' => 15,
+    'SMTP_EHLO_HOST' => 'localhost',
+];

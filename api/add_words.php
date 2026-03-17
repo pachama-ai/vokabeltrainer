@@ -19,8 +19,7 @@ $body     = json_decode(file_get_contents('php://input'), true);
 $category = $body['category'] ?? '';
 $count    = min(50, max(1, (int) ($body['count'] ?? 20)));
 
-$allowed = ['grundwortschatz', 'aufbauwortschatz', 'unregelmaessige_verben'];
-if (!in_array($category, $allowed, true)) {
+if ($category === '' || mb_strlen($category) > 100) {
     jsonResponse(['error' => 'Ungültige Kategorie'], 400);
 }
 

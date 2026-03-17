@@ -1,77 +1,83 @@
 import { useState } from 'react'
-
-// Props:
-//   category:      string
-//   availableCount: Anzahl Wörter noch im Pool (Stufe 0)
-//   onConfirm:     (count) => void
-//   onBack:        () => void
+import './LearningScreen.css'
 
 const CATEGORY_LABELS = {
-  grundwortschatz: 'Grundwortschatz',
-  aufbauwortschatz: 'Aufbauwortschatz',
-  unregelmaessige_verben: 'Unregelmäßige Verben',
+  grundwortschatz:        'Basic Vocabulary',
+  aufbauwortschatz:       'Advanced Vocabulary',
+  unregelmaessige_verben: 'Irregular Verbs',
 }
 
 export default function AddWordsDialog({ category, availableCount, onConfirm, onBack }) {
-  const [count, setCount] = useState(20)
-
+  const [count, setCount] = useState(Math.min(20, availableCount))
   const actual = Math.min(count, availableCount)
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center p-6">
-      <div className="bg-slate-800 rounded-2xl p-8 max-w-md w-full">
-        <h2 className="text-2xl font-bold mb-1">{CATEGORY_LABELS[category]}</h2>
-        <p className="text-slate-400 mb-6 text-sm">
-          Keine aktiven Vokabeln. Wie viele möchtest du hinzufügen?
-        </p>
-
-        {availableCount === 0 ? (
-          <div className="bg-green-900 rounded-xl p-4 text-center mb-6">
-            <p className="text-green-300 font-semibold">Alle Wörter wurden bereits hinzugefügt!</p>
-            <p className="text-green-400 text-sm mt-1">Super gemacht 🎉</p>
-          </div>
-        ) : (
-          <>
-            <div className="text-center mb-4">
-              <span className="text-5xl font-bold text-white">{actual}</span>
-              <span className="text-slate-400 ml-2">Vokabeln</span>
-            </div>
-
-            <input
-              type="range"
-              min={5}
-              max={50}
-              step={5}
-              value={count}
-              onChange={(e) => setCount(Number(e.target.value))}
-              className="w-full mb-2 accent-emerald-400"
-            />
-            <div className="flex justify-between text-xs text-slate-500 mb-2">
-              <span>5</span>
-              <span>50</span>
-            </div>
-
-            <p className="text-slate-400 text-sm text-center mb-6">
-              Noch <span className="text-white font-semibold">{availableCount}</span> Wörter im Pool verfügbar
+    <div className="ls">
+      <header className="ls__header">
+        <button className="ls__back-btn" onClick={onBack}>‹</button>
+        <h1 className="ls__title">{CATEGORY_LABELS[category] ?? category}</h1>
+        <div className="ls__streak-ph" />
+      </header>
+      <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 24px' }}>
+        <div style={{
+          background: 'rgba(190, 208, 224, 0.34)',
+          borderRadius: '24px',
+          padding: '36px 40px',
+          maxWidth: '440px',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '20px',
+        }}>
+          <div>
+            <p style={{ fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', color: 'rgba(235,242,248,0.60)', marginBottom: '6px' }}>
+              No active words
             </p>
-          </>
-        )}
+            <p style={{ fontSize: '1rem', fontWeight: 500, color: 'rgba(235,242,248,0.82)' }}>
+              How many words do you want to add to your learning deck?
+            </p>
+          </div>
 
-        <div className="flex gap-3">
-          <button
-            onClick={onBack}
-            className="flex-1 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 transition-colors text-sm"
-          >
-            Zurück
-          </button>
-          {availableCount > 0 && (
-            <button
-              onClick={() => onConfirm(actual)}
-              className="flex-1 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold"
-            >
-              Starten
-            </button>
+          {availableCount === 0 ? (
+            <div style={{ textAlign: 'center', padding: '16px', borderRadius: '14px', background: 'rgba(120,200,150,0.18)' }}>
+              <p style={{ fontSize: '1rem', fontWeight: 700, color: 'rgba(140,220,170,0.95)' }}>All words already added!</p>
+              <p style={{ fontSize: '0.82rem', color: 'rgba(140,220,170,0.70)', marginTop: '4px' }}>Great job 🎉</p>
+            </div>
+          ) : (
+            <>
+              <div style={{ textAlign: 'center' }}>
+                <span style={{ fontSize: '4rem', fontWeight: 700, color: 'rgba(235,246,255,0.90)' }}>{actual}</span>
+                <span style={{ fontSize: '1rem', color: 'rgba(235,242,248,0.55)', marginLeft: '8px' }}>words</span>
+              </div>
+              <input
+                type="range"
+                min={5}
+                max={Math.min(50, availableCount)}
+                step={5}
+                value={count}
+                onChange={e => setCount(Number(e.target.value))}
+                style={{ width: '100%', accentColor: '#84c97e' }}
+              />
+              <p style={{ textAlign: 'center', fontSize: '0.82rem', color: 'rgba(235,242,248,0.55)' }}>
+                <span style={{ color: 'rgba(235,246,255,0.88)', fontWeight: 700 }}>{availableCount}</span> words remaining in pool
+              </p>
+            </>
           )}
+
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <button onClick={onBack} style={{
+              flex: 1, padding: '12px', borderRadius: '14px', border: 'none',
+              background: 'rgba(142,154,196,0.28)', color: 'rgba(235,242,248,0.80)',
+              fontFamily: 'inherit', fontSize: '0.88rem', fontWeight: 600, cursor: 'pointer',
+            }}>Back</button>
+            {availableCount > 0 && (
+              <button onClick={() => onConfirm(actual)} style={{
+                flex: 1, padding: '12px', borderRadius: '14px', border: 'none',
+                background: 'rgba(100,200,160,0.48)', color: 'rgba(255,255,255,0.95)',
+                fontFamily: 'inherit', fontSize: '0.88rem', fontWeight: 700, cursor: 'pointer',
+              }}>Start</button>
+            )}
+          </div>
         </div>
       </div>
     </div>

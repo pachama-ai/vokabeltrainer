@@ -75,14 +75,17 @@ try {
     }
 
     // Fortschritt speichern (INSERT oder UPDATE)
+    $wrongInc = $correct ? 0 : 1;
     $stmt = $db->prepare('
-        INSERT INTO user_progress (user_id, word_id, level, correct_streak, last_reviewed, last_level5_at)
-        VALUES (:user_id, :word_id, :level, :streak, :now, :lv5)
+        INSERT INTO user_progress (user_id, word_id, level, correct_streak, last_reviewed, last_level5_at, wrong_count, total_reviews)
+        VALUES (:user_id, :word_id, :level, :streak, :now, :lv5, :wrong, 1)
         ON DUPLICATE KEY UPDATE
             level          = VALUES(level),
             correct_streak = VALUES(correct_streak),
             last_reviewed  = VALUES(last_reviewed),
-            last_level5_at = COALESCE(VALUES(last_level5_at), last_level5_at)
+            last_level5_at = COALESCE(VALUES(last_level5_at), last_level5_at),
+            wrong_count    = wrong_count + :wrong2,
+            total_reviews  = total_reviews + 1
     ');
     $stmt->execute([
         ':user_id' => $userId,
@@ -91,6 +94,8 @@ try {
         ':streak'  => $streak,
         ':now'     => $now,
         ':lv5'     => $lastLevel5At,
+        ':wrong'   => $wrongInc,
+        ':wrong2'  => $wrongInc,
     ]);
 
     jsonResponse([

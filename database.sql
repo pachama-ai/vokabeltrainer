@@ -20,17 +20,30 @@ CREATE TABLE IF NOT EXISTS users (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ------------------------------------------------------------
+-- Passwort-Reset-Tokens
+-- ------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS password_resets (
+  id           INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id      INT UNSIGNED NOT NULL,
+  token_hash   CHAR(64) NOT NULL UNIQUE,               -- SHA-256 vom Token
+  expires_at   DATETIME NOT NULL,
+  used_at      DATETIME DEFAULT NULL,
+  created_at   DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+  INDEX idx_reset_user (user_id),
+  INDEX idx_reset_expires (expires_at),
+
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- ------------------------------------------------------------
 -- Vokabeln (werden einmalig per import_vocab.php befüllt)
 -- ------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS vocabulary (
   id           INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   word         VARCHAR(500) NOT NULL,              -- Deutsches Wort mit Artikel
   translations JSON NOT NULL,                      -- ["car", "automobile"]
-  category     ENUM(
-    'grundwortschatz',
-    'aufbauwortschatz',
-    'unregelmaessige_verben'
-  ) NOT NULL,
+  category     VARCHAR(100) NOT NULL,
   INDEX idx_category (category)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
