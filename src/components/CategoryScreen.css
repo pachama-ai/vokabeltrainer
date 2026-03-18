@@ -690,12 +690,6 @@ letter-spacing: 0.04em;
   flex-direction: column;
 }
 
-/* Avatar+score pinned to top-right corner */
-/* Info bar override for results screen — avatar on far left */
-.ls__result-info-bar {
-  align-items: center;
-}
-
 /* Card body: avatar on left, rows on right */
 .ls__result-body {
   display: flex;
@@ -711,14 +705,6 @@ letter-spacing: 0.04em;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
-}
-
-.ls__result-corner {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-  margin-right: 6px;
 }
 
 .ls__result-avatar-sm {
@@ -776,26 +762,6 @@ letter-spacing: 0.04em;
 /* Footer: no divider line */
 .ls__result-card .hs__result-footer {
   border-top: none;
-}
-
-/* See mistakes button — same frosted style as Fertig but red tint */
-.ls__see-mistakes-btn {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 10px 22px;
-  border-radius: 24px;
-  border: none;
-  background: rgba(190, 210, 228, 0.28);
-  color: rgba(220, 95, 85, 0.90);
-  font-family: inherit;
-  font-size: 0.86rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.ls__see-mistakes-btn:hover {
-  background: rgba(220, 95, 85, 0.18);
 }
 
 /* See mistakes button */

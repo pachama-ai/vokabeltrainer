@@ -68,7 +68,7 @@ const ACTION_BTNS = [
   { id: 'manage',  label: 'Manage', Icon: ManageIcon },
 ]
 
-export default function CategoryScreen({ allStats, loading, onSelectCategory, onLogout, onSettings, onAddCategory, onManage, customCats = [] }) {
+export default function CategoryScreen({ allStats, loading, onSelectCategory, onSettings, onAddCategory, onManage, customCats = [] }) {
   const [activeCatId, setActiveCatId] = useState(CAT_BTNS[0].id)
   const [view, setView] = useState('overview') // 'overview' | 'detail'
   const [detailStats, setDetailStats] = useState(null)

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import {
-  isLoggedIn, getSavedUser, logout,
+  isLoggedIn, logout,
   checkDecay, getStats, getWords, submitAnswer, addWords, getCategories,
 } from './api/vocabApi'
 import LoginScreen from './components/LoginScreen'
@@ -14,13 +14,11 @@ import VocabManagerScreen from './components/VocabManagerScreen'
 // Screens: 'login' | 'categories' | 'add-words' | 'learning' | 'settings'
 
 export default function App() {
-  const [user, setUser]               = useState(null)
   const [screen, setScreen]           = useState('login')
   const [activeCategory, setCategory] = useState(null)
 
   // Daten für CategoryScreen
   const [allStats, setAllStats]         = useState(null)
-  const [totalMastered, setMastered]    = useState(0)
   const [statsLoading, setStatsLoading] = useState(false)
   const [customCats, setCustomCats]     = useState([]) // extra Kategorien aus DB
 
@@ -35,8 +33,6 @@ export default function App() {
   // ── Beim Start: eingeloggter User? ───────────────────────────────────────
   useEffect(() => {
     if (isLoggedIn()) {
-      const savedUser = getSavedUser()
-      setUser(savedUser)
       setScreen('categories')
       initAfterLogin()
     }
@@ -80,15 +76,13 @@ export default function App() {
       }
 
       setAllStats(stats)
-      setMastered(total.mastered)
     } catch (err) {
       if (err?.status === 401) { handleLogout(); return }
     } finally { setStatsLoading(false) }
   }
 
   // ── Login ─────────────────────────────────────────────────────────────────
-  async function handleLoginSuccess(userData) {
-    setUser(userData)
+  async function handleLoginSuccess() {
     setScreen('categories')
     await initAfterLogin()
   }
@@ -96,7 +90,6 @@ export default function App() {
   // ── Abmelden ─────────────────────────────────────────────────────────────
   function handleLogout() {
     logout()
-    setUser(null)
     setAllStats(null)
     setScreen('login')
   }
@@ -232,11 +225,9 @@ export default function App() {
   return (
     <CategoryScreen
       allStats={allStats}
-      totalMastered={totalMastered}
       loading={statsLoading || categoryLoading}
       customCats={customCats}
       onSelectCategory={handleSelectCategory}
-      onLogout={handleLogout}
       onSettings={handleSettings}
       onAddCategory={() => setScreen('add-category')}
       onManage={(cat) => { setManageInitialCat(cat); setScreen('manage') }}

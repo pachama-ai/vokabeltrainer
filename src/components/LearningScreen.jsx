@@ -293,7 +293,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
                     <div className="ls__result-avatar-sm">
                       <AvatarIcon idx={avatarIdx} size={56} />
                       {Array.from({ length: 14 }).map((_, i) => (
-                        <div key={i} className="hs__result-star ls__star-sm" style={{ '--angle': `${(i / 14) * 360}deg`, '--delay': `${i * 0.06}s` }}>★</div>
+                        <div key={i} className="hs__result-star" style={{ '--angle': `${(i / 14) * 360}deg`, '--delay': `${i * 0.06}s` }}>★</div>
                       ))}
                     </div>
                     <p className="ls__result-score">
