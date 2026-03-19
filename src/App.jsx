@@ -51,12 +51,11 @@ export default function App() {
   async function loadAllStats() {
     setStatsLoading(true)
     try {
-      const [catRes, s1, s2, s3, total] = await Promise.all([
+      const [catRes, s1, s2, s3] = await Promise.all([
         getCategories(),
         getStats('grundwortschatz'),
         getStats('aufbauwortschatz'),
         getStats('unregelmaessige_verben'),
-        getStats(),
       ])
 
       const extras = (catRes.categories ?? []).filter(c => !BUILTIN_CATS.includes(c))

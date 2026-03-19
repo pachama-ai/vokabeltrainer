@@ -253,12 +253,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
     <div className="hs">
       {/* ── Header ──────────────────────────────────────── */}
       <header className="hs__header">
-        <button
-          className="hs__arrow"
-          onClick={() => !isAnyActive && setView(v => v === 'overview' ? 'detail' : 'overview')}
-          aria-label="Statistikansicht wechseln"
-          style={isAnyActive ? { opacity: 0, pointerEvents: 'none' } : {}}
-        >‹</button>
+        <div />
         <h1 className="hs__title">
           {learnMode ? 'Study Mode'
             : isTestActive ? 'Vocabulary Test'
@@ -272,6 +267,12 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
 
         {/* Left sidebar – categories */}
         <aside className={`hs__side${isAnyActive ? ' hs__side--locked' : ''}`}>
+          <button
+            className="hs__arrow"
+            onClick={() => !isAnyActive && setView(v => v === 'overview' ? 'detail' : 'overview')}
+            aria-label="Statistikansicht wechseln"
+            style={{ alignSelf: 'center', ...(isAnyActive ? { opacity: 0, pointerEvents: 'none' } : {}) }}
+          >‹</button>
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onSettings} title="Settings">
               <AvatarIcon idx={avatarIdx} size={36} />
@@ -529,7 +530,6 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                     const pct = total > 0 ? Math.round((n / total) * 100) : 0
                     return (
                       <div key={l.level} className="hs__row">
-                        <span className="hs__row-ico">{LEVEL_ICONS[i]}</span>
                         <span className="hs__row-lbl">{l.label}</span>
                         <div className="hs__bar">
                           <div className="hs__bar-fill" style={{ width: `${pct}%`, background: l.color }} />
