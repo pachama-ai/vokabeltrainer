@@ -216,7 +216,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
     setLearnNewCountStr('10')
     setLearnTotalStr('')
     setLearnDir('both')
-    setLearnLevels([1, 2, 3, 4, 5])
+    setLearnLevels([])
   }
 
   function cycleLearnDir() {
@@ -224,9 +224,13 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
   }
 
   function toggleLearnLevel(lvl) {
-    setLearnLevels(prev =>
-      prev.includes(lvl) ? prev.filter(x => x !== lvl) : [...prev, lvl]
-    )
+    setLearnLevels(prev => {
+      if (prev.includes(lvl)) {
+        if (prev.length === 1) return prev  // mindestens 1 muss aktiv sein
+        return prev.filter(x => x !== lvl)
+      }
+      return [...prev, lvl]
+    })
   }
 
   function startLearnNow() {
@@ -367,14 +371,14 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                       key={lvl}
                       className={`hs__level-circle${learnLevels.includes(lvl) ? ' hs__level-circle--on' : ''}`}
                       style={learnLevels.includes(lvl)
-                        ? { background: LEARN_LEVEL_COLORS[lvl], borderColor: LEARN_LEVEL_COLORS[lvl], color: '#fff' }
-                        : { background: LEARN_LEVEL_COLORS[lvl] + '44', borderColor: LEARN_LEVEL_COLORS[lvl] + '88', color: LEARN_LEVEL_COLORS[lvl] }
+                        ? { background: LEARN_LEVEL_COLORS[lvl], borderColor: LEARN_LEVEL_COLORS[lvl], color: '#fff', transform: 'scale(1.12)', boxShadow: `0 0 14px 4px ${LEARN_LEVEL_COLORS[lvl]}88` }
+                        : { background: LEARN_LEVEL_COLORS[lvl] + '33', borderColor: LEARN_LEVEL_COLORS[lvl] + 'aa', color: LEARN_LEVEL_COLORS[lvl] }
                       }
                       onClick={() => toggleLearnLevel(lvl)}
                     >{lvl}</button>
                   ))}
                 </div>
-                <button className="hs__test-confirm-btn" onClick={startLearnNow}>✓</button>
+                <button className="hs__test-confirm-btn" onClick={startLearnNow} disabled={learnLevels.length === 0} style={learnLevels.length === 0 ? { opacity: 0.3, cursor: 'default' } : {}}>✓</button>
               </div>
             </div>
           )}
