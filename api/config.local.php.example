@@ -10,6 +10,9 @@ return [
     'DB_USER' => 'root',
     'DB_PASS' => '',
 
+    // JWT Secret — mindestens 32 zufällige Zeichen (z.B. per: openssl rand -base64 48)
+    'JWT_SECRET' => 'AENDERN_langer_geheimer_schluessel_hier_eintragen',
+
     // Frontend-URL fuer den Reset-Link
     'APP_BASE_URL' => 'http://localhost:5174',
 

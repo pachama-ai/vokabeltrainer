@@ -37,7 +37,7 @@ define('DB_PASS', (string) cfg('DB_PASS', ''));          // XAMPP: leer lassen. 
 define('DB_CHARSET', 'utf8mb4');
 
 // JWT Secret — langer, zufälliger String (mindestens 32 Zeichen)
-define('JWT_SECRET', 'AENDERN_langer_geheimer_schluessel_hier_eintragen');
+define('JWT_SECRET', (string) cfg('JWT_SECRET', 'AENDERN_langer_geheimer_schluessel_hier_eintragen'));
 define('JWT_EXPIRY', 60 * 60 * 24 * 30); // 30 Tage in Sekunden
 
 // Passwort-Reset / E-Mail-Konfiguration

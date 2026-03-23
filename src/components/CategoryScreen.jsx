@@ -12,7 +12,7 @@ const LEVELS = [
   { level: 5, label: 'Level 5', color: '#68b0e2' },
 ]
 
-const LEVEL_ICONS = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣']
+const LEVEL_ICONS = [] // unused – kept for potential future use
 
 const CAT_BTNS = [
   { id: 'grundwortschatz',        label: 'Basic Vocabulary',    icon: '🏠' },
@@ -68,7 +68,7 @@ const ACTION_BTNS = [
   { id: 'manage',  label: 'Manage', Icon: ManageIcon },
 ]
 
-export default function CategoryScreen({ allStats, loading, onSelectCategory, onSettings, onAddCategory, onManage, customCats = [] }) {
+export default function CategoryScreen({ allStats, loading, onSelectCategory, onSettings, onAddCategory, onManage, customCats = [], onDeleteCategory }) {
   const [activeCatId, setActiveCatId] = useState(CAT_BTNS[0].id)
   const [view, setView] = useState('overview') // 'overview' | 'detail'
   const [detailStats, setDetailStats] = useState(null)
@@ -96,6 +96,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
   const [learnTotalStr, setLearnTotalStr]     = useState('')
   const [learnDir, setLearnDir]               = useState('both')
   const [learnLevels, setLearnLevels]         = useState([1, 2, 3, 4, 5])
+  const [deleteCatConfirm, setDeleteCatConfirm] = useState(null) // catId to confirm delete
 
   const allCatBtns = [
     ...CAT_BTNS,
@@ -253,7 +254,14 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
     <div className="hs">
       {/* ── Header ──────────────────────────────────────── */}
       <header className="hs__header">
-        <div />
+        <div className="hs__header-left">
+          <button
+            className="hs__arrow"
+            onClick={() => !isAnyActive && setView(v => v === 'overview' ? 'detail' : 'overview')}
+            aria-label="Statistikansicht wechseln"
+            style={isAnyActive ? { opacity: 0, pointerEvents: 'none' } : {}}
+          >‹</button>
+        </div>
         <h1 className="hs__title">
           {learnMode ? 'Study Mode'
             : isTestActive ? 'Vocabulary Test'
@@ -267,12 +275,6 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
 
         {/* Left sidebar – categories */}
         <aside className={`hs__side${isAnyActive ? ' hs__side--locked' : ''}`}>
-          <button
-            className="hs__arrow"
-            onClick={() => !isAnyActive && setView(v => v === 'overview' ? 'detail' : 'overview')}
-            aria-label="Statistikansicht wechseln"
-            style={{ alignSelf: 'center', ...(isAnyActive ? { opacity: 0, pointerEvents: 'none' } : {}) }}
-          >‹</button>
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onSettings} title="Settings">
               <AvatarIcon idx={avatarIdx} size={36} />
@@ -280,14 +282,18 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
             <span className="hs__mascot-lbl">Knowse</span>
           </div>
 
-          {allCatBtns.map(cat => (
-            <button
-              key={cat.id}
-              className={`hs__cat-btn${activeCatId === cat.id ? ' hs__cat-btn--on' : ''}`}
-              onClick={() => setActiveCatId(cat.id)}
-              title={cat.label}
-            ><PlaceholderIcon /></button>
-          ))}
+          {allCatBtns.map(cat => {
+            const isCustom = customCats.includes(cat.id)
+            return (
+              <button
+                key={cat.id}
+                className={`hs__cat-btn${activeCatId === cat.id ? ' hs__cat-btn--on' : ''}`}
+                onClick={() => setActiveCatId(cat.id)}
+                onContextMenu={isCustom ? (e) => { e.preventDefault(); setDeleteCatConfirm(cat.id) } : undefined}
+                title={cat.label}
+              ><PlaceholderIcon /></button>
+            )
+          })}
 
           <div className="hs__side-spacer" />
           <button className="hs__cat-btn hs__add-btn" title="Add category" onClick={onAddCategory}>+</button>
@@ -617,6 +623,30 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
       </div>
 
 
+
+      {/* ── Delete category confirmation ── */}
+      {deleteCatConfirm && (
+        <div className="hs__overlay">
+          <div className="hs__confirm-box">
+            <p className="hs__confirm-msg">
+              Kategorie löschen?<br/>
+              <span>Alle Wörter in «{deleteCatConfirm}» werden unwiderruflich gelöscht.</span>
+            </p>
+            <div className="hs__confirm-btns">
+              <button className="hs__confirm-no" onClick={() => setDeleteCatConfirm(null)}>Abbrechen</button>
+              <button
+                className="hs__confirm-yes"
+                onClick={async () => {
+                  const catId = deleteCatConfirm
+                  setDeleteCatConfirm(null)
+                  if (activeCatId === catId) setActiveCatId(allCatBtns[0]?.id ?? null)
+                  await onDeleteCategory?.(catId)
+                }}
+              >Löschen</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Cancel confirmation popup ── */}
       {showCancelConfirm === 'level-warn' ? (

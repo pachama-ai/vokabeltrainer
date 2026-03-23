@@ -1,0 +1,5 @@
+# Block direct access to sensitive config/helper files
+<FilesMatch "^(config\.local\.php|db\.php|jwt\.php|mailer\.php)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

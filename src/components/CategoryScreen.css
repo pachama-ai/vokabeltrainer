@@ -38,7 +38,16 @@ height: 72px;
 flex-shrink: 0;
 display: flex;
 align-items: center;
-padding: 0 24px;
+padding: 0 24px 0 14px;
+}
+
+/* Arrow container in header – same width as left sidebar so arrow sits centered above it */
+.hs__header-left {
+  width: 96px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hs__arrow {
@@ -87,6 +96,7 @@ position: relative;
 z-index: 1;
 flex: 1;
 display: flex;
+align-items: stretch;
 gap: 12px;
 padding: 0 14px 18px;
 min-height: 0;
@@ -228,14 +238,14 @@ gap: 6px;
 
 .hs__row {
 display: grid;
-grid-template-columns: 52px 210px 1fr 90px 90px;
+grid-template-columns: 140px 1fr 58px 58px;
 align-items: center;
-gap: 20px;
-padding: 12px 24px 12px 8px;
+gap: 12px;
+padding: 12px 12px 12px 6px;
 }
 
 .hs__row-ico {
-font-size: 2rem;
+font-size: 1.6rem;
 text-align: center;
 line-height: 1;
 }
@@ -263,7 +273,7 @@ transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hs__row-n {
-font-size: 1.7rem;
+font-size: 1.15rem;
 font-weight: 700;
 text-align: right;
 color: var(--text);
@@ -271,7 +281,7 @@ letter-spacing: -0.01em;
 }
 
 .hs__row-p {
-font-size: 1.7rem;
+font-size: 1.15rem;
 font-weight: 700;
 text-align: right;
 color: var(--text);
@@ -1513,3 +1523,54 @@ letter-spacing: 0.04em;
   box-shadow: 0 0 0 1.5px rgba(60, 210, 198, 0.45);
 }
 .vm__action-active .hs__action-lbl { color: rgba(160, 245, 238, 0.92) !important; }
+
+/* ── Delete confirmation modal ── */
+.vm__modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.vm__modal {
+  background: rgba(52, 66, 80, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 28px 32px 22px;
+  min-width: 280px;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+.vm__modal-text {
+  color: rgba(220, 230, 240, 0.92);
+  font-size: 1rem;
+  margin: 0 0 22px;
+  line-height: 1.5;
+}
+.vm__modal-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.vm__modal-btn {
+  padding: 8px 22px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.vm__modal-btn--cancel {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(200, 210, 220, 0.9);
+}
+.vm__modal-btn--cancel:hover { opacity: 0.75; }
+.vm__modal-btn--del {
+  background: rgba(220, 80, 80, 0.82);
+  color: #fff;
+}
+.vm__modal-btn--del:hover { opacity: 0.85; }

@@ -1,0 +1,9 @@
+Options -MultiViews
+RewriteEngine On
+
+# Serve files/directories that actually exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Route all other requests to index.html (React SPA)
+RewriteRule ^ index.html [L]

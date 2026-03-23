@@ -3,7 +3,7 @@
 // ============================================================
 
 // Vor dem Build auf echte Server-URL ändern:
-const API_BASE = 'http://localhost/vocab-app/api';
+const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost/vocab-app/api';
 
 // ──────────────────────────────────────────────────────────────
 // Hilfsfunktionen
@@ -194,6 +194,14 @@ export async function createCategory(name, words) {
   return apiFetch('/create_category.php', {
     method: 'POST',
     body: JSON.stringify({ name, words }),
+  });
+}
+
+/** Kategorie und alle zugehörigen Vokabeln löschen. */
+export async function deleteCategory(category) {
+  return apiFetch('/delete_category.php', {
+    method: 'POST',
+    body: JSON.stringify({ category }),
   });
 }
 

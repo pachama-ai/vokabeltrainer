@@ -144,11 +144,14 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
   function cancelEdit() { setEditingId(null) }
 
   // ── Delete ────────────────────────────────────────────────────
-  async function handleDelete(wordId) {
+  const [deleteConfirmId, setDeleteConfirmId] = useState(null)
+
+  async function confirmDelete() {
     try {
-      await deleteWord(wordId)
-      setWords(prev => prev.filter(w => w.id !== wordId))
+      await deleteWord(deleteConfirmId)
+      setWords(prev => prev.filter(w => w.id !== deleteConfirmId))
     } catch { alert('Fehler beim Löschen') }
+    setDeleteConfirmId(null)
   }
 
   // ── Add new ───────────────────────────────────────────────────
@@ -277,7 +280,7 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
                       return <span className="vm__badge" style={{ background: b.color }}>{b.label}</span>
                     })()}
                     <button className="vm__icon-btn" onClick={() => startEdit(w)} title="Edit"><PencilIcon /></button>
-                    <button className="vm__icon-btn vm__icon-btn--del" onClick={() => handleDelete(w.id)} title="Delete"><TrashIcon /></button>
+                    <button className="vm__icon-btn vm__icon-btn--del" onClick={() => setDeleteConfirmId(w.id)} title="Delete"><TrashIcon /></button>
                   </div>
                 )
               ))}
@@ -344,6 +347,24 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
         </aside>
 
       </div>
+
+      {/* ── Delete confirmation modal ── */}
+      {deleteConfirmId && (() => {
+        const w = words.find(x => x.id === deleteConfirmId)
+        return (
+          <div className="vm__modal-overlay" onClick={() => setDeleteConfirmId(null)}>
+            <div className="vm__modal" onClick={e => e.stopPropagation()}>
+              <p className="vm__modal-text">
+                Vokabel <strong>{w?.word}</strong> wirklich löschen?
+              </p>
+              <div className="vm__modal-btns">
+                <button className="vm__modal-btn vm__modal-btn--cancel" onClick={() => setDeleteConfirmId(null)}>Abbrechen</button>
+                <button className="vm__modal-btn vm__modal-btn--del" onClick={confirmDelete}>Löschen</button>
+              </div>
+            </div>
+          </div>
+        )
+      })()}
     </div>
   )
 }

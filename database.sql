@@ -14,6 +14,10 @@ USE vocab_app;
 -- ------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS users (
   id           INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  username     VARCHAR(80)  NULL,                  -- Anzeigename (optional)
+  name         VARCHAR(120) NULL,                  -- Vollständiger Name
+  address      VARCHAR(255) NULL,                  -- Adresse
+  language     VARCHAR(10)  NULL,                  -- Bevorzugte Sprache
   email        VARCHAR(255) NOT NULL UNIQUE,       -- Login-E-Mail
   password_hash VARCHAR(255) NOT NULL,             -- bcrypt via password_hash()
   created_at   DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP

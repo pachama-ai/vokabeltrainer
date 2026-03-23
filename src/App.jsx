@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import {
   isLoggedIn, logout,
-  checkDecay, getStats, getWords, submitAnswer, addWords, getCategories,
+  checkDecay, getStats, getWords, submitAnswer, addWords, getCategories, deleteCategory,
 } from './api/vocabApi'
 import LoginScreen from './components/LoginScreen'
 import CategoryScreen from './components/CategoryScreen'
@@ -12,6 +12,7 @@ import AddCategoryScreen from './components/AddCategoryScreen'
 import VocabManagerScreen from './components/VocabManagerScreen'
 
 // Screens: 'login' | 'categories' | 'add-words' | 'learning' | 'settings'
+const BUILTIN_CATS = ['grundwortschatz', 'aufbauwortschatz', 'unregelmaessige_verben']
 
 export default function App() {
   const [screen, setScreen]           = useState('login')
@@ -46,8 +47,6 @@ export default function App() {
   }
 
   // ── Statistik aller Kategorien laden ─────────────────────────────────────
-  const BUILTIN_CATS = ['grundwortschatz', 'aufbauwortschatz', 'unregelmaessige_verben']
-
   async function loadAllStats() {
     setStatsLoading(true)
     try {
@@ -159,7 +158,16 @@ export default function App() {
     setCategory(null)
     loadAllStats()
   }
-
+  // ── Kategorie löschen ─────────────────────────────────────────────────────
+  async function handleDeleteCategory(catId) {
+    try {
+      await deleteCategory(catId)
+      await loadAllStats()
+    } catch (err) {
+      if (err?.status === 401) { handleLogout(); return }
+      alert('Fehler beim Löschen: ' + (err?.message ?? 'Unbekannter Fehler'))
+    }
+  }
   // ── Rendering ─────────────────────────────────────────────────────────────
   if (screen === 'login') {
     return <LoginScreen onLoginSuccess={handleLoginSuccess} />
@@ -230,6 +238,7 @@ export default function App() {
       onSettings={handleSettings}
       onAddCategory={() => setScreen('add-category')}
       onManage={(cat) => { setManageInitialCat(cat); setScreen('manage') }}
+      onDeleteCategory={handleDeleteCategory}
     />
   )
 }

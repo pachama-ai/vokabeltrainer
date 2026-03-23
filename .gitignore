@@ -1,4 +1,6 @@
 api/config.local.php
+.env.production
+.env.local
 # Logs
 logs
 *.log
