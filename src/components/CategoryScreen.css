@@ -171,11 +171,12 @@ box-shadow: var(--neuro-raised);
   opacity: 0.55;
 }
 
-.hs__side--r { justify-content: center; gap: 10px; align-self: center; padding-top: 32px; padding-bottom: 32px; }
+.hs__side--r { justify-content: center; gap: 14px; align-self: center; padding-top: 42px; padding-bottom: 42px; }
 
-/* Test mode: icons centred, cancel just below */
-.hs__side--r-test { position: static; justify-content: center; gap: 12px; padding-top: 32px; padding-bottom: 32px; }
+/* Test mode: same size as normal, extra gap before cancel */
+.hs__side--r-test { justify-content: center; gap: 14px; padding-top: 42px; padding-bottom: 42px; }
 .hs__side--r-test .hs__side-spacer { display: none; }
+.hs__side--r-test .hs__cancel-btn { margin-top: 10px; }
 
 /* Dimmed action buttons during test */
 .hs__action-btn--dim {
