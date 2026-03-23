@@ -145,7 +145,7 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, customC
   return (
     <div className="hs">
       <header className="hs__header">
-        <button className="hs__arrow" onClick={onBack}>‹</button>
+        <div className="hs__arrow-ph" />
         <h1 className="hs__title">Add Vocabulary Set</h1>
         <div className="hs__streak">🔥 <span>0 Days</span></div>
       </header>
