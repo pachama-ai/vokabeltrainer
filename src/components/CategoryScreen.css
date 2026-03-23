@@ -1012,21 +1012,23 @@ letter-spacing: 0.04em;
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  border: 2px solid rgba(142, 154, 196, 0.65);
-  background: rgba(142, 154, 196, 0.30);
-  color: rgba(200, 212, 228, 0.85);
+  border: 2px solid rgba(200, 212, 228, 0.55);
+  background: rgba(200, 212, 228, 0.15);
+  color: rgba(200, 212, 228, 0.95);
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: 700;
   display: grid;
   place-items: center;
   cursor: pointer;
-  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s, box-shadow 0.15s;
 }
 .hs__level-circle:hover { transform: scale(1.06); }
 .hs__level-circle--on {
-  color: rgba(255, 255, 255, 0.90);
-  border-width: 2px;
+  color: rgba(255, 255, 255, 0.95);
+  border-width: 2.5px;
+  box-shadow: 0 0 12px 3px currentColor;
+  transform: scale(1.08);
 }
 
 /* ── Cancel confirm overlay ── */
