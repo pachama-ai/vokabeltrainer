@@ -185,7 +185,6 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
     <div className="hs">
       {/* ── Header ── */}
       <header className="hs__header">
-        <button className="hs__arrow" onClick={onBack}>‹</button>
         <h1 className="hs__title">Vocabulary Manager</h1>
         <div className="hs__streak">🔥 <span>0 Days</span></div>
       </header>
@@ -195,7 +194,7 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
         {/* ── Left sidebar ── */}
         <aside className="hs__side">
           <div className="hs__mascot-wrap">
-            <button className="hs__mascot-btn" onClick={onSettings} title="Settings">
+            <button className="hs__mascot-btn" onClick={onBack} title="Back to Home">
               <AvatarIcon idx={avatarIdx} size={36} />
             </button>
             <span className="hs__mascot-lbl">Knowse</span>
@@ -355,11 +354,11 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
           <div className="vm__modal-overlay" onClick={() => setDeleteConfirmId(null)}>
             <div className="vm__modal" onClick={e => e.stopPropagation()}>
               <p className="vm__modal-text">
-                Vokabel <strong>{w?.word}</strong> wirklich löschen?
+                Delete <strong>{w?.word}</strong>?
               </p>
               <div className="vm__modal-btns">
-                <button className="vm__modal-btn vm__modal-btn--cancel" onClick={() => setDeleteConfirmId(null)}>Abbrechen</button>
-                <button className="vm__modal-btn vm__modal-btn--del" onClick={confirmDelete}>Löschen</button>
+                <button className="vm__modal-btn vm__modal-btn--cancel" onClick={() => setDeleteConfirmId(null)}>Cancel</button>
+                <button className="vm__modal-btn vm__modal-btn--del" onClick={confirmDelete}>Delete</button>
               </div>
             </div>
           </div>
