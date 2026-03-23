@@ -45,9 +45,9 @@ const ManageIcon = () => (
 )
 
 const ST_ACTION_BTNS = [
-  { id: 'learn',  label: 'Learn',  Icon: LearnIcon  },
-  { id: 'test',   label: 'Test',   Icon: TestIcon   },
-  { id: 'manage', label: 'Manage', Icon: ManageIcon },
+  { id: 'learn',  label: 'Learn',  Icon: LearnIcon,  color: '#5b9ec9' },
+  { id: 'test',   label: 'Test',   Icon: TestIcon,   color: '#c0826e' },
+  { id: 'manage', label: 'Manage', Icon: ManageIcon, color: '#9a8e5e' },
 ]
 
 const ShieldIcon = () => (
@@ -775,8 +775,8 @@ export default function SettingsScreen({ onBack, onLogout }) {
 
         {/* Right sidebar */}
         <aside className="hs__side hs__side--r">
-          {ST_ACTION_BTNS.map(({ id, label, Icon }) => (
-            <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label}>
+          {ST_ACTION_BTNS.map(({ id, label, Icon, color }) => (
+            <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
               <Icon />
               <span className="hs__action-lbl">{label}</span>
             </button>

@@ -171,10 +171,12 @@ box-shadow: var(--neuro-raised);
   opacity: 0.55;
 }
 
-.hs__side--r { justify-content: center; gap: 10px; }
+.hs__side--r { justify-content: center; gap: 10px; align-self: center; }
 
-/* Test mode: items at top so spacer+cancel work */
-.hs__side--r-test { justify-content: flex-start; }
+/* Test mode: icons centred, cancel pinned to bottom */
+.hs__side--r-test { position: relative; justify-content: center; }
+.hs__side--r-test .hs__side-spacer { display: none; }
+.hs__side--r-test .hs__cancel-btn { position: absolute; bottom: 12px; }
 
 /* Dimmed action buttons during test */
 .hs__action-btn--dim {
