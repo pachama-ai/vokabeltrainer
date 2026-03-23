@@ -7,8 +7,8 @@
 --bar-track:  rgba(165, 155, 140, 0.28);
 --text:       rgba(42, 36, 28, 0.90);
 --text-soft:  rgba(100, 90, 75, 0.72);
---neuro-raised: 5px 5px 11px rgba(0,0,0,0.13), -4px -4px 9px rgba(255,255,255,0.92);
---neuro-inset:  inset 3px 3px 8px rgba(0,0,0,0.18), inset -2px -2px 6px rgba(255,255,255,0.22);
+--neuro-raised: 5px 5px 12px rgba(0,0,0,0.18);
+--neuro-inset:  inset 3px 3px 8px rgba(0,0,0,0.22);
 
 position: fixed;
 inset: 0;
@@ -115,7 +115,7 @@ flex-direction: column;
 align-items: center;
 padding: 18px 0 14px;
 gap: 12px;
-box-shadow: 6px 6px 14px rgba(0,0,0,0.08), -4px -4px 10px rgba(255,255,255,0.95);
+box-shadow: 6px 6px 14px rgba(0,0,0,0.14);
 }
 
 .hs__mascot-wrap {
@@ -139,7 +139,7 @@ place-items: center;
 transition: box-shadow 0.15s, transform 0.12s;
 box-shadow: var(--neuro-raised);
 }
-.hs__mascot-btn:hover { box-shadow: 6px 6px 14px rgba(0,0,0,0.17), -4px -4px 10px rgba(255,255,255,0.95); transform: scale(1.04); }
+.hs__mascot-btn:hover { box-shadow: 6px 6px 14px rgba(0,0,0,0.22); transform: scale(1.04); }
 
 .hs__mascot-lbl {
 font-size: 0.63rem;
@@ -171,12 +171,11 @@ box-shadow: var(--neuro-raised);
   opacity: 0.55;
 }
 
-.hs__side--r { justify-content: center; gap: 10px; align-self: center; }
+.hs__side--r { justify-content: center; gap: 10px; align-self: center; padding-top: 32px; padding-bottom: 32px; }
 
-/* Test mode: icons centred, cancel pinned to bottom */
-.hs__side--r-test { position: relative; justify-content: center; }
+/* Test mode: icons centred, cancel just below */
+.hs__side--r-test { position: static; justify-content: center; gap: 12px; padding-top: 32px; padding-bottom: 32px; }
 .hs__side--r-test .hs__side-spacer { display: none; }
-.hs__side--r-test .hs__cancel-btn { position: absolute; bottom: 12px; }
 
 /* Dimmed action buttons during test */
 .hs__action-btn--dim {
