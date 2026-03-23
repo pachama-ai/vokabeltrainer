@@ -699,12 +699,13 @@ export default function SettingsScreen({ onBack, onLogout }) {
             <button className="hs__mascot-btn" onClick={onBack} title="Back">
               <AvatarIcon idx={avatarIdx} size={36} />
             </button>
-            <span className="hs__mascot-lbl">Knowse</span>
+            <span className="hs__mascot-lbl">Settings</span>
           </div>
 
           {/* Settings (active) */}
           <button
             className={`hs__cat-btn st__nav-btn${activeTab !== 'privacy' && activeTab !== 'imprint' ? ' st__nav-btn--on' : ''}`}
+            style={{ background: '#8da0c0' }}
             title="Settings"
             onClick={() => setActiveTab('personal')}
           >
@@ -714,6 +715,7 @@ export default function SettingsScreen({ onBack, onLogout }) {
           {/* Privacy Policy */}
           <button
             className={`hs__cat-btn st__nav-btn${activeTab === 'privacy' ? ' st__nav-btn--on' : ''}`}
+            style={{ background: '#5aab82' }}
             title="Privacy Policy"
             onClick={() => setActiveTab('privacy')}
           >
@@ -723,6 +725,7 @@ export default function SettingsScreen({ onBack, onLogout }) {
           {/* Imprint */}
           <button
             className={`hs__cat-btn st__nav-btn${activeTab === 'imprint' ? ' st__nav-btn--on' : ''}`}
+            style={{ background: '#c4956a' }}
             title="Imprint"
             onClick={() => setActiveTab('imprint')}
           >

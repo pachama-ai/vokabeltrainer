@@ -11,6 +11,13 @@ const BUILTIN_CAT_IDS = [
   'unregelmaessige_verben',
 ]
 
+const CAT_COLOR_MAP = {
+  grundwortschatz: '#c4956a',
+  aufbauwortschatz: '#5aab82',
+  unregelmaessige_verben: '#b07891',
+}
+const DEFAULT_CAT_COLOR = '#8da0c0'
+
 const PlaceholderIcon = () => (
   <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
     <ellipse cx="16" cy="13" rx="9" ry="8" stroke="currentColor" strokeWidth="1.8"/>
@@ -44,9 +51,9 @@ const ManageIcon = () => (
 )
 
 const ACTION_BTNS = [
-  { id: 'learn',  label: 'Learn',  Icon: LearnIcon  },
-  { id: 'test',   label: 'Test',   Icon: TestIcon   },
-  { id: 'manage', label: 'Manage', Icon: ManageIcon },
+  { id: 'learn',  label: 'Learn',  Icon: LearnIcon,  color: '#5b9ec9' },
+  { id: 'test',   label: 'Test',   Icon: TestIcon,   color: '#c0826e' },
+  { id: 'manage', label: 'Manage', Icon: ManageIcon, color: '#9a8e5e' },
 ]
 
 const LEVELS = [
@@ -203,12 +210,13 @@ export default function LearningScreen({ category, words: initialWords, counts, 
           <button className="hs__mascot-btn" title="Settings" onClick={onSettings}>
             <AvatarIcon idx={avatarIdx} size={36} />
           </button>
-          <span className="hs__mascot-lbl">Knowse</span>
+          <span className="hs__mascot-lbl">Home</span>
         </div>
         {allCatIds.map(id => (
           <button
             key={id}
             className={`hs__cat-btn${activeCatId === id ? ' hs__cat-btn--on' : ''}`}
+            style={{ background: CAT_COLOR_MAP[id] ?? DEFAULT_CAT_COLOR }}
             disabled
           ><PlaceholderIcon /></button>
         ))}
@@ -220,8 +228,8 @@ export default function LearningScreen({ category, words: initialWords, counts, 
 
   const rightSidebar = (
     <aside className="hs__side hs__side--r hs__side--r-test">
-      {ACTION_BTNS.map(({ id, label, Icon }) => (
-        <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label}>
+      {ACTION_BTNS.map(({ id, label, Icon, color }) => (
+        <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
           <Icon />
           <span className="hs__action-lbl">{label}</span>
         </button>

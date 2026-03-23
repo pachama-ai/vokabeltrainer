@@ -9,6 +9,13 @@ const BUILTIN_CATS = [
   { id: 'unregelmaessige_verben', label: 'Irregulars', color: 'rgba(200, 148, 72, 0.72)'  },
 ]
 
+const CAT_SIDEBAR_COLORS = {
+  grundwortschatz: '#c4956a',
+  aufbauwortschatz: '#5aab82',
+  unregelmaessige_verben: '#b07891',
+}
+const DEFAULT_CAT_COLOR = '#8da0c0'
+
 const PlaceholderIcon = () => (
   <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
     <ellipse cx="16" cy="13" rx="9" ry="8" stroke="currentColor" strokeWidth="1.8"/>
@@ -60,9 +67,9 @@ const ChevronDownIcon = () => (
 )
 
 const ACTION_BTNS = [
-  { id: 'learn',  label: 'Learn',  Icon: LearnIcon  },
-  { id: 'test',   label: 'Test',   Icon: TestIcon   },
-  { id: 'manage', label: 'Manage', Icon: ManageIcon },
+  { id: 'learn',  label: 'Learn',  Icon: LearnIcon,  color: '#5b9ec9' },
+  { id: 'test',   label: 'Test',   Icon: TestIcon,   color: '#c0826e' },
+  { id: 'manage', label: 'Manage', Icon: ManageIcon, color: '#9a8e5e' },
 ]
 
 const PAGE_SIZE = 20
@@ -197,13 +204,13 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
             <button className="hs__mascot-btn" onClick={onBack} title="Back to Home">
               <AvatarIcon idx={avatarIdx} size={36} />
             </button>
-            <span className="hs__mascot-lbl">Knowse</span>
+            <span className="hs__mascot-lbl">Home</span>
           </div>
           {sidebarCats.map(cat => (
             <button
               key={cat.id}
               className="hs__cat-btn"
-              style={{ opacity: 0.45, cursor: 'default' }}
+              style={{ opacity: 0.55, cursor: 'default', background: CAT_SIDEBAR_COLORS[cat.id] ?? DEFAULT_CAT_COLOR }}
               disabled
               title={cat.label}
             >
@@ -330,14 +337,14 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
 
         {/* ── Right sidebar ── */}
         <aside className="hs__side hs__side--r">
-          {ACTION_BTNS.map(({ id, label, Icon }) => (
+          {ACTION_BTNS.map(({ id, label, Icon, color }) => (
             id === 'manage' ? (
-              <button key={id} className="hs__action-btn vm__action-active" title={label}>
+              <button key={id} className="hs__action-btn vm__action-active" title={label} style={{ background: color }}>
                 <Icon />
                 <span className="hs__action-lbl">{label}</span>
               </button>
             ) : (
-              <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label}>
+              <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
                 <Icon />
                 <span className="hs__action-lbl">{label}</span>
               </button>

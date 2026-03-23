@@ -15,10 +15,17 @@ const LEVELS = [
 const LEVEL_ICONS = [] // unused – kept for potential future use
 
 const CAT_BTNS = [
-  { id: 'grundwortschatz',        label: 'Basic Vocabulary',    icon: '🏠' },
-  { id: 'aufbauwortschatz',       label: 'Advanced Vocabulary', icon: '📚' },
-  { id: 'unregelmaessige_verben', label: 'Irregular Verbs',     icon: '⚡' },
+  { id: 'grundwortschatz',        label: 'Basic Vocabulary',    icon: '🏠', color: '#c4956a' },
+  { id: 'aufbauwortschatz',       label: 'Advanced Vocabulary', icon: '📚', color: '#5aab82' },
+  { id: 'unregelmaessige_verben', label: 'Irregular Verbs',     icon: '⚡', color: '#b07891' },
 ]
+
+const CAT_COLOR_MAP = {
+  grundwortschatz: '#c4956a',
+  aufbauwortschatz: '#5aab82',
+  unregelmaessige_verben: '#b07891',
+}
+const DEFAULT_CAT_COLOR = '#8da0c0'
 
 // Placeholder icon
 const PlaceholderIcon = () => (
@@ -63,9 +70,9 @@ const RetryIcon = () => (
 )
 
 const ACTION_BTNS = [
-  { id: 'learn',   label: 'Learn',  Icon: LearnIcon  },
-  { id: 'test',    label: 'Test',   Icon: TestIcon   },
-  { id: 'manage',  label: 'Manage', Icon: ManageIcon },
+  { id: 'learn',   label: 'Learn',  Icon: LearnIcon,  color: '#5b9ec9' },
+  { id: 'test',    label: 'Test',   Icon: TestIcon,   color: '#c0826e' },
+  { id: 'manage',  label: 'Manage', Icon: ManageIcon, color: '#9a8e5e' },
 ]
 
 export default function CategoryScreen({ allStats, loading, onSelectCategory, onSettings, onAddCategory, onManage, customCats = [], onDeleteCategory }) {
@@ -283,7 +290,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
             <button className="hs__mascot-btn" onClick={onSettings} title="Settings">
               <AvatarIcon idx={avatarIdx} size={36} />
             </button>
-            <span className="hs__mascot-lbl">Knowse</span>
+            <span className="hs__mascot-lbl">Home</span>
           </div>
 
           {allCatBtns.map(cat => {
@@ -292,6 +299,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
               <button
                 key={cat.id}
                 className={`hs__cat-btn${activeCatId === cat.id ? ' hs__cat-btn--on' : ''}`}
+                style={{ background: cat.color ?? DEFAULT_CAT_COLOR }}
                 onClick={() => setActiveCatId(cat.id)}
                 onContextMenu={isCustom ? (e) => { e.preventDefault(); setDeleteCatConfirm(cat.id) } : undefined}
                 title={cat.label}
@@ -598,9 +606,9 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
 
         {/* Right sidebar – actions */}
         <aside className={`hs__side hs__side--r${isAnyActive ? ' hs__side--r-test' : ''}`}>
-          {ACTION_BTNS.map(({ id, label, Icon }) => (
+          {ACTION_BTNS.map(({ id, label, Icon, color }) => (
             isAnyActive ? (
-              <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label}>
+              <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
                 <Icon />
                 <span className="hs__action-lbl">{label}</span>
               </button>
@@ -609,6 +617,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 key={id}
                 className="hs__action-btn"
                 title={label}
+                style={{ background: color }}
                 onClick={() => {
                   if (id === 'learn')  openLearn()
                   if (id === 'test')   openTest()

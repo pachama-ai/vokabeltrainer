@@ -52,12 +52,12 @@
 }
 
 .st__nav-btn--on {
-  background: rgba(130, 100, 210, 0.48) !important;
-  color: rgba(230, 210, 255, 0.96) !important;
+  box-shadow: inset 3px 3px 8px rgba(0,0,0,0.22), inset -2px -2px 5px rgba(255,255,255,0.18) !important;
+  filter: brightness(0.88) !important;
 }
 .st__nav-btn--on:hover {
-  background: rgba(130, 100, 210, 0.60) !important;
-  transform: scale(1.06);
+  transform: scale(1.02);
+  filter: brightness(0.90) !important;
 }
 
 /* Logout button – purple pill */
