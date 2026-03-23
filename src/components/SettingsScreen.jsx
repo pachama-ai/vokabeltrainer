@@ -696,10 +696,10 @@ export default function SettingsScreen({ onBack, onLogout }) {
         {/* Left sidebar */}
         <aside className="hs__side">
           <div className="hs__mascot-wrap">
-            <button className="hs__mascot-btn" onClick={onBack} title="Back">
+            <button className="hs__mascot-btn" onClick={onBack} title="Home">
               <AvatarIcon idx={avatarIdx} size={36} />
             </button>
-            <span className="hs__mascot-lbl">Settings</span>
+            <span className="hs__mascot-lbl">Home</span>
           </div>
 
           {/* Settings (active) */}

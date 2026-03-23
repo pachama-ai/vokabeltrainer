@@ -290,7 +290,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
             <button className="hs__mascot-btn" onClick={onSettings} title="Settings">
               <AvatarIcon idx={avatarIdx} size={36} />
             </button>
-            <span className="hs__mascot-lbl">Home</span>
+            <span className="hs__mascot-lbl">Settings</span>
           </div>
 
           {allCatBtns.map(cat => {

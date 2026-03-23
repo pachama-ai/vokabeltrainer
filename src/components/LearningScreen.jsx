@@ -207,7 +207,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
       {/* Left sidebar */}
       <aside className="hs__side hs__side--locked">
         <div className="hs__mascot-wrap">
-          <button className="hs__mascot-btn" title="Settings" onClick={onSettings}>
+          <button className="hs__mascot-btn" title="Home" onClick={onBack}>
             <AvatarIcon idx={avatarIdx} size={36} />
           </button>
           <span className="hs__mascot-lbl">Home</span>
