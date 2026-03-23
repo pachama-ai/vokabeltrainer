@@ -2,20 +2,20 @@
 
 /* Root */
 .hs {
---sidebar-bg: rgba(185, 202, 220, 0.30);
---cat-btn-bg: rgba(190, 210, 232, 0.28);
---bar-track:  rgba(180, 205, 228, 0.28);
---text:       rgba(242, 246, 250, 0.96);
---text-soft:  rgba(210, 222, 232, 0.72);
---neuro-raised: 5px 5px 12px rgba(0,0,0,0.22);
---neuro-inset:  inset 3px 3px 8px rgba(0,0,0,0.28);
+--sidebar-bg: rgba(214, 209, 199, 0.82);
+--cat-btn-bg: rgba(200, 194, 181, 0.90);
+--bar-track:  rgba(165, 155, 140, 0.28);
+--text:       rgba(42, 36, 28, 0.90);
+--text-soft:  rgba(100, 90, 75, 0.72);
+--neuro-raised: 5px 5px 12px rgba(0,0,0,0.18);
+--neuro-inset:  inset 3px 3px 8px rgba(0,0,0,0.22);
 
 position: fixed;
 inset: 0;
 overflow: hidden;
 display: flex;
 flex-direction: column;
-background: linear-gradient(160deg, #7d97aa 0%, #6b8698 55%, #627e90 100%);
+background: #e8e4dc;
 font-family: 'Montserrat', 'Segoe UI', sans-serif;
 color: var(--text);
 user-select: none;
@@ -240,6 +240,22 @@ min-width: 0;
 display: flex;
 flex-direction: column;
 justify-content: center;
+background: linear-gradient(160deg, #7d97aa 0%, #6b8698 55%, #627e90 100%);
+border-radius: 26px;
+padding: 16px 20px;
+--text:      rgba(242, 246, 250, 0.96);
+--text-soft: rgba(210, 222, 232, 0.72);
+--bar-track: rgba(180, 200, 220, 0.28);
+color: var(--text);
+}
+
+/* Cream inner cards need dark text since they sit on the gradient */
+.hs__test-card,
+.hs__result-card,
+.hs__panel {
+  --text:      rgba(42, 36, 28, 0.90);
+  --text-soft: rgba(100, 90, 75, 0.72);
+  color: var(--text);
 }
 
 /* Overview rows */

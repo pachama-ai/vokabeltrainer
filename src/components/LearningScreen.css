@@ -27,6 +27,15 @@
   z-index: 0;
 }
 
+/* In learn screen the whole .ls is already the gradient – no inner box needed */
+.ls .hs__main {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  --text:      rgba(242, 246, 250, 0.96);
+  --text-soft: rgba(235, 242, 248, 0.70);
+}
+
 /* Header */
 .ls__header {
   position: relative;
