@@ -366,7 +366,10 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                     <button
                       key={lvl}
                       className={`hs__level-circle${learnLevels.includes(lvl) ? ' hs__level-circle--on' : ''}`}
-                      style={learnLevels.includes(lvl) ? { background: LEARN_LEVEL_COLORS[lvl], borderColor: LEARN_LEVEL_COLORS[lvl] } : {}}
+                      style={learnLevels.includes(lvl)
+                        ? { background: LEARN_LEVEL_COLORS[lvl], borderColor: LEARN_LEVEL_COLORS[lvl], color: '#fff' }
+                        : { background: LEARN_LEVEL_COLORS[lvl] + '44', borderColor: LEARN_LEVEL_COLORS[lvl] + '88', color: LEARN_LEVEL_COLORS[lvl] }
+                      }
                       onClick={() => toggleLearnLevel(lvl)}
                     >{lvl}</button>
                   ))}
