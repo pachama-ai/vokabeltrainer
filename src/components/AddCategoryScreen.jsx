@@ -153,7 +153,7 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, customC
       <div className="hs__body">
 
         {/* Left sidebar — identical to CategoryScreen */}
-        <aside className="hs__side">
+        <aside className="hs__side hs__side--locked">
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onBack} title="Home">
               <AvatarIcon idx={avatarIdx} size={36} />
@@ -235,7 +235,7 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, customC
         {/* Right sidebar */}
         <aside className="hs__side hs__side--r">
           {ACTION_BTNS.map(({ id, label, Icon, color }) => (
-            <button key={id} className="hs__action-btn" style={{ background: color }} disabled>
+            <button key={id} className="hs__action-btn hs__action-btn--dim" style={{ background: color }} disabled>
               <Icon />
               <span className="hs__action-lbl">{label}</span>
             </button>
