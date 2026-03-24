@@ -240,22 +240,13 @@ min-width: 0;
 display: flex;
 flex-direction: column;
 justify-content: center;
-background: linear-gradient(160deg, #7d97aa 0%, #6b8698 55%, #627e90 100%);
+background: rgba(255, 255, 255, 0.50);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
 border-radius: 26px;
 padding: 16px 20px;
---text:      rgba(242, 246, 250, 0.96);
---text-soft: rgba(210, 222, 232, 0.72);
---bar-track: rgba(180, 200, 220, 0.28);
-color: var(--text);
-}
-
-/* Cream inner cards need dark text since they sit on the gradient */
-.hs__test-card,
-.hs__result-card,
-.hs__panel {
-  --text:      rgba(42, 36, 28, 0.90);
-  --text-soft: rgba(100, 90, 75, 0.72);
-  color: var(--text);
+box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+border: 1px solid rgba(255, 255, 255, 0.65);
 }
 
 /* Overview rows */

@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 .ls {
-  --sidebar-bg: rgba(185, 202, 220, 0.30);
-  --text:       rgba(242, 246, 250, 0.96);
-  --text-soft:  rgba(235, 242, 248, 0.70);
+  --sidebar-bg: rgba(214, 209, 199, 0.82);
+  --text:       rgba(42, 36, 28, 0.90);
+  --text-soft:  rgba(100, 90, 75, 0.72);
 
   position: fixed;
   inset: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(160deg, #7d97aa 0%, #6b8698 55%, #627e90 100%);
+  background: #e8e4dc;
   font-family: 'Montserrat', 'Segoe UI', sans-serif;
   color: var(--text);
   user-select: none;
@@ -21,19 +21,21 @@
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.07;
+  opacity: 0.18;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 180px 180px;
   z-index: 0;
 }
 
-/* In learn screen the whole .ls is already the gradient – no inner box needed */
+/* In learn screen the word card is the center box – reset hs__main glass styles */
 .ls .hs__main {
   background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border-radius: 0;
+  border: none;
+  box-shadow: none;
   padding: 0;
-  --text:      rgba(242, 246, 250, 0.96);
-  --text-soft: rgba(235, 242, 248, 0.70);
 }
 
 /* Header */
@@ -88,8 +90,8 @@
   font-size: 0.82rem;
   font-weight: 700;
 }
-.ls__pill--ok  { background: rgba(100, 200, 140, 0.35); color: rgba(160, 240, 180, 0.95); }
-.ls__pill--err { background: rgba(220, 100, 90, 0.30);  color: rgba(255, 170, 160, 0.95); }
+.ls__pill--ok  { background: rgba(100, 200, 140, 0.25); color: rgba(40, 130, 80, 0.90); }
+.ls__pill--err { background: rgba(220, 100, 90, 0.20);  color: rgba(180, 60, 50, 0.90); }
 
 /* Progress bar */
 .ls__progress-bar {
@@ -138,8 +140,8 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(142, 154, 196, 0.22);
-  color: rgba(50, 70, 88, 0.50);
+  background: rgba(200, 194, 181, 0.60);
+  color: rgba(60, 50, 40, 0.45);
   display: grid;
   place-items: center;
 }
@@ -148,7 +150,7 @@
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background: rgba(215, 228, 240, 0.52);
+  background: rgba(220, 215, 205, 0.80);
   display: grid;
   place-items: center;
   margin-bottom: 6px;
@@ -202,7 +204,11 @@
 .ls__card {
   flex: 1;
   min-width: 0;
-  background: rgba(190, 208, 224, 0.34);
+  background: rgba(255, 255, 255, 0.50);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 2px 18px rgba(0,0,0,0.07);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -230,14 +236,14 @@
 .ls__word {
   font-size: 3.2rem;
   font-weight: 700;
-  color: rgba(230, 242, 252, 0.60);
+  color: rgba(42, 36, 28, 0.28);
   text-align: center;
   line-height: 1.1;
 }
 
 .ls__card-divider {
   height: 1px;
-  background: rgba(190, 210, 228, 0.35);
+  background: rgba(100, 90, 75, 0.15);
   margin: 0 24px;
 }
 
@@ -260,9 +266,9 @@
   font-weight: 600;
   color: var(--text);
   text-align: center;
-  caret-color: rgba(200, 230, 255, 0.8);
+  caret-color: rgba(42, 36, 28, 0.50);
 }
-.ls__input::placeholder { color: rgba(200, 218, 234, 0.30); font-size: 1.4rem; }
+.ls__input::placeholder { color: rgba(100, 90, 75, 0.35); font-size: 1.4rem; }
 
 .ls__submit-btn {
   position: absolute;
@@ -297,8 +303,8 @@
   font-weight: 700;
 }
 
-.ls__feedback-ok  { color: rgba(120, 220, 160, 0.95); }
-.ls__feedback-err { color: rgba(240, 140, 120, 0.95); font-size: 1.3rem; }
+.ls__feedback-ok  { color: rgba(40, 150, 80, 0.95); }
+.ls__feedback-err { color: rgba(190, 55, 45, 0.95); font-size: 1.3rem; }
 
 .ls__next-btn {
   width: 52px;
@@ -306,7 +312,7 @@
   flex-shrink: 0;
   border-radius: 50%;
   border: none;
-  background: rgba(142, 154, 196, 0.38);
+  background: rgba(200, 194, 181, 0.70);
   color: var(--text);
   font-size: 1.4rem;
   cursor: pointer;
@@ -314,7 +320,7 @@
   place-items: center;
   transition: background 0.15s, transform 0.1s;
 }
-.ls__next-btn:hover { background: rgba(160, 172, 214, 0.58); transform: scale(1.06); }
+.ls__next-btn:hover { background: rgba(180, 172, 160, 0.85); transform: scale(1.06); }
 
 /* Dimmed back button */
 .ls__back-btn--dim {
@@ -335,8 +341,8 @@
   height: 52px;
   border-radius: 50%;
   border: none;
-  background: rgba(220, 100, 90, 0.45);
-  color: rgba(255, 220, 210, 0.95);
+  background: rgba(220, 100, 90, 0.55);
+  color: rgba(255, 255, 255, 0.95);
   font-size: 1.1rem;
   cursor: pointer;
   display: grid;
@@ -357,13 +363,13 @@
 }
 
 .ls__modal {
-  background: linear-gradient(160deg, #7d97aa, #627e90);
+  background: rgba(255, 252, 248, 0.97);
   border-radius: 20px;
   padding: 32px 28px;
   max-width: 300px;
   width: 90%;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
   font-family: 'Montserrat', 'Segoe UI', sans-serif;
 }
 
@@ -390,7 +396,7 @@
   padding: 10px 24px;
   border-radius: 12px;
   border: none;
-  background: rgba(142, 154, 196, 0.38);
+  background: rgba(200, 194, 181, 0.60);
   color: var(--text);
   font-family: inherit;
   font-size: 0.9rem;
@@ -398,14 +404,14 @@
   cursor: pointer;
   transition: background 0.15s;
 }
-.ls__modal-btn--cancel:hover { background: rgba(160, 172, 214, 0.55); }
+.ls__modal-btn--cancel:hover { background: rgba(180, 172, 160, 0.80); }
 
 .ls__modal-btn--confirm {
   padding: 10px 24px;
   border-radius: 12px;
   border: none;
-  background: rgba(220, 100, 90, 0.55);
-  color: rgba(255, 220, 210, 0.95);
+  background: rgba(220, 100, 90, 0.72);
+  color: rgba(255, 255, 255, 0.95);
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 600;
