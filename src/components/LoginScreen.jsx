@@ -209,10 +209,10 @@ export default function LoginScreen({ onLoginSuccess }) {
               {password.length > 0 && (
                 <div className="pw-rules">
                   {[
-                    { ok: password.length >= 8,                                            text: 'Mindestens 8 Zeichen' },
-                    { ok: /[a-z]/.test(password) && /[A-Z]/.test(password),               text: 'Klein- und Großbuchstaben' },
-                    { ok: /[0-9!@#$%^&*()_\-+=\[\]{};:'"\\|,.<>\/?]/.test(password),     text: 'Mindestens 1 Zahl oder Symbol' },
-                    { ok: !/\s/.test(password),                                            text: 'Keine Leerzeichen' },
+                    { ok: password.length >= 8,                                            text: 'At least 8 characters' },
+                    { ok: /[a-z]/.test(password) && /[A-Z]/.test(password),               text: 'Upper & lowercase letters' },
+                    { ok: /[0-9!@#$%^&*()_\\-+=\\[\\]{};:'\"\\\\|,.<>\\/?]/.test(password),     text: 'At least 1 number or symbol' },
+                    { ok: !/\\s/.test(password),                                            text: 'No spaces' },
                   ].map(({ ok, text }) => (
                     <div key={text} className={`pw-rule${ok ? ' pw-rule--ok' : ''}`}>
                       <span className="pw-rule-dot" aria-hidden="true">{ok ? '✓' : '·'}</span>
