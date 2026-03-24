@@ -1,5 +1,6 @@
 ﻿import { useState } from 'react'
 import { login, register, requestPasswordReset } from '../api/vocabApi'
+import { AvatarIcon, getAvatarIdx } from './avatars'
 import './LoginScreen.css'
 
 export default function LoginScreen({ onLoginSuccess }) {
@@ -15,6 +16,7 @@ export default function LoginScreen({ onLoginSuccess }) {
   const [loading, setLoading] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirm, setShowConfirm] = useState(false)
+  const [avatarIdx] = useState(getAvatarIdx)
 
   function switchMode(newMode) {
     setMode(newMode)
@@ -133,7 +135,7 @@ export default function LoginScreen({ onLoginSuccess }) {
     <div className="login-page">
       <div className="login-card">
         <div className="mascot-frame" aria-hidden="true">
-          <div className="mascot-placeholder" />
+          <AvatarIcon idx={avatarIdx} size={62} />
         </div>
 
         {/* ── LOGIN ── */}
