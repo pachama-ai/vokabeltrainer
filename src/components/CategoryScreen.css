@@ -244,6 +244,8 @@ box-shadow: var(--neuro-raised);
 .hs__main {
 flex: 1;
 min-width: 0;
+max-width: 580px;
+margin: 0 auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
