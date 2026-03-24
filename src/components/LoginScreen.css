@@ -246,7 +246,41 @@ font-size: clamp(0.88rem, 1.8vw, 1.1rem);
 height: 52px;
 margin-top: 14px;
 }
+/* ── Password rules hint ─────── */
+.pw-rules {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 8px 14px 10px;
+	margin-bottom: 4px;
+	background: rgba(255, 255, 255, 0.30);
+	border-left: 2.5px solid rgba(42, 36, 28, 0.14);
+}
 
+.pw-rule {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 0.78rem;
+	color: var(--text-muted);
+	transition: color 0.22s ease;
+}
+
+.pw-rule--ok {
+	color: rgba(60, 140, 80, 0.80);
+}
+
+.pw-rule-dot {
+	width: 16px;
+	text-align: center;
+	font-size: 0.82rem;
+	line-height: 1;
+	transition: color 0.22s ease;
+}
+
+.pw-rule--ok .pw-rule-dot {
+	color: rgba(60, 140, 80, 0.90);
+}
 .register-switch {
 border: 0;
 background: transparent;

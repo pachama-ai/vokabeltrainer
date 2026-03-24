@@ -206,6 +206,22 @@ export default function LoginScreen({ onLoginSuccess }) {
                 </button>
               </label>
 
+              {password.length > 0 && (
+                <div className="pw-rules">
+                  {[
+                    { ok: password.length >= 8,                                            text: 'Mindestens 8 Zeichen' },
+                    { ok: /[a-z]/.test(password) && /[A-Z]/.test(password),               text: 'Klein- und Großbuchstaben' },
+                    { ok: /[0-9!@#$%^&*()_\-+=\[\]{};:'"\\|,.<>\/?]/.test(password),     text: 'Mindestens 1 Zahl oder Symbol' },
+                    { ok: !/\s/.test(password),                                            text: 'Keine Leerzeichen' },
+                  ].map(({ ok, text }) => (
+                    <div key={text} className={`pw-rule${ok ? ' pw-rule--ok' : ''}`}>
+                      <span className="pw-rule-dot" aria-hidden="true">{ok ? '✓' : '·'}</span>
+                      <span>{text}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               <label className="login-field">
                 <span className="field-icon" aria-hidden="true">{IconLock}</span>
                 <input type={showConfirm ? 'text' : 'password'} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}
