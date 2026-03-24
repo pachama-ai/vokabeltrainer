@@ -153,7 +153,7 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelec
       <div className="hs__body">
 
         {/* Left sidebar */}
-        <aside className="hs__side hs__side--locked">
+        <aside className="hs__side">
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onBack} title="Home">
               <AvatarIcon idx={avatarIdx} size={36} />
@@ -161,12 +161,12 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelec
             <span className="hs__mascot-lbl">Home</span>
           </div>
           {allCatBtns.map(cat => (
-            <button key={cat.id} className="hs__cat-btn" disabled title={cat.label}>
+            <button key={cat.id} className="hs__cat-btn hs__cat-btn--dim" disabled title={cat.label}>
               <PlaceholderIcon />
             </button>
           ))}
           <div className="hs__side-spacer" />
-          <button className="hs__cat-btn hs__add-btn" disabled>+</button>
+          <button className="hs__cat-btn hs__add-btn hs__cat-btn--dim" disabled>+</button>
         </aside>
 
         {/* Main */}

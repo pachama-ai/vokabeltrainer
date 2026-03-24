@@ -190,6 +190,13 @@ box-shadow: var(--neuro-raised);
   pointer-events: none;
 }
 
+/* Dimmed cat buttons (e.g. in AddCategory) */
+.hs__cat-btn--dim {
+  opacity: 0.28;
+  cursor: default;
+  pointer-events: none;
+}
+
 /* Action buttons (right sidebar) */
 .hs__action-btn {
   display: flex;
