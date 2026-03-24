@@ -1347,6 +1347,8 @@ letter-spacing: 0.04em;
 .vm__main {
   justify-content: flex-start !important;
   padding-top: 10px;
+  max-width: none;
+  align-self: stretch;
 }
 
 /* ── Top bar: search + filter tabs ── */
