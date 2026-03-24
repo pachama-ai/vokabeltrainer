@@ -152,8 +152,8 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelec
 
       <div className="hs__body">
 
-        {/* Left sidebar — identical to CategoryScreen */}
-        <aside className="hs__side">
+        {/* Left sidebar */}
+        <aside className="hs__side hs__side--locked">
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onBack} title="Home">
               <AvatarIcon idx={avatarIdx} size={36} />
@@ -161,12 +161,12 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelec
             <span className="hs__mascot-lbl">Home</span>
           </div>
           {allCatBtns.map(cat => (
-            <button key={cat.id} className="hs__cat-btn" title={cat.label} onClick={() => onSelectCategory?.(cat.id)}>
+            <button key={cat.id} className="hs__cat-btn" disabled title={cat.label}>
               <PlaceholderIcon />
             </button>
           ))}
           <div className="hs__side-spacer" />
-          <button className="hs__cat-btn ac__add-btn--on" title="Add category">+</button>
+          <button className="hs__cat-btn hs__add-btn" disabled>+</button>
         </aside>
 
         {/* Main */}
@@ -235,8 +235,7 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelec
         {/* Right sidebar */}
         <aside className="hs__side hs__side--r">
           {ACTION_BTNS.map(({ id, label, Icon, color }) => (
-            <button key={id} className="hs__action-btn" style={{ background: color }}
-              onClick={id === 'manage' ? onManage : onBack}>
+            <button key={id} className="hs__action-btn hs__action-btn--dim" style={{ background: color }} disabled title={label}>
               <Icon />
               <span className="hs__action-lbl">{label}</span>
             </button>
