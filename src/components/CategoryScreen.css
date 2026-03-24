@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* Root */
 .hs {
@@ -43,7 +43,7 @@ align-items: center;
 padding: 0 24px 0 14px;
 }
 
-/* Arrow container in header – same width as left sidebar so arrow sits centered above it */
+/* Arrow container in header � same width as left sidebar so arrow sits centered above it */
 .hs__header-left {
   width: 80px;
   flex-shrink: 0;
@@ -105,7 +105,7 @@ flex: 1;
 display: flex;
 align-items: stretch;
 gap: 12px;
-padding: 0 14px 18px;
+padding: 14px 14px 18px;
 min-height: 0;
 }
 
@@ -415,13 +415,13 @@ letter-spacing: 0.04em;
 	opacity: 0.7;
 }
 
-/* ── Locked sidebars during test ── */
+/* -- Locked sidebars during test -- */
 .hs__side--locked {
   opacity: 0.42;
   pointer-events: none;
 }
 
-/* ── Cancel button ── */
+/* -- Cancel button -- */
 .hs__cancel-btn {
   width: 48px;
   height: 48px;
@@ -438,7 +438,7 @@ letter-spacing: 0.04em;
 }
 .hs__cancel-btn:hover { background: rgba(224, 90, 70, 0.90); transform: scale(1.08); }
 
-/* ── Test Setup Card ── */
+/* -- Test Setup Card -- */
 .hs__test-card {
   background: rgba(255, 255, 255, 0.52);
   backdrop-filter: blur(10px);
@@ -569,7 +569,7 @@ letter-spacing: 0.04em;
 .hs__test-confirm-btn:hover { opacity: 0.75; transform: scale(1.06); }
 .hs__test-confirm-btn:disabled { opacity: 0.35; cursor: default; transform: none; }
 
-/* ── Quiz Card (test running) ── */
+/* -- Quiz Card (test running) -- */
 .hs__quiz-wrap {
   display: flex;
   flex-direction: column;
@@ -721,7 +721,7 @@ letter-spacing: 0.04em;
 }
 .hs__quiz-action-btn:hover { color: var(--text); }
 
-/* ── Result Card ── */
+/* -- Result Card -- */
 .hs__result-card {
   background: rgba(255, 255, 255, 0.52);
   backdrop-filter: blur(10px);
@@ -992,7 +992,7 @@ letter-spacing: 0.04em;
 }
 .hs__result-done:hover { background: rgba(190, 210, 228, 0.58); }
 
-/* ── Floating cancel button ── */
+/* -- Floating cancel button -- */
 .hs__cancel-btn {
   width: 54px;
   height: 54px;
@@ -1008,7 +1008,7 @@ letter-spacing: 0.04em;
 }
 .hs__cancel-btn:hover { background: rgba(210, 90, 70, 0.70); color: #fff; transform: scale(1.08); }
 
-/* ── Learn Setup: direction pills ── */
+/* -- Learn Setup: direction pills -- */
 .hs__learn-dir-row {
   display: flex;
   gap: 8px;
@@ -1034,7 +1034,7 @@ letter-spacing: 0.04em;
 }
 .hs__learn-dir-pill:hover { background: rgba(190, 210, 228, 0.18); }
 
-/* ── Learn Setup: total wrap ── */
+/* -- Learn Setup: total wrap -- */
 .hs__learn-total-wrap {
   display: flex;
   align-items: center;
@@ -1053,7 +1053,7 @@ letter-spacing: 0.04em;
 }
 .hs__learn-all-btn:hover { opacity: 1; }
 
-/* ── Learn Setup: level circles ── */
+/* -- Learn Setup: level circles -- */
 .hs__level-circle {
   width: 72px;
   height: 72px;
@@ -1077,7 +1077,7 @@ letter-spacing: 0.04em;
   transform: scale(1.08);
 }
 
-/* ── Cancel confirm overlay ── */
+/* -- Cancel confirm overlay -- */
 .hs__overlay {
   position: fixed;
   inset: 0;
@@ -1146,9 +1146,9 @@ letter-spacing: 0.04em;
 }
 .hs__confirm-yes:hover { background: rgba(210, 90, 70, 0.85); }
 
-/* ═══════════════════════════════════════════════════════════════
+/* ---------------------------------------------------------------
    ADD CATEGORY SCREEN  (ac__ prefix)
-═══════════════════════════════════════════════════════════════ */
+--------------------------------------------------------------- */
 
 /* Highlight the left sidebar + button when on this screen */
 .ac__add-btn--on {
@@ -1287,7 +1287,7 @@ letter-spacing: 0.04em;
 .ac__edit-inp::placeholder { color: var(--text-soft); }
 .ac__edit-inp:focus { border-color: rgba(42, 36, 28, 0.36); }
 
-/* + (add word) button — positioned inside the empty row */
+/* + (add word) button � positioned inside the empty row */
 .ac__plus-btn {
   position: absolute;
   right: 16px;
@@ -1339,9 +1339,9 @@ letter-spacing: 0.04em;
   text-align: center;
 }
 
-/* ════════════════════════════════════════════
+/* --------------------------------------------
    Vocabulary Manager  (vm__)
-════════════════════════════════════════════ */
+-------------------------------------------- */
 
 /* Override hs__main alignment */
 .vm__main {
@@ -1352,7 +1352,7 @@ letter-spacing: 0.04em;
   margin: 0 auto;
 }
 
-/* ── Top bar: search + filter tabs ── */
+/* -- Top bar: search + filter tabs -- */
 .vm__topbar {
   display: flex;
   align-items: center;
@@ -1403,7 +1403,7 @@ letter-spacing: 0.04em;
   margin: 0 0 10px;
 }
 
-/* ── Word card ── */
+/* -- Word card -- */
 .vm__card {
   flex: 1;
   min-height: 0;
@@ -1435,7 +1435,7 @@ letter-spacing: 0.04em;
   color: var(--text-soft);
 }
 
-/* ── Word row ── */
+/* -- Word row -- */
 .vm__row {
   display: grid;
   grid-template-columns: 1fr 1fr auto 34px 34px;
@@ -1478,7 +1478,7 @@ letter-spacing: 0.04em;
   flex-shrink: 0;
 }
 
-/* ── Icon buttons ── */
+/* -- Icon buttons -- */
 .vm__icon-btn {
   width: 34px;
   height: 34px;
@@ -1508,7 +1508,7 @@ letter-spacing: 0.04em;
   color: rgba(220, 110, 100, 0.92);
 }
 
-/* ── Edit row ── */
+/* -- Edit row -- */
 .vm__row--edit {
   grid-template-columns: 1fr 1fr 34px 34px;
 }
@@ -1527,7 +1527,7 @@ letter-spacing: 0.04em;
 }
 .vm__edit-inp::placeholder { color: rgba(100, 90, 75, 0.35); }
 
-/* ── Footer ── */
+/* -- Footer -- */
 .vm__footer {
   flex-shrink: 0;
   display: flex;
@@ -1566,12 +1566,12 @@ letter-spacing: 0.04em;
   color: rgba(30, 185, 175, 1);
 }
 
-/* ── Active manage button (right sidebar) ── */
+/* -- Active manage button (right sidebar) -- */
 .vm__action-active {
   cursor: default;
 }
 
-/* ── Delete confirmation modal ── */
+/* -- Delete confirmation modal -- */
 .vm__modal-overlay {
   position: fixed;
   inset: 0;
