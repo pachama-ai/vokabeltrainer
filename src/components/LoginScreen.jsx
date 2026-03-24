@@ -211,7 +211,7 @@ export default function LoginScreen({ onLoginSuccess }) {
                   {[
                     { ok: password.length >= 8,                                            text: 'At least 8 characters' },
                     { ok: /[a-z]/.test(password) && /[A-Z]/.test(password),               text: 'Upper & lowercase letters' },
-                    { ok: /[0-9!@#$%^&*()_\\-+=\\[\\]{};:'\"\\\\|,.<>\\/?]/.test(password),     text: 'At least 1 number or symbol' },
+                    { ok: /[0-9!@#$%^&*()_\-+=\[\]{};:'"\\|,.<>/?]/.test(password),             text: 'At least 1 number or symbol' },
                     { ok: !/\\s/.test(password),                                            text: 'No spaces' },
                   ].map(({ ok, text }) => (
                     <div key={text} className={`pw-rule${ok ? ' pw-rule--ok' : ''}`}>
