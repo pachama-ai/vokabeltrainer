@@ -80,7 +80,7 @@
 .st__tabs {
   display: flex;
   gap: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
   margin-bottom: 14px;
   flex-shrink: 0;
 }
@@ -88,7 +88,7 @@
 .st__tab {
   background: none;
   border: none;
-  color: rgba(235, 242, 248, 0.55);
+  color: rgba(80, 70, 55, 0.55);
   font-family: 'Montserrat', 'Segoe UI', sans-serif;
   font-size: 0.84rem;
   font-weight: 500;
@@ -100,10 +100,10 @@
   white-space: nowrap;
 }
 .st__tab:hover {
-  color: rgba(242, 246, 250, 0.85);
+  color: rgba(42, 36, 28, 0.82);
 }
 .st__tab--on {
-  color: rgba(242, 246, 250, 0.96);
+  color: rgba(42, 36, 28, 0.92);
   font-weight: 600;
 }
 .st__tab--on::after {
@@ -113,7 +113,7 @@
   left: 12px;
   right: 12px;
   height: 2px;
-  background: rgba(242, 246, 250, 0.85);
+  background: rgba(42, 36, 28, 0.55);
   border-radius: 1px;
 }
 
@@ -140,7 +140,7 @@
 
 /* ── Card ────────────────────────────────────────────────────── */
 .st__card {
-  background: rgba(190, 208, 224, 0.32);
+  background: rgba(255, 255, 255, 0.50);
   border-radius: 22px;
   padding: 16px 22px 18px;
 }
@@ -155,7 +155,7 @@
 .st__card-ttl {
   font-size: 0.82rem;
   font-weight: 600;
-  color: rgba(235, 242, 248, 0.65);
+  color: rgba(80, 70, 55, 0.65);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -171,10 +171,10 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 10px;
-  color: rgba(235, 242, 248, 0.72);
+  color: rgba(80, 70, 55, 0.72);
   font-family: 'Montserrat', 'Segoe UI', sans-serif;
   font-size: 0.82rem;
   font-weight: 500;
@@ -183,9 +183,9 @@
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .st__edit-btn:hover {
-  background: rgba(255, 255, 255, 0.16);
-  color: rgba(242, 246, 250, 0.96);
-  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(0, 0, 0, 0.10);
+  color: rgba(42, 36, 28, 0.88);
+  border-color: rgba(0, 0, 0, 0.20);
 }
 .st__edit-btn:disabled {
   opacity: 0.5;
@@ -194,19 +194,19 @@
 .st__edit-btn--save {
   background: rgba(130, 100, 210, 0.32);
   border-color: rgba(180, 150, 250, 0.35);
-  color: rgba(230, 215, 255, 0.90);
+  color: rgba(255, 255, 255, 0.95);
 }
 .st__edit-btn--save:hover {
   background: rgba(130, 100, 210, 0.50);
 }
 .st__edit-btn--cancel {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.10);
-  color: rgba(235, 242, 248, 0.50);
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: rgba(80, 70, 55, 0.50);
 }
 .st__edit-btn--cancel:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: rgba(235, 242, 248, 0.75);
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(80, 70, 55, 0.75);
 }
 
 /* ── Rows ────────────────────────────────────────────────────── */
@@ -220,7 +220,7 @@
 
 .st__row-lbl {
   font-size: 0.86rem;
-  color: rgba(235, 242, 248, 0.60);
+  color: rgba(80, 70, 55, 0.65);
   font-weight: 400;
   flex-shrink: 0;
   width: 160px;
@@ -228,23 +228,23 @@
 
 .st__row-val {
   font-size: 0.92rem;
-  color: rgba(242, 246, 250, 0.95);
+  color: rgba(42, 36, 28, 0.90);
   font-weight: 600;
   text-align: right;
 }
 
 .st__divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.08);
   margin: 0;
 }
 
 /* ── Input ───────────────────────────────────────────────────── */
 .st__input {
-  background: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  color: rgba(242, 246, 250, 0.95);
+  color: rgba(42, 36, 28, 0.90);
   font-family: 'Montserrat', 'Segoe UI', sans-serif;
   font-size: 0.90rem;
   font-weight: 500;
@@ -257,11 +257,11 @@
   transition: border-color 0.15s, background 0.15s;
 }
 .st__input::placeholder {
-  color: rgba(235, 242, 248, 0.35);
+  color: rgba(80, 70, 55, 0.38);
 }
 .st__input:focus {
-  border-color: rgba(255, 255, 255, 0.40);
-  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(0, 0, 0, 0.30);
+  background: rgba(255, 255, 255, 0.88);
 }
 /* ── Password row with eye icon ────────────────────────── */
 .st__pw-field {
@@ -290,7 +290,7 @@
 .st__eye-btn {
   background: none;
   border: none;
-  color: rgba(235, 242, 248, 0.65);
+  color: rgba(80, 70, 55, 0.65);
   cursor: pointer;
   padding: 4px;
   display: grid;
@@ -300,7 +300,7 @@
   flex-shrink: 0;
 }
 .st__eye-btn:hover {
-  color: rgba(242, 246, 250, 0.95);
+  color: rgba(42, 36, 28, 0.88);
 }
 .st__eye-btn--static {
   opacity: 0.40;
@@ -324,7 +324,7 @@
 .st__pw-reqs-ttl {
   font-size: 0.80rem;
   font-weight: 600;
-  color: rgba(235, 242, 248, 0.60);
+  color: rgba(80, 70, 55, 0.65);
   margin-bottom: 6px;
   letter-spacing: 0.01em;
 }
@@ -339,7 +339,7 @@
 
 .st__pw-reqs-list li {
   font-size: 0.76rem;
-  color: rgba(235, 242, 248, 0.50);
+  color: rgba(80, 70, 55, 0.58);
   font-weight: 400;
 }
 /* ── Save password button ────────────────────────────────────── */
@@ -351,7 +351,7 @@
   background: rgba(130, 100, 210, 0.42);
   border: 1px solid rgba(180, 150, 250, 0.30);
   border-radius: 14px;
-  color: rgba(230, 215, 255, 0.95);
+  color: rgba(255, 255, 255, 0.95);
   font-family: 'Montserrat', 'Segoe UI', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
@@ -376,20 +376,20 @@
   border-radius: 10px;
 }
 .st__msg--ok {
-  background: rgba(120, 200, 140, 0.18);
-  color: rgba(160, 230, 170, 0.95);
-  border: 1px solid rgba(120, 200, 140, 0.30);
+  background: rgba(40, 150, 80, 0.12);
+  color: rgba(28, 120, 60, 0.90);
+  border: 1px solid rgba(40, 150, 80, 0.30);
 }
 .st__msg--err {
-  background: rgba(220, 100, 90, 0.18);
-  color: rgba(255, 160, 150, 0.95);
+  background: rgba(220, 100, 90, 0.12);
+  color: rgba(170, 50, 40, 0.90);
   border: 1px solid rgba(220, 100, 90, 0.30);
 }
 
 /* ── Placeholder tabs ────────────────────────────────────────── */
 .st__placeholder-msg {
   font-size: 0.86rem;
-  color: rgba(235, 242, 248, 0.45);
+  color: rgba(80, 70, 55, 0.50);
   padding: 18px 0 8px;
 }
 
@@ -407,9 +407,9 @@
   width: 112px;
   height: 112px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.12);
-  background: rgba(55, 70, 100, 0.28);
-  color: rgba(195, 212, 232, 0.75);
+  border: 2px solid rgba(0, 0, 0, 0.10);
+  background: rgba(0, 0, 0, 0.07);
+  color: rgba(80, 70, 55, 0.65);
   display: grid;
   place-items: center;
   cursor: default;
@@ -428,8 +428,8 @@
   cursor: pointer;
 }
 .st__av-grid--edit .st__av-item:not(.st__av-item--on):hover {
-  background: rgba(200, 215, 235, 0.14);
-  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.10);
+  border-color: rgba(0, 0, 0, 0.18);
   transform: scale(1.06);
 }
 .st__av-grid--edit .st__av-item--on {
@@ -469,7 +469,7 @@
 .st__session-name {
   font-size: 0.90rem;
   font-weight: 600;
-  color: rgba(242, 246, 250, 0.95);
+  color: rgba(42, 36, 28, 0.90);
   flex: 1;
   min-width: 0;
   white-space: nowrap;
@@ -479,7 +479,7 @@
 
 .st__session-time {
   font-size: 0.78rem;
-  color: rgba(235, 242, 248, 0.48);
+  color: rgba(80, 70, 55, 0.55);
   flex-shrink: 0;
   white-space: nowrap;
 }
@@ -489,9 +489,9 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.07);
-  color: rgba(235, 242, 248, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(80, 70, 55, 0.65);
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -500,9 +500,9 @@
   padding: 0;
 }
 .st__sec-action:hover {
-  background: rgba(255, 255, 255, 0.16);
-  color: rgba(242, 246, 250, 0.96);
-  border-color: rgba(255, 255, 255, 0.26);
+  background: rgba(0, 0, 0, 0.10);
+  color: rgba(42, 36, 28, 0.88);
+  border-color: rgba(0, 0, 0, 0.20);
 }
 
 .st__sec-action--ok {
@@ -529,13 +529,13 @@
 .st__sec-delete-lbl {
   font-size: 0.88rem;
   font-weight: 600;
-  color: rgba(242, 246, 250, 0.90);
+  color: rgba(42, 36, 28, 0.88);
   margin-bottom: 3px;
 }
 .st__sec-delete-sub {
   font-size: 0.78rem;
   font-style: italic;
-  color: rgba(235, 242, 248, 0.46);
+  color: rgba(80, 70, 55, 0.55);
 }
 
 /* Static "Save" badge in Security card header */
@@ -546,21 +546,21 @@
   font-family: 'Montserrat', 'Segoe UI', sans-serif;
   font-size: 0.82rem;
   font-weight: 500;
-  color: rgba(235, 242, 248, 0.55);
+  color: rgba(80, 70, 55, 0.60);
   pointer-events: none;
   user-select: none;
 }
 
 /* Danger variant for edit-style buttons */
 .st__edit-btn--danger {
-  background: rgba(180, 50, 50, 0.22);
+  background: rgba(180, 50, 50, 0.12);
   border-color: rgba(220, 100, 90, 0.38);
-  color: rgba(255, 160, 150, 0.92);
+  color: rgba(155, 45, 35, 0.90);
 }
 .st__edit-btn--danger:hover {
-  background: rgba(200, 60, 60, 0.38);
+  background: rgba(200, 60, 60, 0.20);
   border-color: rgba(220, 100, 90, 0.60);
-  color: rgba(255, 175, 165, 1);
+  color: rgba(140, 35, 25, 1);
 }
 
 /* Confirmation box below the card */
@@ -569,14 +569,14 @@
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  background: rgba(190, 208, 224, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.40);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 14px;
   padding: 12px 18px;
 }
 .st__confirm-box p {
   font-size: 0.84rem;
-  color: rgba(235, 242, 248, 0.72);
+  color: rgba(80, 70, 55, 0.72);
   margin: 0;
 }
 .st__confirm-actions {
@@ -589,7 +589,7 @@
 .st__card--text {
   font-size: 0.72rem;
   line-height: 1.45;
-  color: rgba(242, 246, 250, 0.88);
+  color: rgba(42, 36, 28, 0.82);
   overflow-y: auto;
   overflow-x: hidden;
   flex: 1;
@@ -611,7 +611,7 @@
 }
 
 .st__card--text strong {
-  color: rgba(242, 246, 250, 0.96);
+  color: rgba(42, 36, 28, 0.92);
   font-weight: 600;
 }
 
@@ -634,11 +634,11 @@
 .st__imprint-dl dt {
   font-size: 0.70rem;
   font-weight: 600;
-  color: rgba(242, 246, 250, 0.65);
+  color: rgba(80, 70, 55, 0.65);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding: 5px 14px 5px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
   display: flex;
   align-items: flex-start;
   line-height: 1.35;
@@ -646,11 +646,11 @@
 
 .st__imprint-dl dd {
   font-size: 0.76rem;
-  color: rgba(242, 246, 250, 0.90);
+  color: rgba(42, 36, 28, 0.88);
   line-height: 1.45;
   margin: 0;
   padding: 5px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
 .st__imprint-dl dt:last-of-type,
@@ -659,12 +659,12 @@
 }
 
 .st__link {
-  color: rgba(170, 200, 255, 0.85);
+  color: rgba(50, 90, 200, 0.85);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 .st__link:hover {
-  color: rgba(190, 215, 255, 1);
+  color: rgba(30, 70, 180, 1);
 }
 
 /* ── Sidebar-only page heading (replaces tab bar) ─────────────────────── */
@@ -672,9 +672,9 @@
   font-family: 'Montserrat', 'Segoe UI', sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
-  color: rgba(242, 246, 250, 0.92);
+  color: rgba(42, 36, 28, 0.90);
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
   margin-bottom: 14px;
   flex-shrink: 0;
   letter-spacing: 0.01em;
