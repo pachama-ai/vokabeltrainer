@@ -223,7 +223,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
     setLearnNewCountStr('10')
     setLearnTotalStr('')
     setLearnDir('both')
-    setLearnLevels([])
+    setLearnLevels([1, 2, 3, 4, 5])
   }
 
   function cycleLearnDir() {
