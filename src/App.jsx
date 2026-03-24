@@ -220,6 +220,8 @@ export default function App() {
       <AddCategoryScreen
         onBack={() => setScreen('categories')}
         onSettings={handleSettings}
+        onSelectCategory={handleSelectCategory}
+        onManage={() => { setManageInitialCat('all'); setScreen('manage') }}
         customCats={customCats}
         onSaved={async (categoryName) => {
           setScreen('categories')

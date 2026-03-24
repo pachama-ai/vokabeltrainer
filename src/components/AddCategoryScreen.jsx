@@ -65,7 +65,7 @@ const TOTAL_ROWS = 8
 let _id = 1
 function genId() { return `w${_id++}` }
 
-export default function AddCategoryScreen({ onBack, onSaved, onSettings, customCats = [] }) {
+export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelectCategory, onManage, customCats = [] }) {
   const [avatarIdx]  = useState(getAvatarIdx)
   const [setName, setSetNameState] = useState('')
   const [words, setWords]          = useState([])
@@ -153,7 +153,7 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, customC
       <div className="hs__body">
 
         {/* Left sidebar — identical to CategoryScreen */}
-        <aside className="hs__side hs__side--locked">
+        <aside className="hs__side">
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onBack} title="Home">
               <AvatarIcon idx={avatarIdx} size={36} />
@@ -161,7 +161,7 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, customC
             <span className="hs__mascot-lbl">Home</span>
           </div>
           {allCatBtns.map(cat => (
-            <button key={cat.id} className="hs__cat-btn" style={{ cursor: 'default' }} disabled title={cat.label}>
+            <button key={cat.id} className="hs__cat-btn" title={cat.label} onClick={() => onSelectCategory?.(cat.id)}>
               <PlaceholderIcon />
             </button>
           ))}
@@ -235,7 +235,8 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, customC
         {/* Right sidebar */}
         <aside className="hs__side hs__side--r">
           {ACTION_BTNS.map(({ id, label, Icon, color }) => (
-            <button key={id} className="hs__action-btn hs__action-btn--dim" style={{ background: color }} disabled>
+            <button key={id} className="hs__action-btn" style={{ background: color }}
+              onClick={id === 'manage' ? onManage : onBack}>
               <Icon />
               <span className="hs__action-lbl">{label}</span>
             </button>
