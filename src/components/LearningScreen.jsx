@@ -80,7 +80,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
   const [avatarIdx] = useState(getAvatarIdx)
 
   // Which levels to include (learnSettings?.levels, or default 1-4)
-  const activeLevels = learnSettings?.levels ?? [1, 2, 3, 4]
+  const activeLevels = learnSettings?.levels ?? [1, 2, 3, 4, 5]
   // Filter by selected levels, then limit by total if set
   const filteredInitial = initialWords.filter((w) => activeLevels.includes(w.level))
   const sessionLimit = learnSettings?.total ?? null

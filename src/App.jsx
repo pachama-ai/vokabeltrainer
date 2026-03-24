@@ -119,7 +119,7 @@ export default function App() {
       setCounts(stats.counts)
       setAvailable(stats.counts[0])
 
-      const active = stats.counts[1] + stats.counts[2] + stats.counts[3] + stats.counts[4]
+      const active = stats.counts[1] + stats.counts[2] + stats.counts[3] + stats.counts[4] + stats.counts[5]
       setScreen(active === 0 ? 'add-words' : 'learning')
     } catch (err) {
       if (err?.status === 401) { handleLogout(); return }
