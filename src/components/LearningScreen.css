@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 .ls {
-  --sidebar-bg: rgba(214, 209, 199, 0.82);
+  --sidebar-bg: rgba(255, 255, 255, 0.48);
   --text:       rgba(42, 36, 28, 0.90);
   --text-soft:  rgba(100, 90, 75, 0.72);
 
@@ -120,7 +120,7 @@
 
 /* Sidebars */
 .ls__side {
-  width: 96px;
+  width: 80px;
   flex-shrink: 0;
   background: var(--sidebar-bg);
   border-radius: 26px;

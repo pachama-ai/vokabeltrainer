@@ -2,7 +2,7 @@
 
 /* Root */
 .hs {
---sidebar-bg: rgba(214, 209, 199, 0.82);
+--sidebar-bg: rgba(255, 255, 255, 0.48);
 --cat-btn-bg: rgba(200, 194, 181, 0.90);
 --bar-track:  rgba(165, 155, 140, 0.28);
 --text:       rgba(42, 36, 28, 0.90);
@@ -45,7 +45,7 @@ padding: 0 24px 0 14px;
 
 /* Arrow container in header – same width as left sidebar so arrow sits centered above it */
 .hs__header-left {
-  width: 96px;
+  width: 80px;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -111,7 +111,7 @@ min-height: 0;
 
 /* Sidebars */
 .hs__side {
-width: 96px;
+width: 80px;
 flex-shrink: 0;
 background: var(--sidebar-bg);
 border-radius: 26px;
