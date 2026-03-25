@@ -594,10 +594,7 @@
   line-height: 1.45;
   color: rgba(42, 36, 28, 0.82);
   overflow: hidden;
-  padding: 22px 16px 12px;
-}
-
-.st__card--text p {
+  padding: 36px 16px 12px;
   margin: 0 0 5px;
 }
 
@@ -627,7 +624,7 @@
 /* ── Imprint card (scrollable within fixed panel) ───────────────── */
 .st__card--imprint {
   overflow: hidden;
-  padding: 22px 16px 12px;
+  padding: 36px 16px 12px;
 }
 
 .st__imprint-dl {
