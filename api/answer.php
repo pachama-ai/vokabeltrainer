@@ -32,6 +32,13 @@ function streakNeeded(int $level): int {
 try {
     $db = getDB();
 
+    // Ensure wrong_count + total_reviews columns exist (migration guard)
+    try {
+        $db->exec('ALTER TABLE user_progress
+            ADD COLUMN IF NOT EXISTS wrong_count   INT UNSIGNED NOT NULL DEFAULT 0,
+            ADD COLUMN IF NOT EXISTS total_reviews INT UNSIGNED NOT NULL DEFAULT 0');
+    } catch (PDOException $ignored) {}
+
     // Prüfen ob Wort existiert
     $stmt = $db->prepare('SELECT id FROM vocabulary WHERE id = ?');
     $stmt->execute([$wordId]);

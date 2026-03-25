@@ -60,6 +60,8 @@ CREATE TABLE IF NOT EXISTS user_progress (
   word_id        INT UNSIGNED NOT NULL,
   level          TINYINT UNSIGNED NOT NULL DEFAULT 0,  -- 0–5
   correct_streak TINYINT UNSIGNED NOT NULL DEFAULT 0,
+  wrong_count    INT UNSIGNED     NOT NULL DEFAULT 0,   -- Falschantworten gesamt
+  total_reviews  INT UNSIGNED     NOT NULL DEFAULT 0,   -- Antworten gesamt
   last_reviewed  DATETIME DEFAULT NULL,
   last_level5_at DATETIME DEFAULT NULL,               -- Für Verfall-Logik
 
