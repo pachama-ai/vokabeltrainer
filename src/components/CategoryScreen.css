@@ -113,14 +113,17 @@ min-height: 0;
 .hs__side {
 width: 80px;
 flex-shrink: 0;
-background: var(--sidebar-bg);
+background: rgba(240, 237, 230, 0.82);
+backdrop-filter: blur(14px);
+-webkit-backdrop-filter: blur(14px);
 border-radius: 26px;
 display: flex;
 flex-direction: column;
 align-items: center;
 padding: 18px 0 14px;
 gap: 12px;
-box-shadow: 6px 6px 14px rgba(0,0,0,0.14);
+border: 1px solid rgba(255,255,255,0.68);
+box-shadow: 4px 4px 18px rgba(0,0,0,0.16), inset 0 1px 0 rgba(255,255,255,0.75);
 }
 
 .hs__mascot-wrap {
@@ -158,17 +161,25 @@ width: 54px;
 height: 54px;
 flex-shrink: 0;
 border-radius: 50%;
-border: 0;
+border: 1px solid rgba(255,255,255,0.35);
 background: var(--cat-btn-bg);
 color: rgba(255, 255, 255, 0.92);
 display: grid;
 place-items: center;
 cursor: pointer;
 transition: box-shadow 0.15s, transform 0.12s, filter 0.15s;
-box-shadow: var(--neuro-raised);
+box-shadow:
+  inset 3px 4px 9px rgba(0,0,0,0.32),
+  inset -1px -2px 5px rgba(255,255,255,0.22),
+  0 2px 4px rgba(0,0,0,0.12);
 }
-.hs__cat-btn:hover  { transform: scale(1.08); filter: brightness(1.10); }
-.hs__cat-btn--on    { box-shadow: var(--neuro-inset); filter: brightness(0.90); }
+.hs__cat-btn:hover  { transform: scale(1.06); filter: brightness(1.10); }
+.hs__cat-btn--on    {
+  box-shadow:
+    inset 5px 6px 13px rgba(0,0,0,0.42),
+    inset -2px -3px 6px rgba(255,255,255,0.15);
+  filter: brightness(0.88);
+}
 .hs__cat-btn--ph    {
   background: rgba(195, 188, 175, 0.65);
   cursor: default;
@@ -206,12 +217,15 @@ box-shadow: var(--neuro-raised);
   width: 48px;
   padding: 7px 4px 5px;
   border-radius: 12px;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.32);
   background: var(--cat-btn-bg);
   color: rgba(255, 255, 255, 0.80);
   cursor: pointer;
   transition: box-shadow 0.15s, transform 0.12s, filter 0.15s;
-  box-shadow: var(--neuro-raised);
+  box-shadow:
+    inset 2px 3px 7px rgba(0,0,0,0.28),
+    inset -1px -2px 4px rgba(255,255,255,0.20),
+    0 2px 3px rgba(0,0,0,0.10);
 }
 .hs__action-btn svg { width: 18px; height: 18px; }
 .hs__action-btn:hover {
