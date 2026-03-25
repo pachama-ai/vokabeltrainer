@@ -601,6 +601,15 @@
   margin: 0 0 3px;
 }
 
+.st__card--text p + p {
+  margin-top: 10px;
+}
+
+.st__card--text p strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
 .st__card--text ul {
   margin: 1px 0 3px 12px;
   padding: 0;
