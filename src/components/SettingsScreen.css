@@ -594,20 +594,20 @@
   line-height: 1.45;
   color: rgba(42, 36, 28, 0.82);
   overflow: hidden;
-  padding: 10px 16px 12px;
+  padding: 16px 16px 12px;
 }
 
 .st__card--text p {
-  margin: 0 0 3px;
+  margin: 0 0 5px;
 }
 
 .st__card--text p + p:has(strong) {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .st__card--text p strong {
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .st__card--text ul {
