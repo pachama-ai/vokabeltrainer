@@ -43,7 +43,7 @@ align-items: center;
 padding: 0 24px 0 14px;
 }
 
-/* Arrow container in header – same width as left sidebar so arrow sits centered above it */
+/* Arrow container in header ï¿½ same width as left sidebar so arrow sits centered above it */
 .hs__header-left {
   width: 80px;
   flex-shrink: 0;
@@ -202,30 +202,31 @@ box-shadow: var(--neuro-raised);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  width: 58px;
-  padding: 8px 4px 6px;
-  border-radius: 14px;
+  gap: 4px;
+  width: 48px;
+  padding: 7px 4px 5px;
+  border-radius: 12px;
   border: none;
   background: var(--cat-btn-bg);
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.80);
   cursor: pointer;
   transition: box-shadow 0.15s, transform 0.12s, filter 0.15s;
   box-shadow: var(--neuro-raised);
 }
+.hs__action-btn svg { width: 18px; height: 18px; }
 .hs__action-btn:hover {
-  transform: scale(1.06);
-  filter: brightness(1.10);
+  transform: scale(1.04);
+  filter: brightness(1.08);
 }
 .hs__action-btn:hover .hs__action-lbl {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.90);
 }
 .hs__action-lbl {
-  font-size: 0.62rem;
-  font-weight: 600;
+  font-size: 0.56rem;
+  font-weight: 500;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .hs__side-spacer { flex: 1; min-height: 0; }
@@ -1287,7 +1288,7 @@ letter-spacing: 0.04em;
 .ac__edit-inp::placeholder { color: var(--text-soft); }
 .ac__edit-inp:focus { border-color: rgba(42, 36, 28, 0.36); }
 
-/* + (add word) button — positioned inside the empty row */
+/* + (add word) button ï¿½ positioned inside the empty row */
 .ac__plus-btn {
   position: absolute;
   right: 16px;
