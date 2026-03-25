@@ -18,6 +18,13 @@ if ($category === '' || mb_strlen($category) > 100) {
 try {
     $db = getDB();
 
+    // Ensure columns exist (migration guard)
+    try {
+        $db->exec('ALTER TABLE user_progress
+            ADD COLUMN IF NOT EXISTS wrong_count   INT UNSIGNED NOT NULL DEFAULT 0,
+            ADD COLUMN IF NOT EXISTS total_reviews INT UNSIGNED NOT NULL DEFAULT 0');
+    } catch (PDOException $ignored) {}
+
     // ── Top 10 Failures ───────────────────────────────────────
     $stmt = $db->prepare('
         SELECT v.word, v.translations, p.wrong_count

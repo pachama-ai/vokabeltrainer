@@ -567,6 +567,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 <div className="hs__panel">
                   <p className="hs__panel-ttl">Top 10 Failures</p>
                   {detailLoading && <p className="hs__panel-empty">Loading…</p>}
+                  {!detailLoading && !detailStats && <p className="hs__panel-empty">Could not load data.</p>}
                   {!detailLoading && detailStats && (
                     detailStats.top_failures.length === 0
                       ? <p className="hs__panel-empty">No mistakes yet — keep it up!</p>
@@ -585,6 +586,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 <div className="hs__panel">
                   <p className="hs__panel-ttl">Average Learning Time</p>
                   {detailLoading && <p className="hs__panel-empty">Loading…</p>}
+                  {!detailLoading && !detailStats && <p className="hs__panel-empty">Could not load data.</p>}
                   {!detailLoading && detailStats && (
                     !detailStats.avg_time
                       ? <p className="hs__panel-empty">Not enough data yet.</p>
