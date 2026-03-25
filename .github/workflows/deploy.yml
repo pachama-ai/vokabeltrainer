@@ -35,3 +35,10 @@ jobs:
             -o StrictHostKeyChecking=no \
             -r dist/. \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/xenia/
+
+      - name: API-PHP-Dateien hochladen (ohne config.local.php)
+        run: |
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" scp \
+            -o StrictHostKeyChecking=no \
+            $(find api/ -name "*.php" ! -name "config.local.php" | tr '\n' ' ') \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/xenia/api/
