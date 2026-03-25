@@ -620,10 +620,8 @@
 
 /* ── Imprint card (scrollable within fixed panel) ───────────────── */
 .st__card--imprint {
-  overflow-y: auto;
+  overflow: hidden;
   padding: 10px 16px 12px;
-  flex: 1;
-  min-height: 0;
 }
 
 .st__imprint-dl {

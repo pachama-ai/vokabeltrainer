@@ -646,17 +646,7 @@ function ImprintTab() {
           <dt>Represented by</dt>
           <dd>Max Mustermann</dd>
 
-          <dt>Content (§ 55 RStV)</dt>
-          <dd>Max Mustermann, Musterstraße 12, 12345 Musterstadt</dd>
 
-          <dt>Liability — Content</dt>
-          <dd>Pages were created with greatest care. We cannot guarantee accuracy, completeness, or timeliness.</dd>
-
-          <dt>Liability — Links</dt>
-          <dd>External links are beyond our control. We assume no liability for third-party content.</dd>
-
-          <dt>Copyright</dt>
-          <dd>All content on these pages is subject to German copyright law.</dd>
         </dl>
       </div>
       <div className="st__msg-slot" />
