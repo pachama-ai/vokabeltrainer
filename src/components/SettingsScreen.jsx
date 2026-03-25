@@ -604,6 +604,10 @@ function PrivacyTab() {
   return (
     <div className="st__tab-wrap">
       <div className="st__card st__card--text">
+        <div className="st__card-hd" style={{marginBottom:'8px'}}>
+          <span className="st__card-ttl">Privacy Policy</span>
+        </div>
+        <div className="st__divider" style={{marginBottom:'8px'}} />
         <p><strong>Last updated: March 13, 2026</strong></p>
         <p>We take the protection of your personal data seriously. We collect only the information you voluntarily provide (name, email, account details) to operate and improve our service.</p>
         <p><strong>Data &amp; Security</strong></p>
@@ -611,7 +615,7 @@ function PrivacyTab() {
         <p><strong>Your Rights</strong></p>
         <p>You have the right to access, correct, or delete your personal data at any time via the Security settings or by contacting us.</p>
         <p><strong>Contact</strong></p>
-        <p><a className="st__link" href="mailto:privacy@example.com">privacy@example.com</a></p>
+        <p><a className="st__link" href="mailto:selina.schneider@gmail.com"></a></p>
       </div>
       <div className="st__msg-slot" />
     </div>
@@ -622,19 +626,20 @@ function ImprintTab() {
   return (
     <div className="st__tab-wrap">
       <div className="st__card st__card--imprint">
+        <div className="st__card-hd" style={{marginBottom:'8px'}}>
+          <span className="st__card-ttl">Imprint</span>
+        </div>
+        <div className="st__divider" style={{marginBottom:'8px'}} />
         <dl className="st__imprint-dl">
           <dt>Legal notice (§ 5 TMG)</dt>
-          <dd>Max Mustermann<br/>Musterstraße 12, 12345 Musterstadt<br/>Germany</dd>
+          <dd>Xenia & Selina Schneider<br/>Forckestraße 24, 38855 Wernigerode<br/>Germany</dd>
 
           <dt>Contact</dt>
-          <dd>Phone: +49 123 456789<br/>E-Mail: contact@examplesite.de</dd>
+          <dd>Phone: +49 176 9217465<br/>E-Mail: selina.schneider@gmail.com</dd>
 
           <dt>Represented by</dt>
-          <dd>Max Mustermann</dd>
+          <dd>Selina & Xenia</dd>
 
-
-          <dt>Content (§ 55 RStV)</dt>
-          <dd>Max Mustermann, Musterstraße 12, 12345 Musterstadt</dd>
 
           <dt>Liability — Content</dt>
           <dd>Pages were created with greatest care. We cannot guarantee accuracy, completeness, or timeliness.</dd>

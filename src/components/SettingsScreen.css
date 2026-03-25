@@ -601,7 +601,7 @@
   margin: 0 0 3px;
 }
 
-.st__card--text p + p {
+.st__card--text p + p:has(strong) {
   margin-top: 10px;
 }
 
