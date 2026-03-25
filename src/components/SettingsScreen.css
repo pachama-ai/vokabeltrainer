@@ -588,15 +588,12 @@
   flex-shrink: 0;
 }
 
-/* ── Text card (Privacy Policy — scrollable) ────────────────────── */
+/* ── Text card (Privacy Policy) ─────────────────────────────────── */
 .st__card--text {
-  font-size: 0.66rem;
-  line-height: 1.36;
+  font-size: 0.72rem;
+  line-height: 1.45;
   color: rgba(42, 36, 28, 0.82);
-  overflow-y: auto;
-  overflow-x: hidden;
-  flex: 1;
-  min-height: 0;
+  overflow: hidden;
   padding: 10px 16px 12px;
 }
 

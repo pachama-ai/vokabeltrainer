@@ -605,27 +605,13 @@ function PrivacyTab() {
     <div className="st__tab-wrap">
       <div className="st__card st__card--text">
         <p><strong>Last updated: March 13, 2026</strong></p>
-        <p>We take the protection of your personal data seriously. This Privacy Policy explains how we collect, use, and protect your information when you use our website or application.</p>
-        <p><strong>1. Information We Collect</strong></p>
-        <p>We may collect personal information that you voluntarily provide when using our services, such as your name, email address, account details, or other information you choose to provide.</p>
-        <p><strong>2. How We Use Your Information</strong></p>
-        <p>The information we collect may be used to:</p>
-        <ul>
-          <li>Provide and maintain our services</li>
-          <li>Improve user experience</li>
-          <li>Communicate with users regarding updates or support</li>
-          <li>Ensure the security and functionality of our platform</li>
-        </ul>
-        <p><strong>3. Data Storage and Security</strong></p>
-        <p>We take appropriate technical and organizational measures to protect your personal data from unauthorized access, loss, or misuse.</p>
-        <p><strong>4. Third-Party Services</strong></p>
-        <p>Our service may include links to third-party websites or services. We are not responsible for the privacy practices of those external websites.</p>
-        <p><strong>5. Your Rights</strong></p>
-        <p>Depending on your location, you may have the right to access, correct, or delete your personal data.</p>
-        <p><strong>6. Changes to This Policy</strong></p>
-        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page.</p>
-        <p><strong>7. Contact</strong></p>
-        <p>If you have any questions regarding this Privacy Policy, please contact us at: <a className="st__link" href="mailto:privacy@example.com">privacy@example.com</a></p>
+        <p>We take the protection of your personal data seriously. We collect only the information you voluntarily provide (name, email, account details) to operate and improve our service.</p>
+        <p><strong>Data &amp; Security</strong></p>
+        <p>Your data is protected with appropriate technical and organizational measures. We do not share your personal data with third parties.</p>
+        <p><strong>Your Rights</strong></p>
+        <p>You have the right to access, correct, or delete your personal data at any time via the Security settings or by contacting us.</p>
+        <p><strong>Contact</strong></p>
+        <p><a className="st__link" href="mailto:privacy@example.com">privacy@example.com</a></p>
       </div>
       <div className="st__msg-slot" />
     </div>
@@ -647,6 +633,17 @@ function ImprintTab() {
           <dd>Max Mustermann</dd>
 
 
+          <dt>Content (§ 55 RStV)</dt>
+          <dd>Max Mustermann, Musterstraße 12, 12345 Musterstadt</dd>
+
+          <dt>Liability — Content</dt>
+          <dd>Pages were created with greatest care. We cannot guarantee accuracy, completeness, or timeliness.</dd>
+
+          <dt>Liability — Links</dt>
+          <dd>External links are beyond our control. We assume no liability for third-party content.</dd>
+
+          <dt>Copyright</dt>
+          <dd>All content on these pages is subject to German copyright law.</dd>
         </dl>
       </div>
       <div className="st__msg-slot" />
