@@ -604,10 +604,6 @@ function PrivacyTab() {
   return (
     <div className="st__tab-wrap">
       <div className="st__card st__card--text">
-        <div className="st__card-hd" style={{marginBottom:'8px'}}>
-          <span className="st__card-ttl">Privacy Policy</span>
-        </div>
-        <div className="st__divider" style={{marginBottom:'8px'}} />
         <p><strong>Last updated: March 13, 2026</strong></p>
         <p>We take the protection of your personal data seriously. We collect only the information you voluntarily provide (name, email, account details) to operate and improve our service.</p>
         <p><strong>Data &amp; Security</strong></p>
@@ -626,10 +622,6 @@ function ImprintTab() {
   return (
     <div className="st__tab-wrap">
       <div className="st__card st__card--imprint">
-        <div className="st__card-hd" style={{marginBottom:'8px'}}>
-          <span className="st__card-ttl">Imprint</span>
-        </div>
-        <div className="st__divider" style={{marginBottom:'8px'}} />
         <dl className="st__imprint-dl">
           <dt>Legal notice (§ 5 TMG)</dt>
           <dd>Xenia & Selina Schneider<br/>Forckestraße 24, 38855 Wernigerode<br/>Germany</dd>
