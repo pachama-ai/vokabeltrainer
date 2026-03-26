@@ -236,7 +236,7 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelec
         <aside className="hs__side hs__side--r">
           {ACTION_BTNS.map(({ id, label, img, color }) => (
             <button key={id} className="hs__action-btn hs__action-btn--dim" style={{ background: color }} disabled title={label}>
-              <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
+              <img src={img} alt={label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
               <span className="hs__action-lbl">{label}</span>
             </button>
           ))}

@@ -340,12 +340,12 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
           {ACTION_BTNS.map(({ id, label, img, color }) => (
             id === 'manage' ? (
               <button key={id} className="hs__action-btn vm__action-active" title={label} style={{ background: color }}>
-                <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
+                <img src={img} alt={label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
                 <span className="hs__action-lbl">{label}</span>
               </button>
             ) : (
               <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
-                <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
+                <img src={img} alt={label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
                 <span className="hs__action-lbl">{label}</span>
               </button>
             )

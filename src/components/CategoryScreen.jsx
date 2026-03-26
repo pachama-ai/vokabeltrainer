@@ -288,7 +288,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
         <aside className={`hs__side${isAnyActive ? ' hs__side--locked' : ''}`}>
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onSettings} title="Settings">
-              <AvatarIcon idx={avatarIdx} size={58} />
+              <AvatarIcon idx={avatarIdx} size={62} />
             </button>
             <span className="hs__mascot-lbl">Settings</span>
           </div>

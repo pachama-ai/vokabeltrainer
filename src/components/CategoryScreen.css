@@ -135,8 +135,8 @@ margin-bottom: 4px;
 }
 
 .hs__mascot-btn {
-width: 84px;
-height: 84px;
+width: 72px;
+height: 72px;
 border-radius: 50%;
 border: 0;
 background: rgba(255, 255, 255, 0.75);
@@ -144,6 +144,7 @@ color: rgba(60, 50, 40, 0.78);
 cursor: pointer;
 display: grid;
 place-items: center;
+overflow: hidden;
 transition: box-shadow 0.15s, transform 0.12s;
 box-shadow: var(--neuro-raised);
 }
@@ -214,7 +215,7 @@ box-shadow:
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  width: 48px;
+  width: 58px;
   padding: 7px 4px 5px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.32);

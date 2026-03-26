@@ -761,7 +761,7 @@ export default function SettingsScreen({ onBack, onLogout }) {
         <aside className="hs__side hs__side--r">
           {ST_ACTION_BTNS.map(({ id, label, img, color }) => (
             <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
-              <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
+              <img src={img} alt={label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
               <span className="hs__action-lbl">{label}</span>
             </button>
           ))}
