@@ -615,8 +615,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
             isAnyActive ? (
               <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
                 <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
-              <span className="hs__action-lbl">{label}</span>
-            </button>
+              </button>
             ) : (
               <button
                 key={id}
