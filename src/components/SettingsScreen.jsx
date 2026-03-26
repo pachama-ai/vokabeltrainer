@@ -590,7 +590,7 @@ function AvatarTab({ onAvatarChange }) {
               disabled={!editing}
               type="button"
             >
-              <AvatarIcon idx={i} size={82} />
+              <AvatarIcon idx={i} size={110} />
             </button>
           ))}
         </div>

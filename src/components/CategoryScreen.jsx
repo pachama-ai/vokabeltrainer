@@ -281,7 +281,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 {activeCat.label} — Leitner Box
               </span>}
         </h1>
-        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}><img src="/flamme.png" alt="streak" style={{ width: 22, height: 22, objectFit: 'contain', verticalAlign: 'middle' }} /> <span>0 Days</span></div>
+        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}><img src="/flamme.png" alt="streak" style={{ width: 22, height: 22, objectFit: 'contain', display: 'block' }} /> <span>0 Days</span></div>
       </header>
 
       {/* ── Body: 3 columns ─────────────────────────────── */}
@@ -443,12 +443,15 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                       key={c.id}
                       className={`hs__test-cat-circle${testCats.includes(c.id) ? ' hs__test-cat-circle--on' : ''}`}
                       title={c.label}
+                      style={c.color ? { background: c.color } : {}}
                       onClick={() => setTestCats(prev =>
                         prev.includes(c.id)
                           ? prev.length > 1 ? prev.filter(x => x !== c.id) : prev
                           : [...prev, c.id]
                       )}
-                    ><PlaceholderIcon /></button>
+                    >{c.img
+                      ? <img src={c.img} alt={c.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
+                      : <PlaceholderIcon />}</button>
                   ))}
                 </div>
                 <button
