@@ -614,9 +614,9 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
           {ACTION_BTNS.map(({ id, label, img, color }) => (
             isAnyActive ? (
               <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
-                <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
-                <span className="hs__action-lbl">{label}</span>
-              </button>
+                <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
+              <span className="hs__action-lbl">{label}</span>
+            </button>
             ) : (
               <button
                 key={id}
@@ -629,7 +629,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                   if (id === 'manage') onManage?.(activeCatId)
                 }}
               >
-                <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
+                <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
                 <span className="hs__action-lbl">{label}</span>
               </button>
             )
