@@ -56,9 +56,9 @@ const TrashIcon = () => (
 )
 
 const ACTION_BTNS = [
-  { id: 'learn', label: 'Learn', Icon: LearnIcon,  color: '#5b9ec9' },
-  { id: 'test',  label: 'Test',  Icon: TestIcon,   color: '#c0826e' },
-  { id: 'manage',label: 'Manage',Icon: ManageIcon, color: '#4ca87a' },
+  { id: 'learn',  label: 'Learn',  img: '/learn.png',  color: '#5b9ec9' },
+  { id: 'test',   label: 'Test',   img: '/test.png',   color: '#c0826e' },
+  { id: 'manage', label: 'Manage', img: '/manage.png', color: '#4ca87a' },
 ]
 
 const TOTAL_ROWS = 8
@@ -234,9 +234,9 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelec
 
         {/* Right sidebar */}
         <aside className="hs__side hs__side--r">
-          {ACTION_BTNS.map(({ id, label, Icon, color }) => (
+          {ACTION_BTNS.map(({ id, label, img, color }) => (
             <button key={id} className="hs__action-btn hs__action-btn--dim" style={{ background: color }} disabled title={label}>
-              <Icon />
+              <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
               <span className="hs__action-lbl">{label}</span>
             </button>
           ))}

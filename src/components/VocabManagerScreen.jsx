@@ -67,9 +67,9 @@ const ChevronDownIcon = () => (
 )
 
 const ACTION_BTNS = [
-  { id: 'learn',  label: 'Learn',  Icon: LearnIcon,  color: '#5b9ec9' },
-  { id: 'test',   label: 'Test',   Icon: TestIcon,   color: '#c0826e' },
-  { id: 'manage', label: 'Manage', Icon: ManageIcon, color: '#4ca87a' },
+  { id: 'learn',  label: 'Learn',  img: '/learn.png',  color: '#5b9ec9' },
+  { id: 'test',   label: 'Test',   img: '/test.png',   color: '#c0826e' },
+  { id: 'manage', label: 'Manage', img: '/manage.png', color: '#4ca87a' },
 ]
 
 const PAGE_SIZE = 20
@@ -337,15 +337,15 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
 
         {/* ── Right sidebar ── */}
         <aside className="hs__side hs__side--r">
-          {ACTION_BTNS.map(({ id, label, Icon, color }) => (
+          {ACTION_BTNS.map(({ id, label, img, color }) => (
             id === 'manage' ? (
               <button key={id} className="hs__action-btn vm__action-active" title={label} style={{ background: color }}>
-                <Icon />
+                <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
                 <span className="hs__action-lbl">{label}</span>
               </button>
             ) : (
               <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
-                <Icon />
+                <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
                 <span className="hs__action-lbl">{label}</span>
               </button>
             )
