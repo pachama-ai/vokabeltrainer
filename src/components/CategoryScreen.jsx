@@ -70,9 +70,9 @@ const RetryIcon = () => (
 )
 
 const ACTION_BTNS = [
-  { id: 'learn',   label: 'Learn',  Icon: LearnIcon,  color: '#5b9ec9' },
-  { id: 'test',    label: 'Test',   Icon: TestIcon,   color: '#c0826e' },
-  { id: 'manage',  label: 'Manage', Icon: ManageIcon, color: '#4ca87a' },
+  { id: 'learn',   label: 'Learn',  img: '/learn.png',  color: '#5b9ec9' },
+  { id: 'test',    label: 'Test',   img: '/test.png',   color: '#c0826e' },
+  { id: 'manage',  label: 'Manage', img: '/manage.png', color: '#4ca87a' },
 ]
 
 export default function CategoryScreen({ allStats, loading, onSelectCategory, onSettings, onAddCategory, onManage, customCats = [], onDeleteCategory }) {
@@ -611,10 +611,10 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
 
         {/* Right sidebar – actions */}
         <aside className={`hs__side hs__side--r${isAnyActive ? ' hs__side--r-test' : ''}`}>
-          {ACTION_BTNS.map(({ id, label, Icon, color }) => (
+          {ACTION_BTNS.map(({ id, label, img, color }) => (
             isAnyActive ? (
               <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
-                <Icon />
+                <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
                 <span className="hs__action-lbl">{label}</span>
               </button>
             ) : (
@@ -629,7 +629,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                   if (id === 'manage') onManage?.(activeCatId)
                 }}
               >
-                <Icon />
+                <img src={img} alt={label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
                 <span className="hs__action-lbl">{label}</span>
               </button>
             )
