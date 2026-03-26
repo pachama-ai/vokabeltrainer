@@ -281,7 +281,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 {activeCat.label} — Leitner Box
               </span>}
         </h1>
-        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}><img src="/flamme.png" alt="streak" style={{ width: 22, height: 22, objectFit: 'contain', display: 'block' }} /> <span>0 Days</span></div>
+        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}><img src="/flamme.png" alt="streak" style={{ width: 22, height: 22, objectFit: 'contain', flexShrink: 0 }} /> <span>0 Days</span></div>
       </header>
 
       {/* ── Body: 3 columns ─────────────────────────────── */}
@@ -441,9 +441,15 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                   {allCatBtns.map(c => (
                     <button
                       key={c.id}
-                      className={`hs__test-cat-circle${testCats.includes(c.id) ? ' hs__test-cat-circle--on' : ''}`}
+                      className="hs__test-cat-circle"
                       title={c.label}
-                      style={c.color ? { background: c.color } : {}}
+                      style={{
+                        background: c.color ?? 'rgba(142, 154, 196, 0.38)',
+                        outline: testCats.includes(c.id) ? '3px solid #fff' : '3px solid transparent',
+                        outlineOffset: '3px',
+                        boxShadow: testCats.includes(c.id) ? '0 0 0 5px rgba(255,255,255,0.35)' : 'none',
+                        opacity: testCats.includes(c.id) ? 1 : 0.55,
+                      }}
                       onClick={() => setTestCats(prev =>
                         prev.includes(c.id)
                           ? prev.length > 1 ? prev.filter(x => x !== c.id) : prev
