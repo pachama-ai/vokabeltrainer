@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 /* Root */
 .hs {
@@ -16,7 +16,7 @@ overflow: hidden;
 display: flex;
 flex-direction: column;
 background: #f0e6d8;
-font-family: 'Montserrat', 'Segoe UI', sans-serif;
+font-family: 'Playfair Display', Georgia, serif;
 color: var(--text);
 user-select: none;
 }
