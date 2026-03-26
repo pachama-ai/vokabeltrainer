@@ -45,7 +45,7 @@ padding: 20px 0;
 .mascot-frame {
 width: 90px;
 height: 90px;
-border: 2.5px solid rgba(42, 36, 28, 0.55);
+border: none;
 border-radius: 50%;
 display: grid;
 place-items: center;

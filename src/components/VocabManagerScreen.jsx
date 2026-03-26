@@ -4,9 +4,9 @@ import { getManageWords, updateWord, deleteWord, createCategory } from '../api/v
 import './CategoryScreen.css'
 
 const BUILTIN_CATS = [
-  { id: 'grundwortschatz',        label: 'Basic',      color: 'rgba(68, 196, 186, 0.72)'  },
-  { id: 'aufbauwortschatz',       label: 'Advanced',   color: 'rgba(138, 162, 96, 0.68)'  },
-  { id: 'unregelmaessige_verben', label: 'Irregulars', color: 'rgba(200, 148, 72, 0.72)'  },
+  { id: 'grundwortschatz',        label: 'Basic',      img: '/grundwortschatz.png',  color: 'rgba(68, 196, 186, 0.72)'  },
+  { id: 'aufbauwortschatz',       label: 'Advanced',   img: '/aufbauwortschatz.png', color: 'rgba(138, 162, 96, 0.68)'  },
+  { id: 'unregelmaessige_verben', label: 'Irregulars', img: '/irregular.png',        color: 'rgba(200, 148, 72, 0.72)'  },
 ]
 
 const CAT_SIDEBAR_COLORS = {
@@ -202,7 +202,7 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
         <aside className="hs__side">
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onBack} title="Back to Home">
-              <AvatarIcon idx={avatarIdx} size={36} />
+              <AvatarIcon idx={avatarIdx} size={72} />
             </button>
             <span className="hs__mascot-lbl">Home</span>
           </div>
@@ -214,7 +214,9 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
               disabled
               title={cat.label}
             >
-              <PlaceholderIcon />
+              {cat.img
+                ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
+                : <PlaceholderIcon />}
             </button>
           ))}
           <div className="hs__side-spacer" />

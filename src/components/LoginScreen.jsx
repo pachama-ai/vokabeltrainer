@@ -135,7 +135,7 @@ export default function LoginScreen({ onLoginSuccess }) {
     <div className="login-page">
       <div className="login-card">
         <div className="mascot-frame" aria-hidden="true">
-          <AvatarIcon idx={avatarIdx} size={62} />
+          <AvatarIcon idx={avatarIdx} size={90} />
         </div>
 
         {/* ── LOGIN ── */}
