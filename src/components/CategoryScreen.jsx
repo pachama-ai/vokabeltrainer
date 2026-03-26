@@ -288,7 +288,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
         <aside className={`hs__side${isAnyActive ? ' hs__side--locked' : ''}`}>
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onSettings} title="Settings">
-              <AvatarIcon idx={avatarIdx} size={36} />
+              <AvatarIcon idx={avatarIdx} size={46} />
             </button>
             <span className="hs__mascot-lbl">Settings</span>
           </div>
@@ -304,7 +304,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 onContextMenu={isCustom ? (e) => { e.preventDefault(); setDeleteCatConfirm(cat.id) } : undefined}
                 title={cat.label}
               >{cat.img
-                ? <img src={cat.img} alt={cat.label} style={{ width: 34, height: 34, objectFit: 'contain' }} />
+                ? <img src={cat.img} alt={cat.label} style={{ width: 44, height: 44, objectFit: 'contain' }} />
                 : <PlaceholderIcon />
               }</button>
             )
