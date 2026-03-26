@@ -15,9 +15,9 @@ const LEVELS = [
 const LEVEL_ICONS = [] // unused – kept for potential future use
 
 const CAT_BTNS = [
-  { id: 'grundwortschatz',        label: 'Basic Vocabulary',    icon: '🏠', color: '#c4956a' },
-  { id: 'aufbauwortschatz',       label: 'Advanced Vocabulary', icon: '📚', color: '#5aab82' },
-  { id: 'unregelmaessige_verben', label: 'Irregular Verbs',     icon: '⚡', color: '#b07891' },
+  { id: 'grundwortschatz',        label: 'Basic Vocabulary',    icon: '🏠', color: '#c4956a', img: '/grundwortschatz.png' },
+  { id: 'aufbauwortschatz',       label: 'Advanced Vocabulary', icon: '📚', color: '#5aab82', img: '/aufbauwortschatz.png' },
+  { id: 'unregelmaessige_verben', label: 'Irregular Verbs',     icon: '⚡', color: '#b07891', img: '/irregular.png' },
 ]
 
 const CAT_COLOR_MAP = {
@@ -303,7 +303,10 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 onClick={() => setActiveCatId(cat.id)}
                 onContextMenu={isCustom ? (e) => { e.preventDefault(); setDeleteCatConfirm(cat.id) } : undefined}
                 title={cat.label}
-              ><PlaceholderIcon /></button>
+              >{cat.img
+                ? <img src={cat.img} alt={cat.label} style={{ width: 34, height: 34, objectFit: 'contain' }} />
+                : <PlaceholderIcon />
+              }</button>
             )
           })}
 
