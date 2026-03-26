@@ -135,8 +135,8 @@ margin-bottom: 4px;
 }
 
 .hs__mascot-btn {
-width: 72px;
-height: 72px;
+width: 84px;
+height: 84px;
 border-radius: 50%;
 border: 0;
 background: rgba(255, 255, 255, 0.75);
@@ -157,8 +157,8 @@ color: var(--text-soft);
 }
 
 .hs__cat-btn {
-width: 64px;
-height: 64px;
+width: 54px;
+height: 54px;
 flex-shrink: 0;
 border-radius: 50%;
 border: 1px solid rgba(255,255,255,0.35);
