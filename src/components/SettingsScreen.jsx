@@ -681,7 +681,7 @@ export default function SettingsScreen({ onBack, onLogout }) {
         <aside className="hs__side">
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onBack} title="Home">
-              <AvatarIcon idx={avatarIdx} size={36} />
+              <AvatarIcon idx={avatarIdx} size={72} />
             </button>
             <span className="hs__mascot-lbl">Home</span>
           </div>

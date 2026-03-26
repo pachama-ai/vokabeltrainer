@@ -139,16 +139,16 @@ width: 72px;
 height: 72px;
 border-radius: 50%;
 border: 0;
-background: rgba(255, 255, 255, 0.75);
+background: transparent;
 color: rgba(60, 50, 40, 0.78);
 cursor: pointer;
 display: grid;
 place-items: center;
 overflow: hidden;
-transition: box-shadow 0.15s, transform 0.12s;
-box-shadow: var(--neuro-raised);
+transition: transform 0.12s;
+box-shadow: none;
 }
-.hs__mascot-btn:hover { box-shadow: 6px 6px 14px rgba(0,0,0,0.22); transform: scale(1.04); }
+.hs__mascot-btn:hover { transform: scale(1.04); }
 
 .hs__mascot-lbl {
 font-size: 0.63rem;
