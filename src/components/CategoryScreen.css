@@ -450,7 +450,7 @@ letter-spacing: 0.04em;
   place-items: center;
   transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
   flex-shrink: 0;
-  box-shadow: 0 3px 12px rgba(200, 30, 20, 0.50), 0 0 0 3px rgba(214, 50, 40, 0.15);
+  box-shadow: 0 3px 12px rgba(200, 30, 20, 0.50);
 }
 .hs__cancel-btn:hover { background: #c0221a; transform: scale(1.10); box-shadow: 0 5px 16px rgba(200, 30, 20, 0.65); }
 
@@ -1030,7 +1030,7 @@ letter-spacing: 0.04em;
   display: grid;
   place-items: center;
   transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
-  box-shadow: 0 3px 12px rgba(200, 30, 20, 0.50), 0 0 0 3px rgba(214, 50, 40, 0.15);
+  box-shadow: 0 3px 12px rgba(200, 30, 20, 0.50);
 }
 .hs__cancel-btn:hover { background: #c0221a; color: #fff; transform: scale(1.10); box-shadow: 0 5px 16px rgba(200, 30, 20, 0.65); }
 

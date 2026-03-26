@@ -47,7 +47,7 @@ const ManageIcon = () => (
 const ST_ACTION_BTNS = [
   { id: 'learn',  label: 'Learn',  Icon: LearnIcon,  color: '#5b9ec9' },
   { id: 'test',   label: 'Test',   Icon: TestIcon,   color: '#c0826e' },
-  { id: 'manage', label: 'Manage', Icon: ManageIcon, color: '#9a8e5e' },
+  { id: 'manage', label: 'Manage', Icon: ManageIcon, color: '#4ca87a' },
 ]
 
 const ShieldIcon = () => (
@@ -611,7 +611,7 @@ function PrivacyTab() {
         <p><strong>Your Rights</strong></p>
         <p>You have the right to access, correct, or delete your personal data at any time via the Security settings or by contacting us.</p>
         <p><strong>Contact</strong></p>
-        <p><a className="st__link" href="mailto:selina.schneider@gmail.com"></a></p>
+        <p><a className="st__link" href="mailto:selina.schneider@gmail.com">selina.schneider@gmail.com</a></p>
       </div>
       <div className="st__msg-slot" />
     </div>

@@ -21,12 +21,12 @@
   place-items: center;
   transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
   line-height: 1;
-  box-shadow: 0 3px 14px rgba(200, 30, 20, 0.55), 0 0 0 3px rgba(214, 50, 40, 0.18);
+  box-shadow: 0 3px 14px rgba(200, 30, 20, 0.55);
 }
 .st__close-btn:hover {
   background: #c0221a;
   transform: translate(-50%, -50%) scale(1.10);
-  box-shadow: 0 5px 18px rgba(200, 30, 20, 0.70), 0 0 0 4px rgba(214, 50, 40, 0.25);
+  box-shadow: 0 5px 18px rgba(200, 30, 20, 0.70);
 }
 /* Header spacers (replace arrow + streak badge) */
 .hs__arrow-ph {
