@@ -247,14 +247,14 @@ box-shadow:
 .hs__side-spacer { flex: 1; min-height: 0; }
 
 .hs__add-btn {
-  background: #5aab82;
+  background: #c0826e;
   color: rgba(255, 255, 255, 0.95);
   border: none;
   font-size: 1.5rem;
   line-height: 1;
   box-shadow: var(--neuro-raised);
 }
-.hs__add-btn:hover { background: #4d9a72; color: #fff; transform: scale(1.08); }
+.hs__add-btn:hover { background: #a96d5a; color: #fff; transform: scale(1.08); }
 
 /* Main */
 .hs__main {
