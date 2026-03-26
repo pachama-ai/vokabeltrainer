@@ -276,9 +276,12 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
         <h1 className="hs__title">
           {learnMode ? 'Study Mode'
             : isTestActive ? 'Vocabulary Test'
-            : `${activeCat.label} — Leitner Box`}
+            : <span style={{ display: 'flex', alignItems: 'center', gap: 8, justifyContent: 'center' }}>
+                {activeCat.img && <img src={activeCat.img} alt="" style={{ width: 28, height: 28, objectFit: 'contain' }} />}
+                {activeCat.label} — Leitner Box
+              </span>}
         </h1>
-        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}>🔥 <span>0 Days</span></div>
+        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}><img src="/flamme.png" alt="streak" style={{ width: 22, height: 22, objectFit: 'contain', verticalAlign: 'middle' }} /> <span>0 Days</span></div>
       </header>
 
       {/* ── Body: 3 columns ─────────────────────────────── */}
