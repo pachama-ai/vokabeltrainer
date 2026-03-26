@@ -438,20 +438,21 @@ letter-spacing: 0.04em;
 
 /* -- Cancel button -- */
 .hs__cancel-btn {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  border: none;
-  background: rgba(224, 110, 90, 0.72);
-  color: rgba(255,255,255,0.95);
-  font-size: 1.2rem;
+  border: 2px solid rgba(255, 155, 135, 0.50);
+  background: #d63228;
+  color: #fff;
+  font-size: 1.25rem;
   cursor: pointer;
   display: grid;
   place-items: center;
-  transition: background 0.15s, transform 0.1s;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
   flex-shrink: 0;
+  box-shadow: 0 3px 12px rgba(200, 30, 20, 0.50), 0 0 0 3px rgba(214, 50, 40, 0.15);
 }
-.hs__cancel-btn:hover { background: rgba(224, 90, 70, 0.90); transform: scale(1.08); }
+.hs__cancel-btn:hover { background: #c0221a; transform: scale(1.10); box-shadow: 0 5px 16px rgba(200, 30, 20, 0.65); }
 
 /* -- Test Setup Card -- */
 .hs__test-card {
@@ -1018,19 +1019,20 @@ letter-spacing: 0.04em;
 
 /* -- Floating cancel button -- */
 .hs__cancel-btn {
-  width: 54px;
-  height: 54px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  border: 1px solid rgba(224, 110, 90, 0.55);
-  background: rgba(224, 110, 90, 0.46);
-  color: rgba(255, 220, 210, 0.96);
-  font-size: 1.1rem;
+  border: 2px solid rgba(255, 155, 135, 0.50);
+  background: #d63228;
+  color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
   display: grid;
   place-items: center;
-  transition: background 0.15s, transform 0.1s;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 3px 12px rgba(200, 30, 20, 0.50), 0 0 0 3px rgba(214, 50, 40, 0.15);
 }
-.hs__cancel-btn:hover { background: rgba(210, 90, 70, 0.70); color: #fff; transform: scale(1.08); }
+.hs__cancel-btn:hover { background: #c0221a; color: #fff; transform: scale(1.10); box-shadow: 0 5px 16px rgba(200, 30, 20, 0.65); }
 
 /* -- Learn Setup: direction pills -- */
 .hs__learn-dir-row {

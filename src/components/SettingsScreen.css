@@ -2,31 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* ── Settings-specific layout overrides ─────────────────────── */
-/* Close (X) button – red circle, absolutely centered in header */
+/* Close (X) button – vivid red, absolutely centered in header */
 .st__close-btn {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(192, 48, 38, 0.88);
-  border: 2px solid rgba(255, 120, 100, 0.45);
-  color: rgba(255, 255, 255, 0.97);
-  font-size: 1.1rem;
+  background: #d63228;
+  border: 2.5px solid rgba(255, 160, 140, 0.55);
+  color: #fff;
+  font-size: 1.15rem;
   cursor: pointer;
   z-index: 20;
   display: grid;
   place-items: center;
   transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
   line-height: 1;
-  box-shadow: 0 3px 10px rgba(180, 30, 20, 0.45);
+  box-shadow: 0 3px 14px rgba(200, 30, 20, 0.55), 0 0 0 3px rgba(214, 50, 40, 0.18);
 }
 .st__close-btn:hover {
-  background: rgba(210, 55, 42, 1);
-  transform: translate(-50%, -50%) scale(1.08);
-  box-shadow: 0 4px 14px rgba(180, 30, 20, 0.60);
+  background: #c0221a;
+  transform: translate(-50%, -50%) scale(1.10);
+  box-shadow: 0 5px 18px rgba(200, 30, 20, 0.70), 0 0 0 4px rgba(214, 50, 40, 0.25);
 }
 /* Header spacers (replace arrow + streak badge) */
 .hs__arrow-ph {

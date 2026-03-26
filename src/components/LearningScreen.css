@@ -337,19 +337,20 @@
 
 /* Close button in right sidebar */
 .ls__close-btn {
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  border: none;
-  background: rgba(220, 100, 90, 0.55);
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.1rem;
+  border: 2px solid rgba(255, 155, 135, 0.50);
+  background: #d63228;
+  color: #fff;
+  font-size: 1.15rem;
   cursor: pointer;
   display: grid;
   place-items: center;
-  transition: background 0.15s, transform 0.1s;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 3px 12px rgba(200, 30, 20, 0.50), 0 0 0 3px rgba(214, 50, 40, 0.15);
 }
-.ls__close-btn:hover { background: rgba(210, 80, 70, 0.65); transform: scale(1.06); }
+.ls__close-btn:hover { background: #c0221a; transform: scale(1.08); box-shadow: 0 5px 16px rgba(200, 30, 20, 0.65); }
 
 /* Confirmation modal */
 .ls__modal-overlay {

@@ -72,7 +72,7 @@ const RetryIcon = () => (
 const ACTION_BTNS = [
   { id: 'learn',   label: 'Learn',  Icon: LearnIcon,  color: '#5b9ec9' },
   { id: 'test',    label: 'Test',   Icon: TestIcon,   color: '#c0826e' },
-  { id: 'manage',  label: 'Manage', Icon: ManageIcon, color: '#7a8faa' },
+  { id: 'manage',  label: 'Manage', Icon: ManageIcon, color: '#4ca87a' },
 ]
 
 export default function CategoryScreen({ allStats, loading, onSelectCategory, onSettings, onAddCategory, onManage, customCats = [], onDeleteCategory }) {
