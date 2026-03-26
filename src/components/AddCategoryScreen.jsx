@@ -4,9 +4,9 @@ import { createCategory } from '../api/vocabApi'
 import './CategoryScreen.css'
 
 const BUILTIN_CATS = [
-  { id: 'grundwortschatz',        label: 'Basic Vocabulary'    },
-  { id: 'aufbauwortschatz',       label: 'Advanced Vocabulary' },
-  { id: 'unregelmaessige_verben', label: 'Irregular Verbs'     },
+  { id: 'grundwortschatz',        label: 'Basic Vocabulary',    img: '/grundwortschatz.png',  color: '#c4956a' },
+  { id: 'aufbauwortschatz',       label: 'Advanced Vocabulary', img: '/aufbauwortschatz.png', color: '#5aab82' },
+  { id: 'unregelmaessige_verben', label: 'Irregular Verbs',     img: '/irregular.png',        color: '#b07891' },
 ]
 
 const PlaceholderIcon = () => (
@@ -156,13 +156,15 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelec
         <aside className="hs__side">
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onBack} title="Home">
-              <AvatarIcon idx={avatarIdx} size={36} />
+              <AvatarIcon idx={avatarIdx} size={72} />
             </button>
             <span className="hs__mascot-lbl">Home</span>
           </div>
           {allCatBtns.map(cat => (
-            <button key={cat.id} className="hs__cat-btn hs__cat-btn--dim" disabled title={cat.label}>
-              <PlaceholderIcon />
+            <button key={cat.id} className="hs__cat-btn hs__cat-btn--dim" disabled title={cat.label} style={cat.color ? { background: cat.color } : {}}>
+              {cat.img
+                ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
+                : <PlaceholderIcon />}
             </button>
           ))}
           <div className="hs__side-spacer" />
