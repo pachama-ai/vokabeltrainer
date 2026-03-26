@@ -444,7 +444,7 @@ letter-spacing: 0.04em;
   height: 50px;
   border-radius: 50%;
   border: 2px solid rgba(255, 155, 135, 0.50);
-  background: #d63228;
+  background: #e8160a;
   color: #fff;
   font-size: 1.25rem;
   cursor: pointer;
@@ -452,9 +452,9 @@ letter-spacing: 0.04em;
   place-items: center;
   transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
   flex-shrink: 0;
-  box-shadow: 0 3px 12px rgba(200, 30, 20, 0.50);
+  box-shadow: 0 3px 14px rgba(220, 10, 5, 0.65);
 }
-.hs__cancel-btn:hover { background: #c0221a; transform: scale(1.10); box-shadow: 0 5px 16px rgba(200, 30, 20, 0.65); }
+.hs__cancel-btn:hover { background: #c0100a; transform: scale(1.10); box-shadow: 0 5px 18px rgba(220, 10, 5, 0.80); }
 
 /* -- Test Setup Card -- */
 .hs__test-card {
@@ -1025,16 +1025,16 @@ letter-spacing: 0.04em;
   height: 56px;
   border-radius: 50%;
   border: 2px solid rgba(255, 155, 135, 0.50);
-  background: #d63228;
+  background: #e8160a;
   color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
   display: grid;
   place-items: center;
   transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
-  box-shadow: 0 3px 12px rgba(200, 30, 20, 0.50);
+  box-shadow: 0 3px 14px rgba(220, 10, 5, 0.65);
 }
-.hs__cancel-btn:hover { background: #c0221a; color: #fff; transform: scale(1.10); box-shadow: 0 5px 16px rgba(200, 30, 20, 0.65); }
+.hs__cancel-btn:hover { background: #c0100a; color: #fff; transform: scale(1.10); box-shadow: 0 5px 18px rgba(220, 10, 5, 0.80); }
 
 /* -- Learn Setup: direction pills -- */
 .hs__learn-dir-row {
