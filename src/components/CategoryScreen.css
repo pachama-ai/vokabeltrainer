@@ -5,8 +5,8 @@
 --sidebar-bg: rgba(255, 255, 255, 0.50);
 --cat-btn-bg: rgba(190, 172, 150, 0.90);
 --bar-track:  rgba(165, 155, 140, 0.28);
---text:       rgba(42, 36, 28, 0.90);
---text-soft:  rgba(100, 90, 75, 0.72);
+--text:       rgba(56, 60, 92, 0.90);
+--text-soft:  rgba(82, 86, 118, 0.72);
 --neuro-raised: 5px 5px 12px rgba(0,0,0,0.18);
 --neuro-inset:  inset 3px 3px 8px rgba(0,0,0,0.22);
 
@@ -15,7 +15,7 @@ inset: 0;
 overflow: hidden;
 display: flex;
 flex-direction: column;
-background: #f0e6d8;
+background: #edecea;
 font-family: 'Playfair Display', Georgia, serif;
 color: var(--text);
 user-select: none;
@@ -26,7 +26,7 @@ content: '';
 position: fixed;
 inset: 0;
 pointer-events: none;
-opacity: 0.22;
+opacity: 0.34;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
 background-size: 180px 180px;
 z-index: 0;
@@ -88,7 +88,7 @@ flex-shrink: 0;
 display: flex;
 align-items: center;
 gap: 7px;
-background: rgba(42, 36, 28, 0.82);
+background: rgba(56, 60, 92, 0.82);
 color: rgba(232, 228, 218, 0.95);
 font-size: 0.85rem;
 font-weight: 700;
@@ -663,7 +663,7 @@ letter-spacing: 0.04em;
 .hs__quiz-word {
   font-size: 2.1rem;
   font-weight: 700;
-  color: rgba(42, 36, 28, 0.72);
+  color: rgba(56, 60, 92, 0.72);
   text-align: center;
   line-height: 1.15;
 }
@@ -693,7 +693,7 @@ letter-spacing: 0.04em;
   font-weight: 600;
   color: var(--text);
   text-align: center;
-  caret-color: rgba(42, 36, 28, 0.75);
+  caret-color: rgba(56, 60, 92, 0.75);
 }
 .hs__quiz-input::placeholder { color: rgba(120, 110, 95, 0.30); }
 
@@ -1196,7 +1196,7 @@ letter-spacing: 0.04em;
   align-items: center;
   gap: 10px;
   padding: 4px 0 10px;
-  border-bottom: 1px solid rgba(42, 36, 28, 0.15);
+  border-bottom: 1px solid rgba(56, 60, 92, 0.15);
   margin-bottom: 20px;
   width: 100%;
 }
@@ -1241,7 +1241,7 @@ letter-spacing: 0.04em;
   height: 52px;
 }
 .ac__row + .ac__row {
-  border-top: 1px solid rgba(42, 36, 28, 0.08);
+  border-top: 1px solid rgba(56, 60, 92, 0.08);
 }
 
 /* Placeholder / empty row */
@@ -1301,7 +1301,7 @@ letter-spacing: 0.04em;
 /* Inline edit inputs */
 .ac__edit-inp {
   background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(42, 36, 28, 0.18);
+  border: 1px solid rgba(56, 60, 92, 0.18);
   border-radius: 8px;
   outline: none;
   padding: 6px 10px;
@@ -1311,7 +1311,7 @@ letter-spacing: 0.04em;
   width: 100%;
 }
 .ac__edit-inp::placeholder { color: var(--text-soft); }
-.ac__edit-inp:focus { border-color: rgba(42, 36, 28, 0.36); }
+.ac__edit-inp:focus { border-color: rgba(56, 60, 92, 0.36); }
 
 /* + (add word) button � positioned inside the empty row */
 .ac__plus-btn {
@@ -1395,9 +1395,9 @@ letter-spacing: 0.04em;
   font-size: 0.98rem;
   font-weight: 400;
   color: var(--text);
-  caret-color: rgba(42, 36, 28, 0.50);
+  caret-color: rgba(56, 60, 92, 0.50);
 }
-.vm__search::placeholder { color: rgba(100, 90, 75, 0.38); }
+.vm__search::placeholder { color: rgba(82, 86, 118, 0.38); }
 
 .vm__filters {
   display: flex;
@@ -1412,12 +1412,12 @@ letter-spacing: 0.04em;
   font-family: inherit;
   font-size: 0.88rem;
   font-weight: 500;
-  color: rgba(80, 70, 55, 0.55);
+  color: rgba(82, 86, 118, 0.55);
   cursor: pointer;
   padding: 0;
   transition: color 0.15s;
 }
-.vm__filter-tab:hover { color: rgba(42, 36, 28, 0.80); }
+.vm__filter-tab:hover { color: rgba(56, 60, 92, 0.80); }
 .vm__filter-tab--on {
   color: rgba(68, 208, 196, 0.95);
   font-weight: 700;
@@ -1425,7 +1425,7 @@ letter-spacing: 0.04em;
 
 .vm__divider {
   height: 1px;
-  background: rgba(42, 36, 28, 0.10);
+  background: rgba(56, 60, 92, 0.10);
   margin: 0 0 10px;
 }
 
@@ -1468,7 +1468,7 @@ letter-spacing: 0.04em;
   align-items: center;
   gap: 12px;
   padding: 13px 18px;
-  border-bottom: 1px solid rgba(42, 36, 28, 0.08);
+  border-bottom: 1px solid rgba(56, 60, 92, 0.08);
 }
 .vm__row:last-child { border-bottom: none; }
 
@@ -1511,7 +1511,7 @@ letter-spacing: 0.04em;
   border-radius: 50%;
   border: none;
   background: rgba(0, 0, 0, 0.07);
-  color: rgba(80, 70, 55, 0.65);
+  color: rgba(82, 86, 118, 0.65);
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -1520,7 +1520,7 @@ letter-spacing: 0.04em;
 }
 .vm__icon-btn:hover {
   background: rgba(0, 0, 0, 0.12);
-  color: rgba(42, 36, 28, 0.88);
+  color: rgba(56, 60, 92, 0.88);
 }
 .vm__icon-btn--ok {
   background: rgba(72, 196, 158, 0.40);
@@ -1542,16 +1542,16 @@ letter-spacing: 0.04em;
 .vm__edit-inp {
   background: transparent;
   border: none;
-  border-bottom: 1.5px solid rgba(42, 36, 28, 0.22);
+  border-bottom: 1.5px solid rgba(56, 60, 92, 0.22);
   outline: none;
   font-family: inherit;
   font-size: 0.92rem;
   font-weight: 500;
   color: var(--text);
   padding: 2px 0;
-  caret-color: rgba(42, 36, 28, 0.50);
+  caret-color: rgba(56, 60, 92, 0.50);
 }
-.vm__edit-inp::placeholder { color: rgba(100, 90, 75, 0.35); }
+.vm__edit-inp::placeholder { color: rgba(82, 86, 118, 0.35); }
 
 /* -- Footer -- */
 .vm__footer {
@@ -1560,7 +1560,7 @@ letter-spacing: 0.04em;
   align-items: center;
   justify-content: space-between;
   padding: 6px 14px;
-  border-top: 1px solid rgba(42, 36, 28, 0.10);
+  border-top: 1px solid rgba(56, 60, 92, 0.10);
 }
 
 .vm__footer-btn {
@@ -1569,7 +1569,7 @@ letter-spacing: 0.04em;
   border-radius: 50%;
   border: none;
   background: rgba(0, 0, 0, 0.07);
-  color: rgba(80, 70, 55, 0.65);
+  color: rgba(82, 86, 118, 0.65);
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -1618,7 +1618,7 @@ letter-spacing: 0.04em;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
 }
 .vm__modal-text {
-  color: rgba(42, 36, 28, 0.90);
+  color: rgba(56, 60, 92, 0.90);
   font-size: 1rem;
   margin: 0 0 22px;
   line-height: 1.5;
@@ -1639,7 +1639,7 @@ letter-spacing: 0.04em;
 }
 .vm__modal-btn--cancel {
   background: rgba(180, 172, 158, 0.25);
-  color: rgba(42, 36, 28, 0.80);
+  color: rgba(56, 60, 92, 0.80);
 }
 .vm__modal-btn--cancel:hover { opacity: 0.75; }
 .vm__modal-btn--del {

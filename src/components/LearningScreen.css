@@ -2,15 +2,15 @@
 
 .ls {
   --sidebar-bg: rgba(255, 255, 255, 0.48);
-  --text:       rgba(42, 36, 28, 0.90);
-  --text-soft:  rgba(100, 90, 75, 0.72);
+  --text:       rgba(56, 60, 92, 0.90);
+  --text-soft:  rgba(82, 86, 118, 0.72);
 
   position: fixed;
   inset: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: #ede4d4;
+  background: #edecea;
   font-family: 'Playfair Display', Georgia, serif;
   color: var(--text);
   user-select: none;
@@ -21,7 +21,7 @@
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.22;
+  opacity: 0.34;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 180px 180px;
   z-index: 0;
@@ -236,14 +236,14 @@
 .ls__word {
   font-size: 3.2rem;
   font-weight: 700;
-  color: rgba(42, 36, 28, 0.28);
+  color: rgba(56, 60, 92, 0.28);
   text-align: center;
   line-height: 1.1;
 }
 
 .ls__card-divider {
   height: 1px;
-  background: rgba(100, 90, 75, 0.15);
+  background: rgba(82, 86, 118, 0.15);
   margin: 0 24px;
 }
 
@@ -266,9 +266,9 @@
   font-weight: 600;
   color: var(--text);
   text-align: center;
-  caret-color: rgba(42, 36, 28, 0.50);
+  caret-color: rgba(56, 60, 92, 0.50);
 }
-.ls__input::placeholder { color: rgba(100, 90, 75, 0.35); font-size: 1.4rem; }
+.ls__input::placeholder { color: rgba(82, 86, 118, 0.35); font-size: 1.4rem; }
 
 .ls__submit-btn {
   position: absolute;
