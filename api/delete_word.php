@@ -22,20 +22,14 @@ if ($wordId <= 0) {
 
 try {
     $db = getDB();
-    $db->beginTransaction();
 
-    // Fortschritt aller User für dieses Wort löschen (FK)
-    $db->prepare('DELETE FROM user_progress WHERE word_id = :id')
-       ->execute([':id' => $wordId]);
+    // Nur den Fortschritt des aktuellen Users für dieses Wort löschen
+    // Das Wort selbst bleibt erhalten (kann von anderen Usern noch verwendet werden)
+    $db->prepare('DELETE FROM user_progress WHERE user_id = :user_id AND word_id = :word_id')
+       ->execute([':user_id' => $auth['id'], ':word_id' => $wordId]);
 
-    // Wort löschen
-    $db->prepare('DELETE FROM vocabulary WHERE id = :id')
-       ->execute([':id' => $wordId]);
-
-    $db->commit();
     jsonResponse(['success' => true]);
 
 } catch (PDOException $e) {
-    if ($db->inTransaction()) $db->rollBack();
     jsonResponse(['error' => 'Datenbankfehler'], 500);
 }
