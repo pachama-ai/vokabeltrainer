@@ -12,7 +12,7 @@ import AddCategoryScreen from './components/AddCategoryScreen'
 import VocabManagerScreen from './components/VocabManagerScreen'
 
 // Screens: 'login' | 'categories' | 'add-words' | 'learning' | 'settings'
-const BUILTIN_CATS = ['a1', 'a2', 'b1', 'b2', 'unregelmaessige_verben']
+const BUILTIN_CATS = 'abcdefghijklmnopqrstuvwxyz'.split('')
 
 export default function App() {
   const [screen, setScreen]           = useState('login')
@@ -50,25 +50,18 @@ export default function App() {
   async function loadAllStats() {
     setStatsLoading(true)
     try {
-      const [catRes, s1, s2, s3, s4, s5] = await Promise.all([
+      const [catRes, ...builtinStats] = await Promise.all([
         getCategories(),
-        getStats('a1'),
-        getStats('a2'),
-        getStats('b1'),
-        getStats('b2'),
-        getStats('unregelmaessige_verben'),
+        ...BUILTIN_CATS.map(c => getStats(c)),
       ])
 
       const extras = (catRes.categories ?? []).filter(c => !BUILTIN_CATS.includes(c))
       setCustomCats(extras)
 
-      const stats = {
-        a1:                     { counts: s1.counts, total: s1.total },
-        a2:                     { counts: s2.counts, total: s2.total },
-        b1:                     { counts: s3.counts, total: s3.total },
-        b2:                     { counts: s4.counts, total: s4.total },
-        unregelmaessige_verben: { counts: s5.counts, total: s5.total },
-      }
+      const stats = {}
+      BUILTIN_CATS.forEach((c, i) => {
+        stats[c] = { counts: builtinStats[i].counts, total: builtinStats[i].total }
+      })
       // Stats für custom Kategorien laden
       if (extras.length > 0) {
         const extraStats = await Promise.all(extras.map(c => getStats(c)))

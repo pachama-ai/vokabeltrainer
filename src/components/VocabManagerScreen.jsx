@@ -3,13 +3,18 @@ import { AvatarIcon, getAvatarIdx } from './avatars'
 import { getManageWords, updateWord, deleteWord, createCategory } from '../api/vocabApi'
 import './CategoryScreen.css'
 
-const BUILTIN_CATS = [
-  { id: 'a1',                     label: 'A1',             color: '#5aab82' },
-  { id: 'a2',                     label: 'A2',             color: '#68b0e2' },
-  { id: 'b1',                     label: 'B1',             color: '#c4956a' },
-  { id: 'b2',                     label: 'B2',             color: '#b07891' },
-  { id: 'unregelmaessige_verben', label: 'Irregular Verbs', color: '#9b73c0', img: '/irregular.png' },
+const ALPHA_COLORS = [
+  '#e87070','#e8906a','#f0a055','#f0b830','#d4c040',
+  '#8fc448','#5aab82','#4ca87a','#3ea899','#68b0e2',
+  '#5b9ec9','#4a7db8','#8da0c0','#9b73c0','#b060b0',
+  '#b07891','#c0826e','#c4956a','#a08868','#7a9eaf',
+  '#6bb5a0','#a0c870','#c8b870','#b87878','#8878c8','#78b8c8',
 ]
+const BUILTIN_CATS = 'abcdefghijklmnopqrstuvwxyz'.split('').map((letter, i) => ({
+  id: letter,
+  label: letter.toUpperCase(),
+  color: ALPHA_COLORS[i],
+}))
 
 const DEFAULT_CAT_COLOR = '#8da0c0'
 

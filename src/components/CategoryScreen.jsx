@@ -14,21 +14,24 @@ const LEVELS = [
 
 const LEVEL_ICONS = [] // unused – kept for potential future use
 
-const CAT_BTNS = [
-  { id: 'a1',                     label: 'A1',            tooltip: 'A1 - Basic Vocabulary',      color: '#5aab82' },
-  { id: 'a2',                     label: 'A2',            tooltip: 'A2 - Elementary Vocabulary',  color: '#68b0e2' },
-  { id: 'b1',                     label: 'B1',            tooltip: 'B1 - Intermediate Vocabulary',color: '#c4956a' },
-  { id: 'b2',                     label: 'B2',            tooltip: 'B2 - Upper Intermediate',    color: '#b07891' },
-  { id: 'unregelmaessige_verben', label: 'Irregular Verbs', tooltip: 'Irregular Verbs',           color: '#9b73c0', img: '/irregular.png' },
+const ALPHA_COLORS = [
+  '#e87070','#e8906a','#f0a055','#f0b830','#d4c040',
+  '#8fc448','#5aab82','#4ca87a','#3ea899','#68b0e2',
+  '#5b9ec9','#4a7db8','#8da0c0','#9b73c0','#b060b0',
+  '#b07891','#c0826e','#c4956a','#a08868','#7a9eaf',
+  '#6bb5a0','#a0c870','#c8b870','#b87878','#8878c8','#78b8c8',
 ]
 
-const CAT_COLOR_MAP = {
-  a1: '#5aab82',
-  a2: '#68b0e2',
-  b1: '#c4956a',
-  b2: '#b07891',
-  unregelmaessige_verben: '#9b73c0',
-}
+const CAT_BTNS = 'abcdefghijklmnopqrstuvwxyz'.split('').map((letter, i) => ({
+  id: letter,
+  label: letter.toUpperCase(),
+  tooltip: `${letter.toUpperCase()} - Basic Vocabulary`,
+  color: ALPHA_COLORS[i],
+}))
+
+const CAT_COLOR_MAP = Object.fromEntries(
+  'abcdefghijklmnopqrstuvwxyz'.split('').map((l, i) => [l, ALPHA_COLORS[i]])
+)
 const DEFAULT_CAT_COLOR = '#8da0c0'
 
 // Placeholder icon
