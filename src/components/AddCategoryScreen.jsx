@@ -4,9 +4,11 @@ import { createCategory } from '../api/vocabApi'
 import './CategoryScreen.css'
 
 const BUILTIN_CATS = [
-  { id: 'grundwortschatz',        label: 'Basic Vocabulary',    img: '/grundwortschatz.png',  color: '#c4956a' },
-  { id: 'aufbauwortschatz',       label: 'Advanced Vocabulary', img: '/aufbauwortschatz.png', color: '#5aab82' },
-  { id: 'unregelmaessige_verben', label: 'Irregular Verbs',     img: '/irregular.png',        color: '#b07891' },
+  { id: 'a1',                     label: 'A1',             color: '#5aab82' },
+  { id: 'a2',                     label: 'A2',             color: '#68b0e2' },
+  { id: 'b1',                     label: 'B1',             color: '#c4956a' },
+  { id: 'b2',                     label: 'B2',             color: '#b07891' },
+  { id: 'unregelmaessige_verben', label: 'Irregular Verbs', color: '#9b73c0', img: '/irregular.png' },
 ]
 
 const PlaceholderIcon = () => (
@@ -160,15 +162,18 @@ export default function AddCategoryScreen({ onBack, onSaved, onSettings, onSelec
             </button>
             <span className="hs__mascot-lbl">Home</span>
           </div>
-          {allCatBtns.map(cat => (
-            <button key={cat.id} className="hs__cat-btn hs__cat-btn--dim" disabled title={cat.label} style={cat.color ? { background: cat.color } : {}}>
-              {cat.img
-                ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
-                : <PlaceholderIcon />}
-            </button>
-          ))}
-          <div className="hs__side-spacer" />
-          <button className="hs__cat-btn hs__add-btn hs__cat-btn--dim" disabled>+</button>
+          <div className="hs__cat-list">
+            {allCatBtns.map(cat => (
+              <button key={cat.id} className="hs__cat-btn hs__cat-btn--dim" disabled title={cat.label} style={{ background: cat.color ?? '#8da0c0' }}>
+                {cat.img
+                  ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
+                  : <span style={{ fontSize: cat.label.length <= 2 ? 17 : 11, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center', color: 'rgba(255,255,255,0.95)' }}>{cat.label}</span>}
+              </button>
+            ))}
+          </div>
+          <div className="hs__add-btn-wrap">
+            <button className="hs__cat-btn hs__add-btn hs__cat-btn--dim" disabled>+</button>
+          </div>
         </aside>
 
         {/* Main */}

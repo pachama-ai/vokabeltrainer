@@ -15,15 +15,19 @@ const LEVELS = [
 const LEVEL_ICONS = [] // unused – kept for potential future use
 
 const CAT_BTNS = [
-  { id: 'grundwortschatz',        label: 'Basic Vocabulary',    icon: '🏠', color: '#c4956a', img: '/grundwortschatz.png' },
-  { id: 'aufbauwortschatz',       label: 'Advanced Vocabulary', icon: '📚', color: '#5aab82', img: '/aufbauwortschatz.png' },
-  { id: 'unregelmaessige_verben', label: 'Irregular Verbs',     icon: '⚡', color: '#b07891', img: '/irregular.png' },
+  { id: 'a1',                     label: 'A1', color: '#5aab82' },
+  { id: 'a2',                     label: 'A2', color: '#68b0e2' },
+  { id: 'b1',                     label: 'B1', color: '#c4956a' },
+  { id: 'b2',                     label: 'B2', color: '#b07891' },
+  { id: 'unregelmaessige_verben', label: 'Irregular Verbs', color: '#9b73c0', img: '/irregular.png' },
 ]
 
 const CAT_COLOR_MAP = {
-  grundwortschatz: '#c4956a',
-  aufbauwortschatz: '#5aab82',
-  unregelmaessige_verben: '#b07891',
+  a1: '#5aab82',
+  a2: '#68b0e2',
+  b1: '#c4956a',
+  b2: '#b07891',
+  unregelmaessige_verben: '#9b73c0',
 }
 const DEFAULT_CAT_COLOR = '#8da0c0'
 
@@ -74,6 +78,28 @@ const ACTION_BTNS = [
   { id: 'test',    label: 'Test',   img: '/test.png',   color: '#c0826e' },
   { id: 'manage',  label: 'Manage', img: '/manage.png', color: '#4ca87a' },
 ]
+
+function RingChart({ pct, color, count, label }) {
+  const r = 26
+  const circ = 2 * Math.PI * r
+  const dash = (pct / 100) * circ
+  return (
+    <div className="hs__ring-item">
+      <svg width="66" height="66" viewBox="0 0 66 66">
+        <circle cx="33" cy="33" r={r} fill="none" stroke="rgba(165,155,140,0.25)" strokeWidth="7" />
+        <circle cx="33" cy="33" r={r} fill="none" stroke={color} strokeWidth="7"
+          strokeDasharray={`${dash} ${circ}`}
+          strokeLinecap="round"
+          transform="rotate(-90 33 33)"
+          style={{ transition: 'stroke-dasharray 0.7s cubic-bezier(0.4,0,0.2,1)' }}
+        />
+        <text x="33" y="33" textAnchor="middle" dominantBaseline="central"
+          fontSize="13" fontWeight="700" fill="rgba(56,60,92,0.9)">{count}</text>
+      </svg>
+      <span className="hs__ring-lbl">{label}</span>
+    </div>
+  )
+}
 
 export default function CategoryScreen({ allStats, loading, onSelectCategory, onSettings, onAddCategory, onManage, customCats = [], onDeleteCategory }) {
   const [activeCatId, setActiveCatId] = useState(CAT_BTNS[0].id)
@@ -281,7 +307,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 {activeCat.label} — Leitner Box
               </span>}
         </h1>
-        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}><img src="/flamme.png" alt="streak" style={{ width: 22, height: 22, objectFit: 'contain', flexShrink: 0 }} /> <span>0 Days</span></div>
+        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}>🔥 <span>0 Days</span></div>
       </header>
 
       {/* ── Body: 3 columns ─────────────────────────────── */}
@@ -296,25 +322,35 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
             <span className="hs__mascot-lbl">Settings</span>
           </div>
 
-          {allCatBtns.map(cat => {
-            const isCustom = customCats.includes(cat.id)
-            return (
-              <button
-                key={cat.id}
-                className={`hs__cat-btn${activeCatId === cat.id ? ' hs__cat-btn--on' : ''}`}
-                style={{ background: cat.color ?? DEFAULT_CAT_COLOR }}
-                onClick={() => setActiveCatId(cat.id)}
-                onContextMenu={isCustom ? (e) => { e.preventDefault(); setDeleteCatConfirm(cat.id) } : undefined}
-                title={cat.label}
-              >{cat.img
-                ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
-                : <PlaceholderIcon />
-              }</button>
-            )
-          })}
+          <div className="hs__cat-list">
+            {allCatBtns.map(cat => {
+              const isCustom = customCats.includes(cat.id)
+              const isActive = activeCatId === cat.id
+              return (
+                <button
+                  key={cat.id}
+                  className={`hs__cat-btn${isActive ? ' hs__cat-btn--on' : ''}`}
+                  style={{
+                    background: cat.color ?? DEFAULT_CAT_COLOR,
+                    ...(isActive ? {
+                      outline: `3px solid ${cat.color ?? DEFAULT_CAT_COLOR}`,
+                      outlineOffset: '3px',
+                    } : {})
+                  }}
+                  onClick={() => setActiveCatId(cat.id)}
+                  onContextMenu={isCustom ? (e) => { e.preventDefault(); setDeleteCatConfirm(cat.id) } : undefined}
+                  title={cat.label}
+                >{cat.img
+                  ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
+                  : <span style={{ fontSize: cat.label.length <= 2 ? 17 : 11, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center', color: 'rgba(255,255,255,0.95)' }}>{cat.label}</span>
+                }</button>
+              )
+            })}
+          </div>
 
-          <div className="hs__side-spacer" />
-          <button className="hs__cat-btn hs__add-btn" title="Add category" onClick={onAddCategory}>+</button>
+          <div className="hs__add-btn-wrap">
+            <button className="hs__cat-btn hs__add-btn" title="Add category" onClick={onAddCategory}>+</button>
+          </div>
         </aside>
 
         {/* Main content */}
@@ -324,12 +360,15 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
           {learnMode && (
             <div className="hs__test-card">
               <div className="hs__test-header-row">
-                <span className="hs__test-section-title">Study Mode Setup</span>
+                <span className="hs__test-section-title">Study Settings</span>
               </div>
 
-              {/* Number of New Words */}
+              {/* New Words */}
               <div className="hs__test-row">
-                <span className="hs__test-row-label">Number of New Words</span>
+                <div className="hs__learn-label-wrap">
+                  <span className="hs__test-row-label">New Words</span>
+                  <span className="hs__learn-hint">Unknown words added to your session</span>
+                </div>
                 <input
                   className="hs__test-num-input"
                   type="number"
@@ -340,9 +379,12 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
               </div>
               <div className="hs__test-divider" />
 
-              {/* Total Number of Words */}
+              {/* Total */}
               <div className="hs__test-row">
-                <span className="hs__test-row-label">Total Number of Words</span>
+                <div className="hs__learn-label-wrap">
+                  <span className="hs__test-row-label">Total</span>
+                  <span className="hs__learn-hint">How many words to study this session</span>
+                </div>
                 <div className="hs__learn-total-wrap">
                   {learnTotalStr === '' ? (
                     <button className="hs__test-dir-btn" onClick={() => setLearnTotalStr('20')}>
@@ -365,34 +407,52 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
               </div>
               <div className="hs__test-divider" />
 
-              {/* Translation Direction */}
+              {/* Direction */}
               <div className="hs__test-row">
-                <span className="hs__test-row-label">Translation Direction</span>
+                <div className="hs__learn-label-wrap">
+                  <span className="hs__test-row-label">Direction</span>
+                  <span className="hs__learn-hint">Which language is shown as the prompt</span>
+                </div>
                 <button className="hs__test-dir-btn" onClick={cycleLearnDir}>
-                  {learnDir === 'de→en' ? 'Deutsch → Englisch'
-                    : learnDir === 'en→de' ? 'Englisch → Deutsch'
-                    : 'Deutsch ↔ Englisch'}
+                  {learnDir === 'de→en' ? 'DE → EN'
+                    : learnDir === 'en→de' ? 'EN → DE'
+                    : 'DE ↔ EN'}
                 </button>
               </div>
               <div className="hs__test-divider" />
 
               {/* Level Selection */}
-              <div className="hs__test-cat-section">
-                <span className="hs__test-row-label">Level Selection</span>
-                <div className="hs__test-cat-circles">
-                  {[1, 2, 3, 4, 5].map(lvl => (
-                    <button
-                      key={lvl}
-                      className={`hs__level-circle${learnLevels.includes(lvl) ? ' hs__level-circle--on' : ''}`}
-                      style={learnLevels.includes(lvl)
-                        ? { background: LEARN_LEVEL_COLORS[lvl], borderColor: LEARN_LEVEL_COLORS[lvl], color: '#fff', transform: 'scale(1.12)', boxShadow: `0 0 14px 4px ${LEARN_LEVEL_COLORS[lvl]}88` }
-                        : { background: LEARN_LEVEL_COLORS[lvl] + '33', borderColor: LEARN_LEVEL_COLORS[lvl] + 'aa', color: LEARN_LEVEL_COLORS[lvl] }
-                      }
-                      onClick={() => toggleLearnLevel(lvl)}
-                    >{lvl}</button>
-                  ))}
+              <div className="hs__learn-level-section">
+                <div className="hs__learn-label-wrap">
+                  <span className="hs__test-row-label">Level</span>
+                  <span className="hs__learn-hint">Only include words at these difficulty levels</span>
                 </div>
-                <button className="hs__test-confirm-btn" onClick={startLearnNow} disabled={learnLevels.length === 0} style={learnLevels.length === 0 ? { opacity: 0.3, cursor: 'default' } : {}}>✓</button>
+                <div className="hs__learn-levels">
+                  {LEVELS.map(l => {
+                    const on = learnLevels.includes(l.level)
+                    return (
+                      <button
+                        key={l.level}
+                        className={`hs__lvl-btn${on ? ' hs__lvl-btn--on' : ''}`}
+                        style={on
+                          ? { borderColor: l.color, background: l.color + '22', color: l.color }
+                          : { borderColor: 'rgba(150,140,120,0.3)', background: 'transparent', color: 'rgba(120,120,120,0.6)' }
+                        }
+                        onClick={() => toggleLearnLevel(l.level)}
+                      >
+                        <span className="hs__lvl-dot" style={{ background: on ? l.color : 'rgba(150,140,120,0.3)' }} />
+                        <span className="hs__lvl-num">{l.level}</span>
+                      </button>
+                    )
+                  })}
+                </div>
+                <button
+                  className="hs__learn-start-btn"
+                  onClick={startLearnNow}
+                  disabled={learnLevels.length === 0}
+                >
+                  Start Studying
+                </button>
               </div>
             </div>
           )}
@@ -427,9 +487,9 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                     d === 'de→en' ? 'en→de' : d === 'en→de' ? 'both' : 'de→en'
                   )}
                 >
-                  {testDirection === 'de→en' ? 'Deutsch → Englisch'
-                    : testDirection === 'en→de' ? 'Englisch → Deutsch'
-                    : 'Deutsch ↔ Englisch'}
+                  {testDirection === 'de→en' ? 'DE → EN'
+                    : testDirection === 'en→de' ? 'EN → DE'
+                    : 'DE ↔ EN'}
                 </button>
               </div>
               <div className="hs__test-divider" />
@@ -474,9 +534,9 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
             <div className="hs__quiz-wrap">
               <div className="hs__quiz-info-bar">
                 <span className="hs__quiz-direction">
-                  {testDirection === 'de→en' ? 'Deutsch → Englisch'
-                    : testDirection === 'en→de' ? 'Englisch → Deutsch'
-                    : 'Deutsch ↔ Englisch'}
+                  {testDirection === 'de→en' ? 'DE → EN'
+                    : testDirection === 'en→de' ? 'EN → DE'
+                    : 'DE ↔ EN'}
                 </span>
                 <span className="hs__quiz-counter">{testIndex + 1}/{testWords.length}</span>
               </div>
@@ -510,14 +570,14 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
             const correct = testResults.filter(a => a.correct).length
             const total = testResults.length
             const pct = Math.round((correct / total) * 100)
-            const msg = pct === 100 ? 'PERFEKT!' : pct >= 70 ? 'GUT GEMACHT!' : 'WEITER ÜBEN!'
+            const msg = pct === 100 ? 'PERFECT!' : pct >= 70 ? 'GREAT JOB!' : 'KEEP TRYING!'
             return (
               <div className="hs__quiz-wrap">
                 <div className="hs__quiz-info-bar">
                   <span className="hs__quiz-direction">
-                    {testDirection === 'de→en' ? 'Deutsch → Englisch'
-                      : testDirection === 'en→de' ? 'Englisch → Deutsch'
-                      : 'Deutsch ↔ Englisch'}
+                    {testDirection === 'de→en' ? 'DE → EN'
+                      : testDirection === 'en→de' ? 'EN → DE'
+                      : 'DE ↔ EN'}
                   </span>
                   <span className="hs__quiz-counter">{total}/{total}</span>
                 </div>
@@ -542,10 +602,10 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                   <div className="hs__result-footer">
                     {testResults.some(a => !a.correct) ? (
                       <button className="hs__result-retry" onClick={retryWrong}>
-                        <RetryIcon /> Falsche wiederholen
+                        <RetryIcon /> Retry Mistakes
                       </button>
                     ) : <span />}
-                    <button className="hs__result-done" onClick={closeTest}>✓ Fertig</button>
+                    <button className="hs__result-done" onClick={closeTest}>✓ Done</button>
                   </div>
                 </div>
               </div>
@@ -561,20 +621,24 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                   const counts = s?.counts ?? [0,0,0,0,0,0]
                   const levelCounts = LEVELS.map(l => counts[l.level] ?? 0)
                   const total = levelCounts.reduce((a, b) => a + b, 0)
-                  return LEVELS.map((l, i) => {
-                    const n = levelCounts[i]
-                    const pct = total > 0 ? Math.round((n / total) * 100) : 0
-                    return (
-                      <div key={l.level} className="hs__row">
-                        <span className="hs__row-lbl">{l.label}</span>
-                        <div className="hs__bar">
-                          <div className="hs__bar-fill" style={{ width: `${pct}%`, background: l.color }} />
-                        </div>
-                        <span className="hs__row-n">{n}</span>
-                        <span className="hs__row-p">{pct}%</span>
+                  const mastered = (levelCounts[3] ?? 0) + (levelCounts[4] ?? 0)
+                  const masteryPct = total > 0 ? Math.round((mastered / total) * 100) : 0
+                  return (
+                    <>
+                      <div className="hs__ov-summary">
+                        <span className="hs__ov-total">{total} words</span>
+                        <span className="hs__ov-mastery" style={{ color: masteryPct >= 50 ? '#4ca87a' : '#c0826e' }}>
+                          {masteryPct}% mastered
+                        </span>
                       </div>
-                    )
-                  })
+                      <div className="hs__rings">
+                        {LEVELS.map((l, i) => {
+                          const pct = total > 0 ? (levelCounts[i] / total) * 100 : 0
+                          return <RingChart key={l.level} pct={pct} color={l.color} count={levelCounts[i]} label={l.label} />
+                        })}
+                      </div>
+                    </>
+                  )
                 })()}
               </div>
             ) : (
@@ -661,11 +725,11 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
         <div className="hs__overlay">
           <div className="hs__confirm-box">
             <p className="hs__confirm-msg">
-              Kategorie löschen?<br/>
-              <span>Alle Wörter in «{deleteCatConfirm}» werden unwiderruflich gelöscht.</span>
+              Delete Category?<br/>
+              <span>All words in «{deleteCatConfirm}» will be permanently deleted.</span>
             </p>
             <div className="hs__confirm-btns">
-              <button className="hs__confirm-no" onClick={() => setDeleteCatConfirm(null)}>Abbrechen</button>
+              <button className="hs__confirm-no" onClick={() => setDeleteCatConfirm(null)}>Cancel</button>
               <button
                 className="hs__confirm-yes"
                 onClick={async () => {
@@ -674,7 +738,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                   if (activeCatId === catId) setActiveCatId(allCatBtns[0]?.id ?? null)
                   await onDeleteCategory?.(catId)
                 }}
-              >Löschen</button>
+              >Delete</button>
             </div>
           </div>
         </div>
