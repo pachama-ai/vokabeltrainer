@@ -117,7 +117,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
   const [testResults, setTestResults]     = useState(null)
   const [testWordCountStr, setTestWordCountStr] = useState('35')
   const [testDirection, setTestDirection] = useState('both')
-  const [testCats, setTestCats]           = useState([CAT_BTNS[0].id])
+  const [testLevels, setTestLevels]       = useState([1, 2, 3, 4, 5])
   const [testWords, setTestWords]         = useState([])
   const [testIndex, setTestIndex]         = useState(0)
   const [testInput, setTestInput]         = useState('')
@@ -165,15 +165,22 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
     setTestAnswers([])
     setTestWordCountStr('35')
     setTestDirection('both')
-    setTestCats([activeCatId])
+    // pre-select levels that have words in the current category
+    const counts = allStats?.[activeCatId]?.counts ?? []
+    const available = [1,2,3,4,5].filter(l => (counts[l] ?? 0) > 0)
+    setTestLevels(available.length > 0 ? available : [1,2,3,4,5])
   }
 
   async function startTestNow() {
     const count = Math.max(1, parseInt(testWordCountStr) || 20)
     setTestLoading(true)
     try {
-      const lists = await Promise.all(testCats.map(c => getWords(c)))
-      let pool = lists.flat().filter(w => w.level >= 1 && w.level <= 5)
+      const allCatIds = allCatBtns.map(c => c.id)
+      const lists = await Promise.all(allCatIds.map(c => getWords(c)))
+      let pool = lists.flat().filter(w => testLevels.includes(w.level))
+      // deduplicate by id
+      const seen = new Set()
+      pool = pool.filter(w => { if (seen.has(w.id)) return false; seen.add(w.id); return true })
       // shuffle + limit
       pool = pool.sort(() => Math.random() - 0.5).slice(0, count)
       setTestWords(pool)
@@ -488,36 +495,39 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
               </div>
               <div className="hs__test-divider" />
 
-              {/* Category Selection */}
-              <div className="hs__test-cat-section">
-                <span className="hs__test-row-label">Category Selection</span>
-                <div className="hs__test-cat-circles">
-                  {allCatBtns.map(c => (
-                    <button
-                      key={c.id}
-                      className="hs__test-cat-circle"
-                      title={c.label}
-                      style={{
-                        background: c.color ?? 'rgba(142, 154, 196, 0.38)',
-                        outline: testCats.includes(c.id) ? '3px solid #fff' : '3px solid transparent',
-                        outlineOffset: '3px',
-                        boxShadow: testCats.includes(c.id) ? '0 0 0 5px rgba(255,255,255,0.35)' : 'none',
-                        opacity: testCats.includes(c.id) ? 1 : 0.55,
-                      }}
-                      onClick={() => setTestCats(prev =>
-                        prev.includes(c.id)
-                          ? prev.length > 1 ? prev.filter(x => x !== c.id) : prev
-                          : [...prev, c.id]
-                      )}
-                    >{c.img
-                      ? <img src={c.img} alt={c.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
-                      : <PlaceholderIcon />}</button>
-                  ))}
+              {/* Level Selection */}
+              <div className="hs__learn-level-section">
+                <div className="hs__learn-label-wrap">
+                  <span className="hs__test-row-label">Level</span>
+                  <span className="hs__learn-hint">Only include words at these difficulty levels</span>
+                </div>
+                <div className="hs__learn-levels">
+                  {LEVELS.map(l => {
+                    const on = testLevels.includes(l.level)
+                    return (
+                      <button
+                        key={l.level}
+                        className={`hs__lvl-btn${on ? ' hs__lvl-btn--on' : ''}`}
+                        style={on
+                          ? { borderColor: l.color, background: l.color + '22', color: l.color }
+                          : { borderColor: 'rgba(150,140,120,0.3)', background: 'transparent', color: 'rgba(120,120,120,0.6)' }
+                        }
+                        onClick={() => setTestLevels(prev =>
+                          prev.includes(l.level)
+                            ? prev.length > 1 ? prev.filter(x => x !== l.level) : prev
+                            : [...prev, l.level]
+                        )}
+                      >
+                        <span className="hs__lvl-dot" style={{ background: on ? l.color : 'rgba(150,140,120,0.3)' }} />
+                        <span className="hs__lvl-num">{l.level}</span>
+                      </button>
+                    )
+                  })}
                 </div>
                 <button
                   className="hs__test-confirm-btn"
                   onClick={startTestNow}
-                  disabled={testLoading}
+                  disabled={testLoading || testLevels.length === 0}
                 >✓</button>
               </div>
             </div>
