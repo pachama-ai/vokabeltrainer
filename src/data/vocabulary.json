@@ -1,3417 +1,134 @@
 ﻿[
     {
         "id":  1,
-        "word":  "die Mutter",
+        "word":  "Fähigkeit / Begabung",
         "translations":  [
-                             "mother",
-                             "mom"
+                             "ability"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  2,
-        "word":  "der Vater",
+        "word":  "fähig / tüchtig",
         "translations":  [
-                             "father",
-                             "dad"
+                             "able"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  3,
-        "word":  "die Eltern",
+        "word":  "an Bord",
         "translations":  [
-                             "parents"
+                             "aboard"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  4,
-        "word":  "die Schwester",
+        "word":  "über / ungefähr",
         "translations":  [
-                             "sister"
+                             "about"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  5,
-        "word":  "der Bruder",
+        "word":  "oben / über",
         "translations":  [
-                             "brother"
+                             "above"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  6,
-        "word":  "die Tochter",
+        "word":  "im Ausland",
         "translations":  [
-                             "daughter"
+                             "abroad"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  7,
-        "word":  "der Sohn",
+        "word":  "Abwesenheit",
         "translations":  [
-                             "son"
+                             "absence"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  8,
-        "word":  "die Großmutter",
+        "word":  "abwesend",
         "translations":  [
-                             "grandmother",
-                             "grandma"
+                             "absent"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  9,
-        "word":  "der Großvater",
+        "word":  "absolut",
         "translations":  [
-                             "grandfather",
-                             "grandpa"
+                             "absolute"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  10,
-        "word":  "die Familie",
+        "word":  "versehentlich / zufällig",
         "translations":  [
-                             "family"
+                             "accidentally"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  11,
-        "word":  "der Freund",
+        "word":  "begleiten",
         "translations":  [
-                             "friend",
-                             "boyfriend"
+                             "accompany"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  12,
-        "word":  "die Freundin",
+        "word":  "Konto / Bericht",
         "translations":  [
-                             "friend",
-                             "girlfriend"
+                             "account"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  13,
-        "word":  "der Kollege",
+        "word":  "erklären / Rechenschaft ablegen",
         "translations":  [
-                             "colleague",
-                             "coworker"
+                             "to account for"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  14,
-        "word":  "der Nachbar",
+        "word":  "berücksichtigen",
         "translations":  [
-                             "neighbour",
-                             "neighbor"
+                             "to take into account"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  15,
-        "word":  "das Baby",
+        "word":  "gewöhnen an",
         "translations":  [
-                             "baby"
+                             "to accustom to"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  16,
-        "word":  "der Kopf",
+        "word":  "bekannt sein mit",
         "translations":  [
-                             "head"
+                             "to be acquainted with"
                          ],
         "category":  "grundwortschatz"
     },
     {
         "id":  17,
-        "word":  "das Gesicht",
-        "translations":  [
-                             "face"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  18,
-        "word":  "das Auge",
-        "translations":  [
-                             "eye"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  19,
-        "word":  "das Ohr",
-        "translations":  [
-                             "ear"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  20,
-        "word":  "die Nase",
-        "translations":  [
-                             "nose"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  21,
-        "word":  "der Mund",
-        "translations":  [
-                             "mouth"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  22,
-        "word":  "der Zahn",
-        "translations":  [
-                             "tooth"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  23,
-        "word":  "die Schulter",
-        "translations":  [
-                             "shoulder"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  24,
-        "word":  "der Arm",
-        "translations":  [
-                             "arm"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  25,
-        "word":  "der Finger",
-        "translations":  [
-                             "finger"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  26,
-        "word":  "das Bein",
-        "translations":  [
-                             "leg"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  27,
-        "word":  "der Fuß",
-        "translations":  [
-                             "foot"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  28,
-        "word":  "der Rücken",
-        "translations":  [
-                             "back"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  29,
-        "word":  "der Bauch",
-        "translations":  [
-                             "stomach",
-                             "belly"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  30,
-        "word":  "das Herz",
-        "translations":  [
-                             "heart"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  31,
-        "word":  "das Blut",
-        "translations":  [
-                             "blood"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  32,
-        "word":  "die Haut",
-        "translations":  [
-                             "skin"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  33,
-        "word":  "das Haar",
-        "translations":  [
-                             "hair"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  34,
-        "word":  "das Zimmer",
-        "translations":  [
-                             "room"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  35,
-        "word":  "die Küche",
-        "translations":  [
-                             "kitchen"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  36,
-        "word":  "das Badezimmer",
-        "translations":  [
-                             "bathroom"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  37,
-        "word":  "das Schlafzimmer",
-        "translations":  [
-                             "bedroom"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  38,
-        "word":  "das Wohnzimmer",
-        "translations":  [
-                             "living room"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  39,
-        "word":  "die Tür",
-        "translations":  [
-                             "door"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  40,
-        "word":  "das Fenster",
-        "translations":  [
-                             "window"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  41,
-        "word":  "der Boden",
-        "translations":  [
-                             "floor",
-                             "ground"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  42,
-        "word":  "die Decke",
-        "translations":  [
-                             "ceiling"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  43,
-        "word":  "die Wand",
-        "translations":  [
-                             "wall"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  44,
-        "word":  "die Treppe",
-        "translations":  [
-                             "stairs",
-                             "staircase"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  45,
-        "word":  "der Stuhl",
-        "translations":  [
-                             "chair"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  46,
-        "word":  "der Tisch",
-        "translations":  [
-                             "table"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  47,
-        "word":  "das Bett",
-        "translations":  [
-                             "bed"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  48,
-        "word":  "der Schrank",
-        "translations":  [
-                             "wardrobe",
-                             "cupboard"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  49,
-        "word":  "das Regal",
-        "translations":  [
-                             "shelf"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  50,
-        "word":  "die Lampe",
-        "translations":  [
-                             "lamp",
-                             "light"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  51,
-        "word":  "der Schlüssel",
-        "translations":  [
-                             "key"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  52,
-        "word":  "das Dach",
-        "translations":  [
-                             "roof"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  53,
-        "word":  "der Garten",
-        "translations":  [
-                             "garden"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  54,
-        "word":  "das Brot",
-        "translations":  [
-                             "bread"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  55,
-        "word":  "die Butter",
-        "translations":  [
-                             "butter"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  56,
-        "word":  "das Ei",
-        "translations":  [
-                             "egg"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  57,
-        "word":  "der Käse",
-        "translations":  [
-                             "cheese"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  58,
-        "word":  "die Milch",
-        "translations":  [
-                             "milk"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  59,
-        "word":  "der Saft",
-        "translations":  [
-                             "juice"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  60,
-        "word":  "der Tee",
-        "translations":  [
-                             "tea"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  61,
-        "word":  "der Kaffee",
-        "translations":  [
-                             "coffee"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  62,
-        "word":  "das Fleisch",
-        "translations":  [
-                             "meat"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  63,
-        "word":  "der Fisch",
-        "translations":  [
-                             "fish"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  64,
-        "word":  "das Gemüse",
-        "translations":  [
-                             "vegetables"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  65,
-        "word":  "das Obst",
-        "translations":  [
-                             "fruit"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  66,
-        "word":  "der Apfel",
-        "translations":  [
-                             "apple"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  67,
-        "word":  "die Banane",
-        "translations":  [
-                             "banana"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  68,
-        "word":  "die Tomate",
-        "translations":  [
-                             "tomato"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  69,
-        "word":  "die Kartoffel",
-        "translations":  [
-                             "potato"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  70,
-        "word":  "die Zwiebel",
-        "translations":  [
-                             "onion"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  71,
-        "word":  "der Reis",
-        "translations":  [
-                             "rice"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  72,
-        "word":  "die Nudeln",
-        "translations":  [
-                             "pasta",
-                             "noodles"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  73,
-        "word":  "die Suppe",
-        "translations":  [
-                             "soup"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  74,
-        "word":  "der Kuchen",
-        "translations":  [
-                             "cake"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  75,
-        "word":  "das Frühstück",
-        "translations":  [
-                             "breakfast"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  76,
-        "word":  "das Mittagessen",
-        "translations":  [
-                             "lunch"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  77,
-        "word":  "das Abendessen",
-        "translations":  [
-                             "dinner",
-                             "supper"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  78,
-        "word":  "der Hunger",
-        "translations":  [
-                             "hunger"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  79,
-        "word":  "der Durst",
-        "translations":  [
-                             "thirst"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  80,
-        "word":  "der Löffel",
-        "translations":  [
-                             "spoon"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  81,
-        "word":  "die Gabel",
-        "translations":  [
-                             "fork"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  82,
-        "word":  "das Messer",
-        "translations":  [
-                             "knife"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  83,
-        "word":  "der Teller",
-        "translations":  [
-                             "plate"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  84,
-        "word":  "das Glas",
-        "translations":  [
-                             "glass"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  85,
-        "word":  "die Tasse",
-        "translations":  [
-                             "cup"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  86,
-        "word":  "die Flasche",
-        "translations":  [
-                             "bottle"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  87,
-        "word":  "das Hemd",
-        "translations":  [
-                             "shirt"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  88,
-        "word":  "die Hose",
-        "translations":  [
-                             "trousers",
-                             "pants"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  89,
-        "word":  "der Rock",
-        "translations":  [
-                             "skirt"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  90,
-        "word":  "das Kleid",
-        "translations":  [
-                             "dress"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  91,
-        "word":  "die Jacke",
-        "translations":  [
-                             "jacket"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  92,
-        "word":  "der Mantel",
-        "translations":  [
-                             "coat"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  93,
-        "word":  "der Schuh",
-        "translations":  [
-                             "shoe"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  94,
-        "word":  "der Stiefel",
-        "translations":  [
-                             "boot"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  95,
-        "word":  "die Socke",
-        "translations":  [
-                             "sock"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  96,
-        "word":  "das T-Shirt",
-        "translations":  [
-                             "T-shirt"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  97,
-        "word":  "der Pullover",
-        "translations":  [
-                             "sweater",
-                             "pullover"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  98,
-        "word":  "die Mütze",
-        "translations":  [
-                             "hat",
-                             "cap"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  99,
-        "word":  "der Schal",
-        "translations":  [
-                             "scarf"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  100,
-        "word":  "die Handschuhe",
-        "translations":  [
-                             "gloves"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  101,
-        "word":  "der Gürtel",
-        "translations":  [
-                             "belt"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  102,
-        "word":  "die Klasse",
-        "translations":  [
-                             "class",
-                             "classroom"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  103,
-        "word":  "der Unterricht",
-        "translations":  [
-                             "lesson",
-                             "class"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  104,
-        "word":  "die Hausaufgabe",
-        "translations":  [
-                             "homework"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  105,
-        "word":  "der Stift",
-        "translations":  [
-                             "pen",
-                             "pencil"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  106,
-        "word":  "das Heft",
-        "translations":  [
-                             "notebook",
-                             "exercise book"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  107,
-        "word":  "der Rucksack",
-        "translations":  [
-                             "backpack",
-                             "rucksack"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  108,
-        "word":  "die Prüfung",
-        "translations":  [
-                             "exam",
-                             "test"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  109,
-        "word":  "die Note",
-        "translations":  [
-                             "grade",
-                             "mark"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  110,
-        "word":  "die Tafel",
-        "translations":  [
-                             "blackboard",
-                             "board"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  111,
-        "word":  "der Bleistift",
-        "translations":  [
-                             "pencil"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  112,
-        "word":  "das Lineal",
-        "translations":  [
-                             "ruler"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  113,
-        "word":  "die Schere",
-        "translations":  [
-                             "scissors"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  114,
-        "word":  "der Radiergummi",
-        "translations":  [
-                             "eraser",
-                             "rubber"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  115,
-        "word":  "der Kuli",
-        "translations":  [
-                             "ballpoint pen",
-                             "pen"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  116,
-        "word":  "der Arzt",
-        "translations":  [
-                             "doctor",
-                             "physician"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  117,
-        "word":  "die Ärztin",
-        "translations":  [
-                             "doctor",
-                             "female doctor"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  118,
-        "word":  "der Polizist",
-        "translations":  [
-                             "police officer",
-                             "policeman"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  119,
-        "word":  "der Koch",
-        "translations":  [
-                             "cook",
-                             "chef"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  120,
-        "word":  "der Fahrer",
-        "translations":  [
-                             "driver"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  121,
-        "word":  "das Büro",
-        "translations":  [
-                             "office"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  122,
-        "word":  "der Chef",
-        "translations":  [
-                             "boss",
-                             "manager"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  123,
-        "word":  "das Gehalt",
-        "translations":  [
-                             "salary",
-                             "wage"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  124,
-        "word":  "der Urlaub",
-        "translations":  [
-                             "holiday",
-                             "vacation"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  125,
-        "word":  "der Bus",
-        "translations":  [
-                             "bus"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  126,
-        "word":  "der Zug",
-        "translations":  [
-                             "train"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  127,
-        "word":  "das Flugzeug",
-        "translations":  [
-                             "airplane",
-                             "plane"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  128,
-        "word":  "das Fahrrad",
-        "translations":  [
-                             "bicycle",
-                             "bike"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  129,
-        "word":  "das Motorrad",
-        "translations":  [
-                             "motorcycle"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  130,
-        "word":  "der Weg",
-        "translations":  [
-                             "way",
-                             "path"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  131,
-        "word":  "die Straße",
-        "translations":  [
-                             "street",
-                             "road"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  132,
-        "word":  "die Brücke",
-        "translations":  [
-                             "bridge"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  133,
-        "word":  "der Bahnhof",
-        "translations":  [
-                             "train station",
-                             "railway station"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  134,
-        "word":  "der Flughafen",
-        "translations":  [
-                             "airport"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  135,
-        "word":  "die Haltestelle",
-        "translations":  [
-                             "stop",
-                             "bus stop"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  136,
-        "word":  "links",
-        "translations":  [
-                             "left",
-                             "to the left"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  137,
-        "word":  "rechts",
-        "translations":  [
-                             "right",
-                             "to the right"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  138,
-        "word":  "geradeaus",
-        "translations":  [
-                             "straight ahead"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  139,
-        "word":  "nah",
-        "translations":  [
-                             "near",
-                             "close"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  140,
-        "word":  "weit",
-        "translations":  [
-                             "far",
-                             "distant"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  141,
-        "word":  "der Kilometer",
-        "translations":  [
-                             "kilometre",
-                             "kilometer"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  142,
-        "word":  "die Sonne",
-        "translations":  [
-                             "sun"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  143,
-        "word":  "der Mond",
-        "translations":  [
-                             "moon"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  144,
-        "word":  "der Stern",
-        "translations":  [
-                             "star"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  145,
-        "word":  "der Regen",
-        "translations":  [
-                             "rain"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  146,
-        "word":  "der Schnee",
-        "translations":  [
-                             "snow"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  147,
-        "word":  "der Wind",
-        "translations":  [
-                             "wind"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  148,
-        "word":  "das Feuer",
-        "translations":  [
-                             "fire"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  149,
-        "word":  "der Fluss",
-        "translations":  [
-                             "river"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  150,
-        "word":  "der See",
-        "translations":  [
-                             "lake"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  151,
-        "word":  "das Meer",
-        "translations":  [
-                             "sea",
-                             "ocean"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  152,
-        "word":  "der Berg",
-        "translations":  [
-                             "mountain"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  153,
-        "word":  "der Wald",
-        "translations":  [
-                             "forest",
-                             "woods"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  154,
-        "word":  "das Feld",
-        "translations":  [
-                             "field"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  155,
-        "word":  "die Blume",
-        "translations":  [
-                             "flower"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  156,
-        "word":  "das Gras",
-        "translations":  [
-                             "grass"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  157,
-        "word":  "die Wolke",
-        "translations":  [
-                             "cloud"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  158,
-        "word":  "der Nebel",
-        "translations":  [
-                             "fog",
-                             "mist"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  159,
-        "word":  "das Eis",
-        "translations":  [
-                             "ice"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  160,
-        "word":  "heiß",
-        "translations":  [
-                             "hot"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  161,
-        "word":  "kalt",
-        "translations":  [
-                             "cold"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  162,
-        "word":  "warm",
-        "translations":  [
-                             "warm"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  163,
-        "word":  "kühl",
-        "translations":  [
-                             "cool"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  164,
-        "word":  "das Pferd",
-        "translations":  [
-                             "horse"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  165,
-        "word":  "die Kuh",
-        "translations":  [
-                             "cow"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  166,
-        "word":  "das Schwein",
-        "translations":  [
-                             "pig"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  167,
-        "word":  "das Schaf",
-        "translations":  [
-                             "sheep"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  168,
-        "word":  "die Ziege",
-        "translations":  [
-                             "goat"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  169,
-        "word":  "der Vogel",
-        "translations":  [
-                             "bird"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  170,
-        "word":  "der Fisch",
-        "translations":  [
-                             "fish"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  171,
-        "word":  "die Maus",
-        "translations":  [
-                             "mouse"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  172,
-        "word":  "die Ratte",
-        "translations":  [
-                             "rat"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  173,
-        "word":  "der Löwe",
-        "translations":  [
-                             "lion"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  174,
-        "word":  "der Tiger",
-        "translations":  [
-                             "tiger"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  175,
-        "word":  "der Bär",
-        "translations":  [
-                             "bear"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  176,
-        "word":  "der Elefant",
-        "translations":  [
-                             "elephant"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  177,
-        "word":  "der Affe",
-        "translations":  [
-                             "monkey",
-                             "ape"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  178,
-        "word":  "die Schlange",
-        "translations":  [
-                             "snake"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  179,
-        "word":  "null",
-        "translations":  [
-                             "zero"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  180,
-        "word":  "eins",
-        "translations":  [
-                             "one"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  181,
-        "word":  "zwei",
-        "translations":  [
-                             "two"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  182,
-        "word":  "drei",
-        "translations":  [
-                             "three"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  183,
-        "word":  "vier",
-        "translations":  [
-                             "four"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  184,
-        "word":  "fünf",
-        "translations":  [
-                             "five"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  185,
-        "word":  "sechs",
-        "translations":  [
-                             "six"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  186,
-        "word":  "sieben",
-        "translations":  [
-                             "seven"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  187,
-        "word":  "acht",
-        "translations":  [
-                             "eight"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  188,
-        "word":  "neun",
-        "translations":  [
-                             "nine"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  189,
-        "word":  "zehn",
-        "translations":  [
-                             "ten"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  190,
-        "word":  "zwanzig",
-        "translations":  [
-                             "twenty"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  191,
-        "word":  "hundert",
-        "translations":  [
-                             "hundred"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  192,
-        "word":  "tausend",
-        "translations":  [
-                             "thousand"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  193,
-        "word":  "viel",
-        "translations":  [
-                             "much",
-                             "a lot",
-                             "many"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  194,
-        "word":  "wenig",
-        "translations":  [
-                             "little",
-                             "few"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  195,
-        "word":  "mehr",
-        "translations":  [
-                             "more"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  196,
-        "word":  "genug",
-        "translations":  [
-                             "enough"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  197,
-        "word":  "rot",
-        "translations":  [
-                             "red"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  198,
-        "word":  "blau",
-        "translations":  [
-                             "blue"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  199,
-        "word":  "grün",
-        "translations":  [
-                             "green"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  200,
-        "word":  "gelb",
-        "translations":  [
-                             "yellow"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  201,
-        "word":  "schwarz",
-        "translations":  [
-                             "black"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  202,
-        "word":  "weiß",
-        "translations":  [
-                             "white"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  203,
-        "word":  "grau",
-        "translations":  [
-                             "grey",
-                             "gray"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  204,
-        "word":  "braun",
-        "translations":  [
-                             "brown"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  205,
-        "word":  "orange",
-        "translations":  [
-                             "orange"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  206,
-        "word":  "lila",
-        "translations":  [
-                             "purple",
-                             "violet"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  207,
-        "word":  "pink",
-        "translations":  [
-                             "pink"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  208,
-        "word":  "hell",
-        "translations":  [
-                             "light",
-                             "bright"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  209,
-        "word":  "dunkel",
-        "translations":  [
-                             "dark"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  210,
-        "word":  "groß",
-        "translations":  [
-                             "big",
-                             "large",
-                             "tall"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  211,
-        "word":  "klein",
-        "translations":  [
-                             "small",
-                             "little",
-                             "short"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  212,
-        "word":  "lang",
-        "translations":  [
-                             "long",
-                             "tall"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  213,
-        "word":  "kurz",
-        "translations":  [
-                             "short"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  214,
-        "word":  "breit",
-        "translations":  [
-                             "wide",
-                             "broad"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  215,
-        "word":  "schmal",
-        "translations":  [
-                             "narrow"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  216,
-        "word":  "dick",
-        "translations":  [
-                             "thick",
-                             "fat"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  217,
-        "word":  "dünn",
-        "translations":  [
-                             "thin",
-                             "slim"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  218,
-        "word":  "schwer",
-        "translations":  [
-                             "heavy",
-                             "difficult"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  219,
-        "word":  "leicht",
-        "translations":  [
-                             "light",
-                             "easy"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  220,
-        "word":  "alt",
-        "translations":  [
-                             "old"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  221,
-        "word":  "neu",
-        "translations":  [
-                             "new"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  222,
-        "word":  "jung",
-        "translations":  [
-                             "young"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  223,
-        "word":  "schnell",
-        "translations":  [
-                             "fast",
-                             "quick"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  224,
-        "word":  "langsam",
-        "translations":  [
-                             "slow"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  225,
-        "word":  "laut",
-        "translations":  [
-                             "loud",
-                             "noisy"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  226,
-        "word":  "leise",
-        "translations":  [
-                             "quiet",
-                             "soft"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  227,
-        "word":  "sauber",
-        "translations":  [
-                             "clean"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  228,
-        "word":  "schmutzig",
-        "translations":  [
-                             "dirty"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  229,
-        "word":  "schön",
-        "translations":  [
-                             "beautiful",
-                             "nice"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  230,
-        "word":  "hässlich",
-        "translations":  [
-                             "ugly"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  231,
-        "word":  "billig",
-        "translations":  [
-                             "cheap",
-                             "inexpensive"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  232,
-        "word":  "teuer",
-        "translations":  [
-                             "expensive"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  233,
-        "word":  "richtig",
-        "translations":  [
-                             "correct",
-                             "right"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  234,
-        "word":  "falsch",
-        "translations":  [
-                             "wrong",
-                             "false"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  235,
-        "word":  "wichtig",
-        "translations":  [
-                             "important"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  236,
-        "word":  "einfach",
-        "translations":  [
-                             "simple",
-                             "easy"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  237,
-        "word":  "schwierig",
-        "translations":  [
-                             "difficult"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  238,
-        "word":  "möglich",
-        "translations":  [
-                             "possible"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  239,
-        "word":  "unmöglich",
-        "translations":  [
-                             "impossible"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  240,
-        "word":  "sein",
-        "translations":  [
-                             "to be"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  241,
-        "word":  "haben",
-        "translations":  [
-                             "to have"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  242,
-        "word":  "werden",
-        "translations":  [
-                             "to become",
-                             "will"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  243,
-        "word":  "können",
-        "translations":  [
-                             "can",
-                             "to be able to"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  244,
-        "word":  "müssen",
-        "translations":  [
-                             "must",
-                             "to have to"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  245,
-        "word":  "wollen",
-        "translations":  [
-                             "to want"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  246,
-        "word":  "sollen",
-        "translations":  [
-                             "should",
-                             "to be supposed to"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  247,
-        "word":  "dürfen",
-        "translations":  [
-                             "may",
-                             "to be allowed to"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  248,
-        "word":  "gehen",
-        "translations":  [
-                             "to go",
-                             "to walk"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  249,
-        "word":  "kommen",
-        "translations":  [
-                             "to come"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  250,
-        "word":  "machen",
-        "translations":  [
-                             "to do",
-                             "to make"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  251,
-        "word":  "sagen",
-        "translations":  [
-                             "to say",
-                             "to tell"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  252,
-        "word":  "sehen",
-        "translations":  [
-                             "to see"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  253,
-        "word":  "hören",
-        "translations":  [
-                             "to hear"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  254,
-        "word":  "sprechen",
-        "translations":  [
-                             "to speak",
-                             "to talk"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  255,
-        "word":  "lesen",
-        "translations":  [
-                             "to read"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  256,
-        "word":  "schreiben",
-        "translations":  [
-                             "to write"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  257,
-        "word":  "essen",
-        "translations":  [
-                             "to eat"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  258,
-        "word":  "trinken",
-        "translations":  [
-                             "to drink"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  259,
-        "word":  "schlafen",
-        "translations":  [
-                             "to sleep"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  260,
-        "word":  "wohnen",
-        "translations":  [
-                             "to live",
-                             "to reside"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  261,
-        "word":  "kaufen",
-        "translations":  [
-                             "to buy"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  262,
-        "word":  "verkaufen",
-        "translations":  [
-                             "to sell"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  263,
-        "word":  "fragen",
-        "translations":  [
-                             "to ask"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  264,
-        "word":  "antworten",
-        "translations":  [
-                             "to answer"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  265,
-        "word":  "lernen",
-        "translations":  [
-                             "to learn",
-                             "to study"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  266,
-        "word":  "arbeiten",
-        "translations":  [
-                             "to work"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  267,
-        "word":  "spielen",
-        "translations":  [
-                             "to play"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  268,
-        "word":  "kennen",
-        "translations":  [
-                             "to know"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  269,
-        "word":  "wissen",
-        "translations":  [
-                             "to know"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  270,
-        "word":  "denken",
-        "translations":  [
-                             "to think"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  271,
-        "word":  "glauben",
-        "translations":  [
-                             "to believe",
-                             "to think"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  272,
-        "word":  "finden",
-        "translations":  [
-                             "to find"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  273,
-        "word":  "geben",
-        "translations":  [
-                             "to give"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  274,
-        "word":  "nehmen",
-        "translations":  [
-                             "to take"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  275,
-        "word":  "bringen",
-        "translations":  [
-                             "to bring"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  276,
-        "word":  "holen",
-        "translations":  [
-                             "to get",
-                             "to fetch"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  277,
-        "word":  "legen",
-        "translations":  [
-                             "to put",
-                             "to lay"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  278,
-        "word":  "stellen",
-        "translations":  [
-                             "to put",
-                             "to place"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  279,
-        "word":  "sitzen",
-        "translations":  [
-                             "to sit"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  280,
-        "word":  "stehen",
-        "translations":  [
-                             "to stand"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  281,
-        "word":  "laufen",
-        "translations":  [
-                             "to run",
-                             "to walk"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  282,
-        "word":  "fahren",
-        "translations":  [
-                             "to drive",
-                             "to travel"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  283,
-        "word":  "fliegen",
-        "translations":  [
-                             "to fly"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  284,
-        "word":  "öffnen",
-        "translations":  [
-                             "to open"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  285,
-        "word":  "schließen",
-        "translations":  [
-                             "to close",
-                             "to shut"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  286,
-        "word":  "helfen",
-        "translations":  [
-                             "to help"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  287,
-        "word":  "beginnen",
-        "translations":  [
-                             "to begin",
-                             "to start"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  288,
-        "word":  "beenden",
-        "translations":  [
-                             "to end",
-                             "to finish"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  289,
-        "word":  "zeigen",
-        "translations":  [
-                             "to show"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  290,
-        "word":  "brauchen",
-        "translations":  [
-                             "to need"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  291,
-        "word":  "heißen",
-        "translations":  [
-                             "to be called",
-                             "to mean"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  292,
-        "word":  "bleiben",
-        "translations":  [
-                             "to stay",
-                             "to remain"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  293,
-        "word":  "die Sekunde",
-        "translations":  [
-                             "second"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  294,
-        "word":  "heute",
-        "translations":  [
-                             "today"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  295,
-        "word":  "gestern",
-        "translations":  [
-                             "yesterday"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  296,
-        "word":  "morgen",
-        "translations":  [
-                             "tomorrow"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  297,
-        "word":  "jetzt",
-        "translations":  [
-                             "now"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  298,
-        "word":  "dann",
-        "translations":  [
-                             "then"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  299,
-        "word":  "früh",
-        "translations":  [
-                             "early"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  300,
-        "word":  "spät",
-        "translations":  [
-                             "late"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  301,
-        "word":  "immer",
-        "translations":  [
-                             "always"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  302,
-        "word":  "oft",
-        "translations":  [
-                             "often"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  303,
-        "word":  "manchmal",
-        "translations":  [
-                             "sometimes"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  304,
-        "word":  "nie",
-        "translations":  [
-                             "never"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  305,
-        "word":  "Montag",
-        "translations":  [
-                             "Monday"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  306,
-        "word":  "Dienstag",
-        "translations":  [
-                             "Tuesday"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  307,
-        "word":  "Mittwoch",
-        "translations":  [
-                             "Wednesday"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  308,
-        "word":  "Donnerstag",
-        "translations":  [
-                             "Thursday"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  309,
-        "word":  "Freitag",
-        "translations":  [
-                             "Friday"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  310,
-        "word":  "Samstag",
-        "translations":  [
-                             "Saturday"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  311,
-        "word":  "Sonntag",
-        "translations":  [
-                             "Sunday"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  312,
-        "word":  "Januar",
-        "translations":  [
-                             "January"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  313,
-        "word":  "Februar",
-        "translations":  [
-                             "February"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  314,
-        "word":  "März",
-        "translations":  [
-                             "March"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  315,
-        "word":  "April",
-        "translations":  [
-                             "April"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  316,
-        "word":  "Mai",
-        "translations":  [
-                             "May"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  317,
-        "word":  "Juni",
-        "translations":  [
-                             "June"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  318,
-        "word":  "Juli",
-        "translations":  [
-                             "July"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  319,
-        "word":  "August",
-        "translations":  [
-                             "August"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  320,
-        "word":  "September",
-        "translations":  [
-                             "September"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  321,
-        "word":  "Oktober",
-        "translations":  [
-                             "October"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  322,
-        "word":  "November",
-        "translations":  [
-                             "November"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  323,
-        "word":  "Dezember",
-        "translations":  [
-                             "December"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  324,
-        "word":  "der Frühling",
-        "translations":  [
-                             "spring"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  325,
-        "word":  "der Sommer",
-        "translations":  [
-                             "summer"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  326,
-        "word":  "der Herbst",
-        "translations":  [
-                             "autumn",
-                             "fall"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  327,
-        "word":  "der Winter",
-        "translations":  [
-                             "winter"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  328,
-        "word":  "das Krankenhaus",
-        "translations":  [
-                             "hospital"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  329,
-        "word":  "das Hotel",
-        "translations":  [
-                             "hotel"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  330,
-        "word":  "das Restaurant",
-        "translations":  [
-                             "restaurant"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  331,
-        "word":  "der Supermarkt",
-        "translations":  [
-                             "supermarket"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  332,
-        "word":  "die Post",
-        "translations":  [
-                             "post office"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  333,
-        "word":  "die Bank",
-        "translations":  [
-                             "bank"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  334,
-        "word":  "die Apotheke",
-        "translations":  [
-                             "pharmacy",
-                             "chemist"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  335,
-        "word":  "das Kino",
-        "translations":  [
-                             "cinema",
-                             "movie theater"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  336,
-        "word":  "das Theater",
-        "translations":  [
-                             "theatre",
-                             "theater"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  337,
-        "word":  "das Museum",
-        "translations":  [
-                             "museum"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  338,
-        "word":  "der Park",
-        "translations":  [
-                             "park"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  339,
-        "word":  "der Markt",
-        "translations":  [
-                             "market"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  340,
-        "word":  "das Geschäft",
-        "translations":  [
-                             "shop",
-                             "store"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  341,
-        "word":  "die Kirche",
-        "translations":  [
-                             "church"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  342,
-        "word":  "ich",
-        "translations":  [
-                             "I"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  343,
-        "word":  "du",
-        "translations":  [
-                             "you (informal)"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  344,
-        "word":  "er",
-        "translations":  [
-                             "he"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  345,
-        "word":  "sie",
-        "translations":  [
-                             "she",
-                             "they"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  346,
-        "word":  "wir",
-        "translations":  [
-                             "we"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  347,
-        "word":  "ihr",
-        "translations":  [
-                             "you (plural)"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  348,
-        "word":  "alles",
-        "translations":  [
-                             "everything",
-                             "all"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  349,
-        "word":  "nichts",
-        "translations":  [
-                             "nothing"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  350,
-        "word":  "etwas",
-        "translations":  [
-                             "something",
-                             "some"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  351,
-        "word":  "jemand",
-        "translations":  [
-                             "someone",
-                             "somebody"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  352,
-        "word":  "niemand",
-        "translations":  [
-                             "nobody",
-                             "no one"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  353,
-        "word":  "hier",
-        "translations":  [
-                             "here"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  354,
-        "word":  "dort",
-        "translations":  [
-                             "there"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  355,
-        "word":  "oben",
-        "translations":  [
-                             "above",
-                             "up"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  356,
-        "word":  "unten",
-        "translations":  [
-                             "below",
-                             "down"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  357,
-        "word":  "vorne",
-        "translations":  [
-                             "in front",
-                             "at the front"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  358,
-        "word":  "hinten",
-        "translations":  [
-                             "behind",
-                             "at the back"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  359,
-        "word":  "zusammen",
-        "translations":  [
-                             "together"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  360,
-        "word":  "allein",
-        "translations":  [
-                             "alone"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  361,
-        "word":  "auch",
-        "translations":  [
-                             "also",
-                             "too"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  362,
-        "word":  "noch",
-        "translations":  [
-                             "still",
-                             "yet"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  363,
-        "word":  "schon",
-        "translations":  [
-                             "already"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  364,
-        "word":  "nur",
-        "translations":  [
-                             "only",
-                             "just"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  365,
-        "word":  "sehr",
-        "translations":  [
-                             "very"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  366,
-        "word":  "zu",
-        "translations":  [
-                             "too",
-                             "to"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  367,
-        "word":  "so",
-        "translations":  [
-                             "so",
-                             "like this"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  368,
-        "word":  "wie",
-        "translations":  [
-                             "how",
-                             "like",
-                             "as"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  369,
-        "word":  "warum",
-        "translations":  [
-                             "why"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  370,
-        "word":  "wann",
-        "translations":  [
-                             "when"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  371,
-        "word":  "wo",
-        "translations":  [
-                             "where"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  372,
-        "word":  "wer",
-        "translations":  [
-                             "who"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  373,
-        "word":  "was",
-        "translations":  [
-                             "what"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  374,
-        "word":  "glücklich",
-        "translations":  [
-                             "happy"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  375,
-        "word":  "traurig",
-        "translations":  [
-                             "sad"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  376,
-        "word":  "müde",
-        "translations":  [
-                             "tired"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  377,
-        "word":  "krank",
-        "translations":  [
-                             "sick",
-                             "ill"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  378,
-        "word":  "gesund",
-        "translations":  [
-                             "healthy",
-                             "well"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  379,
-        "word":  "froh",
-        "translations":  [
-                             "glad",
-                             "happy"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  380,
-        "word":  "wütend",
-        "translations":  [
-                             "angry"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  381,
-        "word":  "nervös",
-        "translations":  [
-                             "nervous"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  382,
-        "word":  "ruhig",
-        "translations":  [
-                             "calm",
-                             "quiet"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  383,
-        "word":  "die Freude",
-        "translations":  [
-                             "joy",
-                             "happiness"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  384,
-        "word":  "die Angst",
-        "translations":  [
-                             "fear",
-                             "anxiety"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  385,
-        "word":  "der Schmerz",
-        "translations":  [
-                             "pain"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  386,
-        "word":  "das Telefon",
-        "translations":  [
-                             "phone",
-                             "telephone"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  387,
-        "word":  "das Handy",
-        "translations":  [
-                             "mobile phone",
-                             "cell phone"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  388,
-        "word":  "die E-Mail",
-        "translations":  [
-                             "email"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  389,
-        "word":  "der Brief",
-        "translations":  [
-                             "letter"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  390,
-        "word":  "die Nachricht",
-        "translations":  [
-                             "message",
-                             "news"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  391,
-        "word":  "das Internet",
-        "translations":  [
-                             "internet"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  392,
-        "word":  "der Computer",
-        "translations":  [
-                             "computer"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  393,
-        "word":  "das Wort",
-        "translations":  [
-                             "word"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  394,
-        "word":  "der Satz",
-        "translations":  [
-                             "sentence"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  395,
-        "word":  "die Sprache",
-        "translations":  [
-                             "language",
-                             "speech"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  396,
-        "word":  "der Preis",
-        "translations":  [
-                             "price"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  397,
-        "word":  "die Rechnung",
-        "translations":  [
-                             "bill",
-                             "invoice"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  398,
-        "word":  "die Münze",
-        "translations":  [
-                             "coin"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  399,
-        "word":  "der Schein",
-        "translations":  [
-                             "banknote",
-                             "bill"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  400,
-        "word":  "die Kasse",
-        "translations":  [
-                             "cash register",
-                             "checkout"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  401,
-        "word":  "zahlen",
-        "translations":  [
-                             "to pay"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  402,
-        "word":  "kosten",
-        "translations":  [
-                             "to cost"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  403,
-        "word":  "sparen",
-        "translations":  [
-                             "to save"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  404,
-        "word":  "bezahlen",
-        "translations":  [
-                             "to pay"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  405,
-        "word":  "der Kopfschmerz",
-        "translations":  [
-                             "headache"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  406,
-        "word":  "das Fieber",
-        "translations":  [
-                             "fever"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  407,
-        "word":  "die Erkältung",
-        "translations":  [
-                             "cold"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  408,
-        "word":  "der Husten",
-        "translations":  [
-                             "cough"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  409,
-        "word":  "die Medizin",
-        "translations":  [
-                             "medicine"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  410,
-        "word":  "das Rezept",
-        "translations":  [
-                             "prescription",
-                             "recipe"
-                         ],
-        "category":  "grundwortschatz"
-    },
-    {
-        "id":  411,
         "word":  "die Demokratie",
         "translations":  [
                              "democracy"
@@ -3419,7 +136,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  412,
+        "id":  18,
         "word":  "die Regierung",
         "translations":  [
                              "government"
@@ -3427,7 +144,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  413,
+        "id":  19,
         "word":  "das Parlament",
         "translations":  [
                              "parliament"
@@ -3435,7 +152,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  414,
+        "id":  20,
         "word":  "die Verfassung",
         "translations":  [
                              "constitution"
@@ -3443,7 +160,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  415,
+        "id":  21,
         "word":  "das Gesetz",
         "translations":  [
                              "law"
@@ -3451,7 +168,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  416,
+        "id":  22,
         "word":  "das Recht",
         "translations":  [
                              "right",
@@ -3460,7 +177,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  417,
+        "id":  23,
         "word":  "die Pflicht",
         "translations":  [
                              "duty",
@@ -3469,7 +186,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  418,
+        "id":  24,
         "word":  "die Freiheit",
         "translations":  [
                              "freedom",
@@ -3478,7 +195,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  419,
+        "id":  25,
         "word":  "die Gleichheit",
         "translations":  [
                              "equality"
@@ -3486,7 +203,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  420,
+        "id":  26,
         "word":  "die Gesellschaft",
         "translations":  [
                              "society"
@@ -3494,7 +211,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  421,
+        "id":  27,
         "word":  "die Politik",
         "translations":  [
                              "politics"
@@ -3502,7 +219,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  422,
+        "id":  28,
         "word":  "der Politiker",
         "translations":  [
                              "politician"
@@ -3510,7 +227,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  423,
+        "id":  29,
         "word":  "die Partei",
         "translations":  [
                              "party"
@@ -3518,7 +235,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  424,
+        "id":  30,
         "word":  "die Wahl",
         "translations":  [
                              "election",
@@ -3527,7 +244,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  425,
+        "id":  31,
         "word":  "wählen",
         "translations":  [
                              "to vote",
@@ -3537,7 +254,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  426,
+        "id":  32,
         "word":  "der Staat",
         "translations":  [
                              "state"
@@ -3545,7 +262,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  427,
+        "id":  33,
         "word":  "die Nation",
         "translations":  [
                              "nation"
@@ -3553,7 +270,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  428,
+        "id":  34,
         "word":  "die Grenze",
         "translations":  [
                              "border",
@@ -3562,7 +279,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  429,
+        "id":  35,
         "word":  "die Wirtschaft",
         "translations":  [
                              "economy"
@@ -3570,7 +287,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  430,
+        "id":  36,
         "word":  "das Unternehmen",
         "translations":  [
                              "company",
@@ -3579,7 +296,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  431,
+        "id":  37,
         "word":  "die Firma",
         "translations":  [
                              "company",
@@ -3588,7 +305,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  432,
+        "id":  38,
         "word":  "der Betrieb",
         "translations":  [
                              "business",
@@ -3597,7 +314,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  433,
+        "id":  39,
         "word":  "der Gewinn",
         "translations":  [
                              "profit",
@@ -3606,7 +323,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  434,
+        "id":  40,
         "word":  "der Verlust",
         "translations":  [
                              "loss"
@@ -3614,7 +331,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  435,
+        "id":  41,
         "word":  "die Investition",
         "translations":  [
                              "investment"
@@ -3622,7 +339,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  436,
+        "id":  42,
         "word":  "der Markt",
         "translations":  [
                              "market"
@@ -3630,7 +347,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  437,
+        "id":  43,
         "word":  "der Handel",
         "translations":  [
                              "trade",
@@ -3639,7 +356,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  438,
+        "id":  44,
         "word":  "die Steuer",
         "translations":  [
                              "tax"
@@ -3647,7 +364,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  439,
+        "id":  45,
         "word":  "das Budget",
         "translations":  [
                              "budget"
@@ -3655,7 +372,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  440,
+        "id":  46,
         "word":  "die Schulden",
         "translations":  [
                              "debts"
@@ -3663,7 +380,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  441,
+        "id":  47,
         "word":  "die Inflation",
         "translations":  [
                              "inflation"
@@ -3671,7 +388,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  442,
+        "id":  48,
         "word":  "das Wachstum",
         "translations":  [
                              "growth"
@@ -3679,7 +396,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  443,
+        "id":  49,
         "word":  "die Produktion",
         "translations":  [
                              "production"
@@ -3687,7 +404,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  444,
+        "id":  50,
         "word":  "der Verbrauch",
         "translations":  [
                              "consumption"
@@ -3695,7 +412,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  445,
+        "id":  51,
         "word":  "liefern",
         "translations":  [
                              "to deliver",
@@ -3704,7 +421,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  446,
+        "id":  52,
         "word":  "exportieren",
         "translations":  [
                              "to export"
@@ -3712,7 +429,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  447,
+        "id":  53,
         "word":  "importieren",
         "translations":  [
                              "to import"
@@ -3720,7 +437,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  448,
+        "id":  54,
         "word":  "die Wissenschaft",
         "translations":  [
                              "science"
@@ -3728,7 +445,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  449,
+        "id":  55,
         "word":  "die Forschung",
         "translations":  [
                              "research"
@@ -3736,7 +453,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  450,
+        "id":  56,
         "word":  "das Experiment",
         "translations":  [
                              "experiment"
@@ -3744,7 +461,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  451,
+        "id":  57,
         "word":  "die Theorie",
         "translations":  [
                              "theory"
@@ -3752,7 +469,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  452,
+        "id":  58,
         "word":  "der Beweis",
         "translations":  [
                              "proof",
@@ -3761,7 +478,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  453,
+        "id":  59,
         "word":  "die Methode",
         "translations":  [
                              "method"
@@ -3769,7 +486,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  454,
+        "id":  60,
         "word":  "die Analyse",
         "translations":  [
                              "analysis"
@@ -3777,7 +494,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  455,
+        "id":  61,
         "word":  "die Statistik",
         "translations":  [
                              "statistics"
@@ -3785,7 +502,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  456,
+        "id":  62,
         "word":  "das Ergebnis",
         "translations":  [
                              "result",
@@ -3794,7 +511,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  457,
+        "id":  63,
         "word":  "die Energie",
         "translations":  [
                              "energy"
@@ -3802,7 +519,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  458,
+        "id":  64,
         "word":  "die Technik",
         "translations":  [
                              "technology",
@@ -3811,7 +528,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  459,
+        "id":  65,
         "word":  "die Maschine",
         "translations":  [
                              "machine"
@@ -3819,7 +536,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  460,
+        "id":  66,
         "word":  "der Roboter",
         "translations":  [
                              "robot"
@@ -3827,7 +544,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  461,
+        "id":  67,
         "word":  "die Künstliche Intelligenz",
         "translations":  [
                              "artificial intelligence",
@@ -3836,7 +553,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  462,
+        "id":  68,
         "word":  "das Programm",
         "translations":  [
                              "program",
@@ -3845,7 +562,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  463,
+        "id":  69,
         "word":  "der Algorithmus",
         "translations":  [
                              "algorithm"
@@ -3853,7 +570,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  464,
+        "id":  70,
         "word":  "die Software",
         "translations":  [
                              "software"
@@ -3861,7 +578,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  465,
+        "id":  71,
         "word":  "die Daten",
         "translations":  [
                              "data"
@@ -3869,7 +586,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  466,
+        "id":  72,
         "word":  "das Netzwerk",
         "translations":  [
                              "network"
@@ -3877,7 +594,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  467,
+        "id":  73,
         "word":  "der Server",
         "translations":  [
                              "server"
@@ -3885,7 +602,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  468,
+        "id":  74,
         "word":  "entwickeln",
         "translations":  [
                              "to develop"
@@ -3893,7 +610,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  469,
+        "id":  75,
         "word":  "erfinden",
         "translations":  [
                              "to invent"
@@ -3901,7 +618,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  470,
+        "id":  76,
         "word":  "entdecken",
         "translations":  [
                              "to discover"
@@ -3909,7 +626,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  471,
+        "id":  77,
         "word":  "untersuchen",
         "translations":  [
                              "to examine",
@@ -3918,7 +635,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  472,
+        "id":  78,
         "word":  "messen",
         "translations":  [
                              "to measure"
@@ -3926,7 +643,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  473,
+        "id":  79,
         "word":  "berechnen",
         "translations":  [
                              "to calculate"
@@ -3934,7 +651,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  474,
+        "id":  80,
         "word":  "die Umwelt",
         "translations":  [
                              "environment"
@@ -3942,7 +659,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  475,
+        "id":  81,
         "word":  "das Klima",
         "translations":  [
                              "climate"
@@ -3950,7 +667,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  476,
+        "id":  82,
         "word":  "der Klimawandel",
         "translations":  [
                              "climate change"
@@ -3958,7 +675,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  477,
+        "id":  83,
         "word":  "die Verschmutzung",
         "translations":  [
                              "pollution"
@@ -3966,7 +683,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  478,
+        "id":  84,
         "word":  "die Nachhaltigkeit",
         "translations":  [
                              "sustainability"
@@ -3974,7 +691,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  479,
+        "id":  85,
         "word":  "erneuerbar",
         "translations":  [
                              "renewable"
@@ -3982,7 +699,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  480,
+        "id":  86,
         "word":  "der Kohlenstoff",
         "translations":  [
                              "carbon"
@@ -3990,7 +707,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  481,
+        "id":  87,
         "word":  "die Ressource",
         "translations":  [
                              "resource"
@@ -3998,7 +715,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  482,
+        "id":  88,
         "word":  "recyceln",
         "translations":  [
                              "to recycle"
@@ -4006,7 +723,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  483,
+        "id":  89,
         "word":  "das Ökosystem",
         "translations":  [
                              "ecosystem"
@@ -4014,7 +731,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  484,
+        "id":  90,
         "word":  "die Artenvielfalt",
         "translations":  [
                              "biodiversity"
@@ -4022,7 +739,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  485,
+        "id":  91,
         "word":  "der Naturschutz",
         "translations":  [
                              "nature conservation"
@@ -4030,7 +747,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  486,
+        "id":  92,
         "word":  "die Katastrophe",
         "translations":  [
                              "catastrophe",
@@ -4039,7 +756,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  487,
+        "id":  93,
         "word":  "die Dürre",
         "translations":  [
                              "drought"
@@ -4047,7 +764,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  488,
+        "id":  94,
         "word":  "die Überschwemmung",
         "translations":  [
                              "flood"
@@ -4055,7 +772,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  489,
+        "id":  95,
         "word":  "die Diagnose",
         "translations":  [
                              "diagnosis"
@@ -4063,7 +780,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  490,
+        "id":  96,
         "word":  "die Therapie",
         "translations":  [
                              "therapy"
@@ -4071,7 +788,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  491,
+        "id":  97,
         "word":  "die Operation",
         "translations":  [
                              "operation",
@@ -4080,7 +797,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  492,
+        "id":  98,
         "word":  "das Symptom",
         "translations":  [
                              "symptom"
@@ -4088,7 +805,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  493,
+        "id":  99,
         "word":  "die Behandlung",
         "translations":  [
                              "treatment"
@@ -4096,7 +813,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  494,
+        "id":  100,
         "word":  "das Impfstoff",
         "translations":  [
                              "vaccine"
@@ -4104,7 +821,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  495,
+        "id":  101,
         "word":  "die Allergie",
         "translations":  [
                              "allergy"
@@ -4112,7 +829,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  496,
+        "id":  102,
         "word":  "chronisch",
         "translations":  [
                              "chronic"
@@ -4120,7 +837,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  497,
+        "id":  103,
         "word":  "die Ernährung",
         "translations":  [
                              "nutrition",
@@ -4129,7 +846,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  498,
+        "id":  104,
         "word":  "das Wohlbefinden",
         "translations":  [
                              "wellbeing",
@@ -4138,7 +855,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  499,
+        "id":  105,
         "word":  "die Psychologie",
         "translations":  [
                              "psychology"
@@ -4146,7 +863,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  500,
+        "id":  106,
         "word":  "das Bewusstsein",
         "translations":  [
                              "consciousness",
@@ -4155,7 +872,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  501,
+        "id":  107,
         "word":  "heilen",
         "translations":  [
                              "to heal",
@@ -4164,7 +881,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  502,
+        "id":  108,
         "word":  "leiden",
         "translations":  [
                              "to suffer"
@@ -4172,7 +889,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  503,
+        "id":  109,
         "word":  "erholen",
         "translations":  [
                              "to recover",
@@ -4181,7 +898,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  504,
+        "id":  110,
         "word":  "das Studium",
         "translations":  [
                              "studies",
@@ -4190,7 +907,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  505,
+        "id":  111,
         "word":  "die Universität",
         "translations":  [
                              "university"
@@ -4198,7 +915,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  506,
+        "id":  112,
         "word":  "der Abschluss",
         "translations":  [
                              "degree",
@@ -4207,7 +924,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  507,
+        "id":  113,
         "word":  "der Vortrag",
         "translations":  [
                              "lecture",
@@ -4216,7 +933,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  508,
+        "id":  114,
         "word":  "die Debatte",
         "translations":  [
                              "debate"
@@ -4224,7 +941,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  509,
+        "id":  115,
         "word":  "das Argument",
         "translations":  [
                              "argument"
@@ -4232,7 +949,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  510,
+        "id":  116,
         "word":  "kritisieren",
         "translations":  [
                              "to criticise",
@@ -4241,7 +958,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  511,
+        "id":  117,
         "word":  "analysieren",
         "translations":  [
                              "to analyse",
@@ -4250,7 +967,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  512,
+        "id":  118,
         "word":  "vergleichen",
         "translations":  [
                              "to compare"
@@ -4258,7 +975,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  513,
+        "id":  119,
         "word":  "bewerten",
         "translations":  [
                              "to evaluate",
@@ -4267,7 +984,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  514,
+        "id":  120,
         "word":  "verstehen",
         "translations":  [
                              "to understand"
@@ -4275,7 +992,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  515,
+        "id":  121,
         "word":  "erklären",
         "translations":  [
                              "to explain"
@@ -4283,7 +1000,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  516,
+        "id":  122,
         "word":  "beschreiben",
         "translations":  [
                              "to describe"
@@ -4291,7 +1008,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  517,
+        "id":  123,
         "word":  "zusammenfassen",
         "translations":  [
                              "to summarise",
@@ -4300,7 +1017,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  518,
+        "id":  124,
         "word":  "die Literatur",
         "translations":  [
                              "literature"
@@ -4308,7 +1025,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  519,
+        "id":  125,
         "word":  "das Kunstwerk",
         "translations":  [
                              "artwork",
@@ -4317,7 +1034,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  520,
+        "id":  126,
         "word":  "die Ausstellung",
         "translations":  [
                              "exhibition"
@@ -4325,7 +1042,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  521,
+        "id":  127,
         "word":  "das Konzert",
         "translations":  [
                              "concert"
@@ -4333,7 +1050,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  522,
+        "id":  128,
         "word":  "die Kultur",
         "translations":  [
                              "culture"
@@ -4341,7 +1058,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  523,
+        "id":  129,
         "word":  "die Tradition",
         "translations":  [
                              "tradition"
@@ -4349,7 +1066,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  524,
+        "id":  130,
         "word":  "der Kontinent",
         "translations":  [
                              "continent"
@@ -4357,7 +1074,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  525,
+        "id":  131,
         "word":  "die Hauptstadt",
         "translations":  [
                              "capital city"
@@ -4365,7 +1082,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  526,
+        "id":  132,
         "word":  "die Bevölkerung",
         "translations":  [
                              "population"
@@ -4373,7 +1090,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  527,
+        "id":  133,
         "word":  "das Touristenziel",
         "translations":  [
                              "tourist destination"
@@ -4381,7 +1098,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  528,
+        "id":  134,
         "word":  "die Unterkunft",
         "translations":  [
                              "accommodation"
@@ -4389,7 +1106,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  529,
+        "id":  135,
         "word":  "die Buchung",
         "translations":  [
                              "booking",
@@ -4398,7 +1115,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  530,
+        "id":  136,
         "word":  "der Reiseführer",
         "translations":  [
                              "guidebook",
@@ -4407,7 +1124,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  531,
+        "id":  137,
         "word":  "der Pass",
         "translations":  [
                              "passport"
@@ -4415,7 +1132,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  532,
+        "id":  138,
         "word":  "das Visum",
         "translations":  [
                              "visa"
@@ -4423,7 +1140,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  533,
+        "id":  139,
         "word":  "die Zollkontrolle",
         "translations":  [
                              "customs control"
@@ -4431,7 +1148,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  534,
+        "id":  140,
         "word":  "die Währung",
         "translations":  [
                              "currency"
@@ -4439,7 +1156,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  535,
+        "id":  141,
         "word":  "der Wechselkurs",
         "translations":  [
                              "exchange rate"
@@ -4447,7 +1164,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  536,
+        "id":  142,
         "word":  "die Medien",
         "translations":  [
                              "media"
@@ -4455,7 +1172,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  537,
+        "id":  143,
         "word":  "die Nachrichten",
         "translations":  [
                              "news"
@@ -4463,7 +1180,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  538,
+        "id":  144,
         "word":  "der Journalismus",
         "translations":  [
                              "journalism"
@@ -4471,7 +1188,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  539,
+        "id":  145,
         "word":  "die Werbung",
         "translations":  [
                              "advertising",
@@ -4480,7 +1197,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  540,
+        "id":  146,
         "word":  "die Meinung",
         "translations":  [
                              "opinion"
@@ -4488,7 +1205,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  541,
+        "id":  147,
         "word":  "die Kritik",
         "translations":  [
                              "criticism",
@@ -4497,7 +1214,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  542,
+        "id":  148,
         "word":  "der Kommentar",
         "translations":  [
                              "comment",
@@ -4506,7 +1223,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  543,
+        "id":  149,
         "word":  "beeinflussen",
         "translations":  [
                              "to influence"
@@ -4514,7 +1231,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  544,
+        "id":  150,
         "word":  "überzeugen",
         "translations":  [
                              "to convince",
@@ -4523,7 +1240,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  545,
+        "id":  151,
         "word":  "mitteilen",
         "translations":  [
                              "to communicate",
@@ -4532,7 +1249,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  546,
+        "id":  152,
         "word":  "veröffentlichen",
         "translations":  [
                              "to publish"
@@ -4540,7 +1257,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  547,
+        "id":  153,
         "word":  "berichten",
         "translations":  [
                              "to report"
@@ -4548,7 +1265,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  548,
+        "id":  154,
         "word":  "der Begriff",
         "translations":  [
                              "term",
@@ -4557,7 +1274,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  549,
+        "id":  155,
         "word":  "die Bedeutung",
         "translations":  [
                              "meaning",
@@ -4566,7 +1283,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  550,
+        "id":  156,
         "word":  "der Ausdruck",
         "translations":  [
                              "expression"
@@ -4574,7 +1291,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  551,
+        "id":  157,
         "word":  "die Übersetzung",
         "translations":  [
                              "translation"
@@ -4582,7 +1299,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  552,
+        "id":  158,
         "word":  "der Dialekt",
         "translations":  [
                              "dialect"
@@ -4590,7 +1307,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  553,
+        "id":  159,
         "word":  "der Akzent",
         "translations":  [
                              "accent"
@@ -4598,7 +1315,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  554,
+        "id":  160,
         "word":  "übersetzen",
         "translations":  [
                              "to translate"
@@ -4606,7 +1323,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  555,
+        "id":  161,
         "word":  "ausdrücken",
         "translations":  [
                              "to express"
@@ -4614,7 +1331,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  556,
+        "id":  162,
         "word":  "formulieren",
         "translations":  [
                              "to formulate"
@@ -4622,7 +1339,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  557,
+        "id":  163,
         "word":  "betonen",
         "translations":  [
                              "to emphasise",
@@ -4631,7 +1348,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  558,
+        "id":  164,
         "word":  "erreichen",
         "translations":  [
                              "to reach",
@@ -4640,7 +1357,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  559,
+        "id":  165,
         "word":  "versuchen",
         "translations":  [
                              "to try",
@@ -4649,7 +1366,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  560,
+        "id":  166,
         "word":  "gelingen",
         "translations":  [
                              "to succeed"
@@ -4657,7 +1374,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  561,
+        "id":  167,
         "word":  "scheitern",
         "translations":  [
                              "to fail"
@@ -4665,7 +1382,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  562,
+        "id":  168,
         "word":  "verbessern",
         "translations":  [
                              "to improve"
@@ -4673,7 +1390,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  563,
+        "id":  169,
         "word":  "verschlechtern",
         "translations":  [
                              "to worsen"
@@ -4681,7 +1398,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  564,
+        "id":  170,
         "word":  "verändern",
         "translations":  [
                              "to change",
@@ -4690,7 +1407,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  565,
+        "id":  171,
         "word":  "bestimmen",
         "translations":  [
                              "to determine",
@@ -4699,7 +1416,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  566,
+        "id":  172,
         "word":  "entscheiden",
         "translations":  [
                              "to decide"
@@ -4707,7 +1424,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  567,
+        "id":  173,
         "word":  "planen",
         "translations":  [
                              "to plan"
@@ -4715,7 +1432,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  568,
+        "id":  174,
         "word":  "organisieren",
         "translations":  [
                              "to organise",
@@ -4724,7 +1441,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  569,
+        "id":  175,
         "word":  "leiten",
         "translations":  [
                              "to lead",
@@ -4733,7 +1450,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  570,
+        "id":  176,
         "word":  "fördern",
         "translations":  [
                              "to promote",
@@ -4742,7 +1459,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  571,
+        "id":  177,
         "word":  "unterstützen",
         "translations":  [
                              "to support"
@@ -4750,7 +1467,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  572,
+        "id":  178,
         "word":  "ablehnen",
         "translations":  [
                              "to reject",
@@ -4759,7 +1476,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  573,
+        "id":  179,
         "word":  "zustimmen",
         "translations":  [
                              "to agree"
@@ -4767,7 +1484,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  574,
+        "id":  180,
         "word":  "widersprechen",
         "translations":  [
                              "to contradict",
@@ -4776,7 +1493,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  575,
+        "id":  181,
         "word":  "behaupten",
         "translations":  [
                              "to claim",
@@ -4785,7 +1502,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  576,
+        "id":  182,
         "word":  "annehmen",
         "translations":  [
                              "to assume",
@@ -4794,7 +1511,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  577,
+        "id":  183,
         "word":  "vermuten",
         "translations":  [
                              "to suspect",
@@ -4803,7 +1520,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  578,
+        "id":  184,
         "word":  "vorschlagen",
         "translations":  [
                              "to suggest",
@@ -4812,7 +1529,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  579,
+        "id":  185,
         "word":  "einleiten",
         "translations":  [
                              "to initiate",
@@ -4821,7 +1538,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  580,
+        "id":  186,
         "word":  "durchführen",
         "translations":  [
                              "to carry out",
@@ -4830,7 +1547,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  581,
+        "id":  187,
         "word":  "auswerten",
         "translations":  [
                              "to evaluate",
@@ -4839,7 +1556,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  582,
+        "id":  188,
         "word":  "vorhersagen",
         "translations":  [
                              "to predict"
@@ -4847,7 +1564,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  583,
+        "id":  189,
         "word":  "warnen",
         "translations":  [
                              "to warn"
@@ -4855,7 +1572,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  584,
+        "id":  190,
         "word":  "schützen",
         "translations":  [
                              "to protect"
@@ -4863,7 +1580,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  585,
+        "id":  191,
         "word":  "gefährden",
         "translations":  [
                              "to endanger"
@@ -4871,7 +1588,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  586,
+        "id":  192,
         "word":  "verhindern",
         "translations":  [
                              "to prevent"
@@ -4879,7 +1596,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  587,
+        "id":  193,
         "word":  "ermöglichen",
         "translations":  [
                              "to enable",
@@ -4888,7 +1605,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  588,
+        "id":  194,
         "word":  "benötigen",
         "translations":  [
                              "to need",
@@ -4897,7 +1614,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  589,
+        "id":  195,
         "word":  "verwenden",
         "translations":  [
                              "to use",
@@ -4906,7 +1623,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  590,
+        "id":  196,
         "word":  "einsetzen",
         "translations":  [
                              "to use",
@@ -4915,7 +1632,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  591,
+        "id":  197,
         "word":  "nutzen",
         "translations":  [
                              "to use",
@@ -4924,7 +1641,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  592,
+        "id":  198,
         "word":  "komplex",
         "translations":  [
                              "complex"
@@ -4932,7 +1649,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  593,
+        "id":  199,
         "word":  "abstrakt",
         "translations":  [
                              "abstract"
@@ -4940,7 +1657,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  594,
+        "id":  200,
         "word":  "konkret",
         "translations":  [
                              "concrete",
@@ -4949,7 +1666,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  595,
+        "id":  201,
         "word":  "effektiv",
         "translations":  [
                              "effective"
@@ -4957,7 +1674,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  596,
+        "id":  202,
         "word":  "effizient",
         "translations":  [
                              "efficient"
@@ -4965,7 +1682,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  597,
+        "id":  203,
         "word":  "relevant",
         "translations":  [
                              "relevant"
@@ -4973,7 +1690,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  598,
+        "id":  204,
         "word":  "kritisch",
         "translations":  [
                              "critical"
@@ -4981,7 +1698,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  599,
+        "id":  205,
         "word":  "kreativ",
         "translations":  [
                              "creative"
@@ -4989,7 +1706,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  600,
+        "id":  206,
         "word":  "innovativ",
         "translations":  [
                              "innovative"
@@ -4997,7 +1714,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  601,
+        "id":  207,
         "word":  "nachhaltig",
         "translations":  [
                              "sustainable"
@@ -5005,7 +1722,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  602,
+        "id":  208,
         "word":  "global",
         "translations":  [
                              "global"
@@ -5013,7 +1730,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  603,
+        "id":  209,
         "word":  "lokal",
         "translations":  [
                              "local"
@@ -5021,7 +1738,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  604,
+        "id":  210,
         "word":  "öffentlich",
         "translations":  [
                              "public"
@@ -5029,7 +1746,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  605,
+        "id":  211,
         "word":  "privat",
         "translations":  [
                              "private"
@@ -5037,7 +1754,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  606,
+        "id":  212,
         "word":  "staatlich",
         "translations":  [
                              "public",
@@ -5046,7 +1763,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  607,
+        "id":  213,
         "word":  "wirtschaftlich",
         "translations":  [
                              "economic",
@@ -5055,7 +1772,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  608,
+        "id":  214,
         "word":  "politisch",
         "translations":  [
                              "political"
@@ -5063,7 +1780,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  609,
+        "id":  215,
         "word":  "sozial",
         "translations":  [
                              "social"
@@ -5071,7 +1788,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  610,
+        "id":  216,
         "word":  "kulturell",
         "translations":  [
                              "cultural"
@@ -5079,7 +1796,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  611,
+        "id":  217,
         "word":  "technisch",
         "translations":  [
                              "technical"
@@ -5087,7 +1804,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  612,
+        "id":  218,
         "word":  "wissenschaftlich",
         "translations":  [
                              "scientific",
@@ -5096,7 +1813,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  613,
+        "id":  219,
         "word":  "hauptsächlich",
         "translations":  [
                              "mainly",
@@ -5105,7 +1822,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  614,
+        "id":  220,
         "word":  "grundsätzlich",
         "translations":  [
                              "fundamentally",
@@ -5114,7 +1831,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  615,
+        "id":  221,
         "word":  "letztendlich",
         "translations":  [
                              "ultimately",
@@ -5123,7 +1840,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  616,
+        "id":  222,
         "word":  "tatsächlich",
         "translations":  [
                              "actually",
@@ -5132,7 +1849,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  617,
+        "id":  223,
         "word":  "offensichtlich",
         "translations":  [
                              "obvious",
@@ -5141,7 +1858,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  618,
+        "id":  224,
         "word":  "angeblich",
         "translations":  [
                              "allegedly",
@@ -5150,7 +1867,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  619,
+        "id":  225,
         "word":  "wahrscheinlich",
         "translations":  [
                              "probably",
@@ -5159,7 +1876,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  620,
+        "id":  226,
         "word":  "möglicherweise",
         "translations":  [
                              "possibly",
@@ -5168,7 +1885,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  621,
+        "id":  227,
         "word":  "erheblich",
         "translations":  [
                              "considerable",
@@ -5177,7 +1894,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  622,
+        "id":  228,
         "word":  "wesentlich",
         "translations":  [
                              "essential",
@@ -5186,7 +1903,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  623,
+        "id":  229,
         "word":  "bedeutend",
         "translations":  [
                              "significant",
@@ -5195,7 +1912,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  624,
+        "id":  230,
         "word":  "gering",
         "translations":  [
                              "low",
@@ -5205,7 +1922,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  625,
+        "id":  231,
         "word":  "ausreichend",
         "translations":  [
                              "sufficient",
@@ -5214,7 +1931,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  626,
+        "id":  232,
         "word":  "mangelhaft",
         "translations":  [
                              "deficient",
@@ -5223,7 +1940,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  627,
+        "id":  233,
         "word":  "zuverlässig",
         "translations":  [
                              "reliable"
@@ -5231,7 +1948,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  628,
+        "id":  234,
         "word":  "verantwortlich",
         "translations":  [
                              "responsible"
@@ -5239,7 +1956,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  629,
+        "id":  235,
         "word":  "fähig",
         "translations":  [
                              "capable",
@@ -5248,7 +1965,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  630,
+        "id":  236,
         "word":  "die Erfahrung",
         "translations":  [
                              "experience"
@@ -5256,7 +1973,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  631,
+        "id":  237,
         "word":  "die Fähigkeit",
         "translations":  [
                              "ability",
@@ -5265,7 +1982,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  632,
+        "id":  238,
         "word":  "die Kenntnisse",
         "translations":  [
                              "knowledge",
@@ -5274,7 +1991,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  633,
+        "id":  239,
         "word":  "der Einfluss",
         "translations":  [
                              "influence"
@@ -5282,7 +1999,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  634,
+        "id":  240,
         "word":  "der Unterschied",
         "translations":  [
                              "difference"
@@ -5290,7 +2007,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  635,
+        "id":  241,
         "word":  "die Gemeinsamkeit",
         "translations":  [
                              "similarity",
@@ -5299,7 +2016,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  636,
+        "id":  242,
         "word":  "der Zusammenhang",
         "translations":  [
                              "context",
@@ -5308,7 +2025,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  637,
+        "id":  243,
         "word":  "die Ursache",
         "translations":  [
                              "cause",
@@ -5317,7 +2034,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  638,
+        "id":  244,
         "word":  "die Folge",
         "translations":  [
                              "consequence",
@@ -5326,7 +2043,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  639,
+        "id":  245,
         "word":  "die Lösung",
         "translations":  [
                              "solution"
@@ -5334,7 +2051,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  640,
+        "id":  246,
         "word":  "das Problem",
         "translations":  [
                              "problem"
@@ -5342,7 +2059,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  641,
+        "id":  247,
         "word":  "die Herausforderung",
         "translations":  [
                              "challenge"
@@ -5350,7 +2067,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  642,
+        "id":  248,
         "word":  "die Möglichkeit",
         "translations":  [
                              "possibility",
@@ -5359,7 +2076,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  643,
+        "id":  249,
         "word":  "die Gefahr",
         "translations":  [
                              "danger",
@@ -5368,7 +2085,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  644,
+        "id":  250,
         "word":  "das Risiko",
         "translations":  [
                              "risk"
@@ -5376,7 +2093,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  645,
+        "id":  251,
         "word":  "der Vorteil",
         "translations":  [
                              "advantage"
@@ -5384,7 +2101,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  646,
+        "id":  252,
         "word":  "der Nachteil",
         "translations":  [
                              "disadvantage"
@@ -5392,7 +2109,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  647,
+        "id":  253,
         "word":  "der Fortschritt",
         "translations":  [
                              "progress"
@@ -5400,7 +2117,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  648,
+        "id":  254,
         "word":  "die Entwicklung",
         "translations":  [
                              "development"
@@ -5408,7 +2125,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  649,
+        "id":  255,
         "word":  "der Prozess",
         "translations":  [
                              "process"
@@ -5416,7 +2133,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  650,
+        "id":  256,
         "word":  "das System",
         "translations":  [
                              "system"
@@ -5424,7 +2141,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  651,
+        "id":  257,
         "word":  "die Struktur",
         "translations":  [
                              "structure"
@@ -5432,7 +2149,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  652,
+        "id":  258,
         "word":  "das Konzept",
         "translations":  [
                              "concept"
@@ -5440,7 +2157,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  653,
+        "id":  259,
         "word":  "die Strategie",
         "translations":  [
                              "strategy"
@@ -5448,7 +2165,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  654,
+        "id":  260,
         "word":  "der Plan",
         "translations":  [
                              "plan"
@@ -5456,7 +2173,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  655,
+        "id":  261,
         "word":  "das Ziel",
         "translations":  [
                              "goal",
@@ -5465,7 +2182,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  656,
+        "id":  262,
         "word":  "das Ergebnis",
         "translations":  [
                              "result",
@@ -5474,7 +2191,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  657,
+        "id":  263,
         "word":  "der Erfolg",
         "translations":  [
                              "success"
@@ -5482,7 +2199,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  658,
+        "id":  264,
         "word":  "das Scheitern",
         "translations":  [
                              "failure"
@@ -5490,7 +2207,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  659,
+        "id":  265,
         "word":  "die Leistung",
         "translations":  [
                              "performance",
@@ -5499,7 +2216,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  660,
+        "id":  266,
         "word":  "die Verantwortung",
         "translations":  [
                              "responsibility"
@@ -5507,7 +2224,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  661,
+        "id":  267,
         "word":  "die Entscheidung",
         "translations":  [
                              "decision"
@@ -5515,7 +2232,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  662,
+        "id":  268,
         "word":  "die Maßnahme",
         "translations":  [
                              "measure",
@@ -5524,7 +2241,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  663,
+        "id":  269,
         "word":  "die Voraussetzung",
         "translations":  [
                              "prerequisite",
@@ -5533,7 +2250,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  664,
+        "id":  270,
         "word":  "die Bedingung",
         "translations":  [
                              "condition"
@@ -5541,7 +2258,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  665,
+        "id":  271,
         "word":  "die Auswirkung",
         "translations":  [
                              "impact",
@@ -5550,7 +2267,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  666,
+        "id":  272,
         "word":  "die Tendenz",
         "translations":  [
                              "tendency",
@@ -5559,7 +2276,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  667,
+        "id":  273,
         "word":  "der Trend",
         "translations":  [
                              "trend"
@@ -5567,7 +2284,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  668,
+        "id":  274,
         "word":  "die Reform",
         "translations":  [
                              "reform"
@@ -5575,7 +2292,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  669,
+        "id":  275,
         "word":  "die Krise",
         "translations":  [
                              "crisis"
@@ -5583,7 +2300,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  670,
+        "id":  276,
         "word":  "der Konflikt",
         "translations":  [
                              "conflict"
@@ -5591,7 +2308,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  671,
+        "id":  277,
         "word":  "die Verhandlung",
         "translations":  [
                              "negotiation"
@@ -5599,7 +2316,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  672,
+        "id":  278,
         "word":  "der Vertrag",
         "translations":  [
                              "contract",
@@ -5608,7 +2325,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  673,
+        "id":  279,
         "word":  "das Abkommen",
         "translations":  [
                              "agreement"
@@ -5616,7 +2333,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  674,
+        "id":  280,
         "word":  "der Bericht",
         "translations":  [
                              "report"
@@ -5624,7 +2341,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  675,
+        "id":  281,
         "word":  "die Bewerbung",
         "translations":  [
                              "application"
@@ -5632,7 +2349,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  676,
+        "id":  282,
         "word":  "das Interview",
         "translations":  [
                              "interview"
@@ -5640,7 +2357,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  677,
+        "id":  283,
         "word":  "der Vorteil",
         "translations":  [
                              "advantage"
@@ -5648,7 +2365,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  678,
+        "id":  284,
         "word":  "die Ausbildung",
         "translations":  [
                              "training",
@@ -5658,7 +2375,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  679,
+        "id":  285,
         "word":  "die Karriere",
         "translations":  [
                              "career"
@@ -5666,7 +2383,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  680,
+        "id":  286,
         "word":  "die Qualifikation",
         "translations":  [
                              "qualification"
@@ -5674,7 +2391,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  681,
+        "id":  287,
         "word":  "die Kompetenz",
         "translations":  [
                              "competence",
@@ -5683,7 +2400,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  682,
+        "id":  288,
         "word":  "die Wahrheit",
         "translations":  [
                              "truth"
@@ -5691,7 +2408,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  683,
+        "id":  289,
         "word":  "die Lüge",
         "translations":  [
                              "lie"
@@ -5699,7 +2416,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  684,
+        "id":  290,
         "word":  "die Moral",
         "translations":  [
                              "morality",
@@ -5708,7 +2425,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  685,
+        "id":  291,
         "word":  "die Ethik",
         "translations":  [
                              "ethics"
@@ -5716,7 +2433,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  686,
+        "id":  292,
         "word":  "die Gerechtigkeit",
         "translations":  [
                              "justice",
@@ -5725,7 +2442,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  687,
+        "id":  293,
         "word":  "die Solidarität",
         "translations":  [
                              "solidarity"
@@ -5733,7 +2450,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  688,
+        "id":  294,
         "word":  "die Toleranz",
         "translations":  [
                              "tolerance"
@@ -5741,7 +2458,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  689,
+        "id":  295,
         "word":  "der Respekt",
         "translations":  [
                              "respect"
@@ -5749,7 +2466,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  690,
+        "id":  296,
         "word":  "das Vertrauen",
         "translations":  [
                              "trust"
@@ -5757,7 +2474,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  691,
+        "id":  297,
         "word":  "die Hoffnung",
         "translations":  [
                              "hope"
@@ -5765,7 +2482,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  692,
+        "id":  298,
         "word":  "die Enttäuschung",
         "translations":  [
                              "disappointment"
@@ -5773,7 +2490,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  693,
+        "id":  299,
         "word":  "die Überzeugung",
         "translations":  [
                              "conviction",
@@ -5782,7 +2499,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  694,
+        "id":  300,
         "word":  "die Neugier",
         "translations":  [
                              "curiosity"
@@ -5790,7 +2507,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  695,
+        "id":  301,
         "word":  "die Leidenschaft",
         "translations":  [
                              "passion"
@@ -5798,7 +2515,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  696,
+        "id":  302,
         "word":  "der Mut",
         "translations":  [
                              "courage"
@@ -5806,7 +2523,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  697,
+        "id":  303,
         "word":  "die Geduld",
         "translations":  [
                              "patience"
@@ -5814,7 +2531,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  698,
+        "id":  304,
         "word":  "die Ausdauer",
         "translations":  [
                              "perseverance",
@@ -5823,7 +2540,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  699,
+        "id":  305,
         "word":  "aufbauen",
         "translations":  [
                              "to build up",
@@ -5832,7 +2549,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  700,
+        "id":  306,
         "word":  "abbauen",
         "translations":  [
                              "to reduce",
@@ -5841,7 +2558,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  701,
+        "id":  307,
         "word":  "aufnehmen",
         "translations":  [
                              "to absorb",
@@ -5851,7 +2568,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  702,
+        "id":  308,
         "word":  "aufgeben",
         "translations":  [
                              "to give up",
@@ -5860,7 +2577,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  703,
+        "id":  309,
         "word":  "nachweisen",
         "translations":  [
                              "to prove",
@@ -5869,7 +2586,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  704,
+        "id":  310,
         "word":  "feststellen",
         "translations":  [
                              "to determine",
@@ -5878,7 +2595,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  705,
+        "id":  311,
         "word":  "darstellen",
         "translations":  [
                              "to represent",
@@ -5887,7 +2604,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  706,
+        "id":  312,
         "word":  "hervorheben",
         "translations":  [
                              "to emphasize",
@@ -5896,7 +2613,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  707,
+        "id":  313,
         "word":  "berücksichtigen",
         "translations":  [
                              "to consider",
@@ -5905,7 +2622,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  708,
+        "id":  314,
         "word":  "unterscheiden",
         "translations":  [
                              "to distinguish",
@@ -5914,7 +2631,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  709,
+        "id":  315,
         "word":  "anpassen",
         "translations":  [
                              "to adapt",
@@ -5923,7 +2640,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  710,
+        "id":  316,
         "word":  "umsetzen",
         "translations":  [
                              "to implement",
@@ -5932,7 +2649,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  711,
+        "id":  317,
         "word":  "beitragen",
         "translations":  [
                              "to contribute"
@@ -5940,7 +2657,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  712,
+        "id":  318,
         "word":  "verfügen",
         "translations":  [
                              "to have at one\u0027s disposal"
@@ -5948,7 +2665,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  713,
+        "id":  319,
         "word":  "bestehen",
         "translations":  [
                              "to exist",
@@ -5958,7 +2675,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  714,
+        "id":  320,
         "word":  "entsprechen",
         "translations":  [
                              "to correspond to",
@@ -5967,7 +2684,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  715,
+        "id":  321,
         "word":  "basieren",
         "translations":  [
                              "to be based on"
@@ -5975,7 +2692,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  716,
+        "id":  322,
         "word":  "erfordern",
         "translations":  [
                              "to require",
@@ -5984,7 +2701,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  717,
+        "id":  323,
         "word":  "gewährleisten",
         "translations":  [
                              "to ensure",
@@ -5993,7 +2710,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  718,
+        "id":  324,
         "word":  "konzentrieren",
         "translations":  [
                              "to concentrate"
@@ -6001,7 +2718,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  719,
+        "id":  325,
         "word":  "außerdem",
         "translations":  [
                              "in addition",
@@ -6011,7 +2728,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  720,
+        "id":  326,
         "word":  "jedoch",
         "translations":  [
                              "however",
@@ -6020,7 +2737,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  721,
+        "id":  327,
         "word":  "obwohl",
         "translations":  [
                              "although",
@@ -6029,7 +2746,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  722,
+        "id":  328,
         "word":  "trotzdem",
         "translations":  [
                              "nevertheless",
@@ -6038,7 +2755,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  723,
+        "id":  329,
         "word":  "deshalb",
         "translations":  [
                              "therefore",
@@ -6047,7 +2764,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  724,
+        "id":  330,
         "word":  "daher",
         "translations":  [
                              "therefore",
@@ -6056,7 +2773,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  725,
+        "id":  331,
         "word":  "einerseits",
         "translations":  [
                              "on the one hand"
@@ -6064,7 +2781,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  726,
+        "id":  332,
         "word":  "andererseits",
         "translations":  [
                              "on the other hand"
@@ -6072,7 +2789,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  727,
+        "id":  333,
         "word":  "zunächst",
         "translations":  [
                              "first of all",
@@ -6081,7 +2798,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  728,
+        "id":  334,
         "word":  "schließlich",
         "translations":  [
                              "finally",
@@ -6090,7 +2807,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  729,
+        "id":  335,
         "word":  "inzwischen",
         "translations":  [
                              "in the meantime",
@@ -6099,7 +2816,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  730,
+        "id":  336,
         "word":  "insgesamt",
         "translations":  [
                              "overall",
@@ -6108,7 +2825,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  731,
+        "id":  337,
         "word":  "infolgedessen",
         "translations":  [
                              "as a result",
@@ -6117,7 +2834,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  732,
+        "id":  338,
         "word":  "hingegen",
         "translations":  [
                              "in contrast",
@@ -6126,7 +2843,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  733,
+        "id":  339,
         "word":  "im Gegensatz dazu",
         "translations":  [
                              "in contrast to that",
@@ -6135,7 +2852,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  734,
+        "id":  340,
         "word":  "im Allgemeinen",
         "translations":  [
                              "in general",
@@ -6144,7 +2861,7 @@
         "category":  "aufbauwortschatz"
     },
     {
-        "id":  735,
+        "id":  341,
         "word":  "sein",
         "translations":  [
                              "to be"
@@ -6152,7 +2869,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  736,
+        "id":  342,
         "word":  "haben",
         "translations":  [
                              "to have"
@@ -6160,7 +2877,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  737,
+        "id":  343,
         "word":  "werden",
         "translations":  [
                              "to become",
@@ -6169,7 +2886,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  738,
+        "id":  344,
         "word":  "kÃ¶nnen",
         "translations":  [
                              "to be able to",
@@ -6178,7 +2895,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  739,
+        "id":  345,
         "word":  "mÃ¼ssen",
         "translations":  [
                              "to have to",
@@ -6187,7 +2904,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  740,
+        "id":  346,
         "word":  "wollen",
         "translations":  [
                              "to want"
@@ -6195,7 +2912,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  741,
+        "id":  347,
         "word":  "sollen",
         "translations":  [
                              "to be supposed to",
@@ -6204,7 +2921,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  742,
+        "id":  348,
         "word":  "dÃ¼rfen",
         "translations":  [
                              "to be allowed to",
@@ -6213,7 +2930,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  743,
+        "id":  349,
         "word":  "mÃ¶gen",
         "translations":  [
                              "to like"
@@ -6221,7 +2938,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  744,
+        "id":  350,
         "word":  "gehen",
         "translations":  [
                              "to go"
@@ -6229,7 +2946,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  745,
+        "id":  351,
         "word":  "kommen",
         "translations":  [
                              "to come"
@@ -6237,7 +2954,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  746,
+        "id":  352,
         "word":  "sehen",
         "translations":  [
                              "to see"
@@ -6245,7 +2962,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  747,
+        "id":  353,
         "word":  "stehen",
         "translations":  [
                              "to stand"
@@ -6253,7 +2970,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  748,
+        "id":  354,
         "word":  "liegen",
         "translations":  [
                              "to lie",
@@ -6262,7 +2979,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  749,
+        "id":  355,
         "word":  "sitzen",
         "translations":  [
                              "to sit"
@@ -6270,7 +2987,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  750,
+        "id":  356,
         "word":  "essen",
         "translations":  [
                              "to eat"
@@ -6278,7 +2995,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  751,
+        "id":  357,
         "word":  "trinken",
         "translations":  [
                              "to drink"
@@ -6286,7 +3003,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  752,
+        "id":  358,
         "word":  "schlafen",
         "translations":  [
                              "to sleep"
@@ -6294,7 +3011,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  753,
+        "id":  359,
         "word":  "laufen",
         "translations":  [
                              "to run",
@@ -6303,7 +3020,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  754,
+        "id":  360,
         "word":  "fahren",
         "translations":  [
                              "to drive",
@@ -6312,7 +3029,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  755,
+        "id":  361,
         "word":  "fliegen",
         "translations":  [
                              "to fly"
@@ -6320,7 +3037,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  756,
+        "id":  362,
         "word":  "schwimmen",
         "translations":  [
                              "to swim"
@@ -6328,7 +3045,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  757,
+        "id":  363,
         "word":  "sprechen",
         "translations":  [
                              "to speak",
@@ -6337,7 +3054,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  758,
+        "id":  364,
         "word":  "schreiben",
         "translations":  [
                              "to write"
@@ -6345,7 +3062,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  759,
+        "id":  365,
         "word":  "lesen",
         "translations":  [
                              "to read"
@@ -6353,7 +3070,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  760,
+        "id":  366,
         "word":  "hÃ¶ren",
         "translations":  [
                              "to hear",
@@ -6362,7 +3079,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  761,
+        "id":  367,
         "word":  "denken",
         "translations":  [
                              "to think"
@@ -6370,7 +3087,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  762,
+        "id":  368,
         "word":  "wissen",
         "translations":  [
                              "to know"
@@ -6378,7 +3095,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  763,
+        "id":  369,
         "word":  "nehmen",
         "translations":  [
                              "to take"
@@ -6386,7 +3103,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  764,
+        "id":  370,
         "word":  "geben",
         "translations":  [
                              "to give"
@@ -6394,7 +3111,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  765,
+        "id":  371,
         "word":  "bringen",
         "translations":  [
                              "to bring"
@@ -6402,7 +3119,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  766,
+        "id":  372,
         "word":  "finden",
         "translations":  [
                              "to find"
@@ -6410,7 +3127,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  767,
+        "id":  373,
         "word":  "halten",
         "translations":  [
                              "to hold",
@@ -6419,7 +3136,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  768,
+        "id":  374,
         "word":  "lassen",
         "translations":  [
                              "to let",
@@ -6428,7 +3145,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  769,
+        "id":  375,
         "word":  "heiÃŸen",
         "translations":  [
                              "to be called",
@@ -6437,7 +3154,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  770,
+        "id":  376,
         "word":  "rufen",
         "translations":  [
                              "to call",
@@ -6446,7 +3163,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  771,
+        "id":  377,
         "word":  "helfen",
         "translations":  [
                              "to help"
@@ -6454,7 +3171,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  772,
+        "id":  378,
         "word":  "fallen",
         "translations":  [
                              "to fall"
@@ -6462,7 +3179,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  773,
+        "id":  379,
         "word":  "schlagen",
         "translations":  [
                              "to hit",
@@ -6471,7 +3188,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  774,
+        "id":  380,
         "word":  "werfen",
         "translations":  [
                              "to throw"
@@ -6479,7 +3196,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  775,
+        "id":  381,
         "word":  "ziehen",
         "translations":  [
                              "to pull",
@@ -6488,7 +3205,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  776,
+        "id":  382,
         "word":  "stoÃŸen",
         "translations":  [
                              "to push",
@@ -6497,7 +3214,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  777,
+        "id":  383,
         "word":  "brechen",
         "translations":  [
                              "to break"
@@ -6505,7 +3222,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  778,
+        "id":  384,
         "word":  "schneiden",
         "translations":  [
                              "to cut"
@@ -6513,7 +3230,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  779,
+        "id":  385,
         "word":  "waschen",
         "translations":  [
                              "to wash"
@@ -6521,7 +3238,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  780,
+        "id":  386,
         "word":  "backen",
         "translations":  [
                              "to bake"
@@ -6529,7 +3246,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  781,
+        "id":  387,
         "word":  "kochen",
         "translations":  [
                              "to cook"
@@ -6537,7 +3254,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  782,
+        "id":  388,
         "word":  "kaufen",
         "translations":  [
                              "to buy"
@@ -6545,7 +3262,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  783,
+        "id":  389,
         "word":  "verkaufen",
         "translations":  [
                              "to sell"
@@ -6553,7 +3270,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  784,
+        "id":  390,
         "word":  "bezahlen",
         "translations":  [
                              "to pay"
@@ -6561,7 +3278,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  785,
+        "id":  391,
         "word":  "beginnen",
         "translations":  [
                              "to begin",
@@ -6570,7 +3287,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  786,
+        "id":  392,
         "word":  "enden",
         "translations":  [
                              "to end",
@@ -6579,7 +3296,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  787,
+        "id":  393,
         "word":  "Ã¶ffnen",
         "translations":  [
                              "to open"
@@ -6587,7 +3304,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  788,
+        "id":  394,
         "word":  "schlieÃŸen",
         "translations":  [
                              "to close",
@@ -6596,7 +3313,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  789,
+        "id":  395,
         "word":  "bauen",
         "translations":  [
                              "to build",
@@ -6605,7 +3322,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  790,
+        "id":  396,
         "word":  "steigen",
         "translations":  [
                              "to climb",
@@ -6614,7 +3331,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  791,
+        "id":  397,
         "word":  "sinken",
         "translations":  [
                              "to sink",
@@ -6623,7 +3340,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  792,
+        "id":  398,
         "word":  "wachsen",
         "translations":  [
                              "to grow"
@@ -6631,7 +3348,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  793,
+        "id":  399,
         "word":  "sterben",
         "translations":  [
                              "to die"
@@ -6639,7 +3356,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  794,
+        "id":  400,
         "word":  "leben",
         "translations":  [
                              "to live"
@@ -6647,7 +3364,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  795,
+        "id":  401,
         "word":  "treffen",
         "translations":  [
                              "to meet",
@@ -6656,7 +3373,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  796,
+        "id":  402,
         "word":  "vergessen",
         "translations":  [
                              "to forget"
@@ -6664,7 +3381,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  797,
+        "id":  403,
         "word":  "erinnern",
         "translations":  [
                              "to remember",
@@ -6673,7 +3390,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  798,
+        "id":  404,
         "word":  "gewinnen",
         "translations":  [
                              "to win",
@@ -6682,7 +3399,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  799,
+        "id":  405,
         "word":  "verlieren",
         "translations":  [
                              "to lose"
@@ -6690,7 +3407,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  800,
+        "id":  406,
         "word":  "entscheiden",
         "translations":  [
                              "to decide"
@@ -6698,7 +3415,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  801,
+        "id":  407,
         "word":  "empfehlen",
         "translations":  [
                              "to recommend"
@@ -6706,7 +3423,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  802,
+        "id":  408,
         "word":  "erscheinen",
         "translations":  [
                              "to appear"
@@ -6714,7 +3431,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  803,
+        "id":  409,
         "word":  "verstehen",
         "translations":  [
                              "to understand"
@@ -6722,7 +3439,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  804,
+        "id":  410,
         "word":  "beschreiben",
         "translations":  [
                              "to describe"
@@ -6730,7 +3447,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  805,
+        "id":  411,
         "word":  "vergleichen",
         "translations":  [
                              "to compare"
@@ -6738,7 +3455,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  806,
+        "id":  412,
         "word":  "erklÃ¤ren",
         "translations":  [
                              "to explain"
@@ -6746,7 +3463,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  807,
+        "id":  413,
         "word":  "beweisen",
         "translations":  [
                              "to prove"
@@ -6754,7 +3471,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  808,
+        "id":  414,
         "word":  "bestehen",
         "translations":  [
                              "to consist",
@@ -6764,7 +3481,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  809,
+        "id":  415,
         "word":  "unterscheiden",
         "translations":  [
                              "to distinguish",
@@ -6773,7 +3490,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  810,
+        "id":  416,
         "word":  "einladen",
         "translations":  [
                              "to invite"
@@ -6781,7 +3498,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  811,
+        "id":  417,
         "word":  "versprechen",
         "translations":  [
                              "to promise"
@@ -6789,7 +3506,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  812,
+        "id":  418,
         "word":  "anbieten",
         "translations":  [
                              "to offer"
@@ -6797,7 +3514,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  813,
+        "id":  419,
         "word":  "vorschlagen",
         "translations":  [
                              "to suggest",
@@ -6806,7 +3523,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  814,
+        "id":  420,
         "word":  "ablehnen",
         "translations":  [
                              "to decline",
@@ -6815,7 +3532,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  815,
+        "id":  421,
         "word":  "aufgeben",
         "translations":  [
                              "to give up",
@@ -6824,7 +3541,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  816,
+        "id":  422,
         "word":  "aufnehmen",
         "translations":  [
                              "to record",
@@ -6834,7 +3551,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  817,
+        "id":  423,
         "word":  "ausgehen",
         "translations":  [
                              "to go out",
@@ -6843,7 +3560,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  818,
+        "id":  424,
         "word":  "aussteigen",
         "translations":  [
                              "to get off",
@@ -6852,7 +3569,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  819,
+        "id":  425,
         "word":  "einsteigen",
         "translations":  [
                              "to get in",
@@ -6861,7 +3578,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  820,
+        "id":  426,
         "word":  "ankommen",
         "translations":  [
                              "to arrive"
@@ -6869,7 +3586,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  821,
+        "id":  427,
         "word":  "abfahren",
         "translations":  [
                              "to depart",
@@ -6878,7 +3595,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  822,
+        "id":  428,
         "word":  "zurÃ¼ckkommen",
         "translations":  [
                              "to come back",
@@ -6887,7 +3604,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  823,
+        "id":  429,
         "word":  "weitermachen",
         "translations":  [
                              "to continue",
@@ -6896,7 +3613,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  824,
+        "id":  430,
         "word":  "aufhÃ¶ren",
         "translations":  [
                              "to stop",
@@ -6905,7 +3622,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  825,
+        "id":  431,
         "word":  "anfangen",
         "translations":  [
                              "to start",
@@ -6914,7 +3631,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  826,
+        "id":  432,
         "word":  "mitmachen",
         "translations":  [
                              "to participate",
@@ -6923,7 +3640,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  827,
+        "id":  433,
         "word":  "zuhÃ¶ren",
         "translations":  [
                              "to listen"
@@ -6931,7 +3648,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  828,
+        "id":  434,
         "word":  "nachdenken",
         "translations":  [
                              "to think about",
@@ -6940,7 +3657,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  829,
+        "id":  435,
         "word":  "vorbereiten",
         "translations":  [
                              "to prepare"
@@ -6948,7 +3665,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  830,
+        "id":  436,
         "word":  "durchfÃ¼hren",
         "translations":  [
                              "to carry out",
@@ -6957,7 +3674,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  831,
+        "id":  437,
         "word":  "herausfinden",
         "translations":  [
                              "to find out"
@@ -6965,7 +3682,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  832,
+        "id":  438,
         "word":  "vorstellen",
         "translations":  [
                              "to introduce",
@@ -6974,7 +3691,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  833,
+        "id":  439,
         "word":  "feststellen",
         "translations":  [
                              "to determine",
@@ -6983,7 +3700,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  834,
+        "id":  440,
         "word":  "darstellen",
         "translations":  [
                              "to represent",
@@ -6992,7 +3709,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  835,
+        "id":  441,
         "word":  "besetzen",
         "translations":  [
                              "to occupy"
@@ -7000,7 +3717,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  836,
+        "id":  442,
         "word":  "besitzen",
         "translations":  [
                              "to own",
@@ -7009,7 +3726,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  837,
+        "id":  443,
         "word":  "verschwinden",
         "translations":  [
                              "to disappear",
@@ -7018,7 +3735,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  838,
+        "id":  444,
         "word":  "entstehen",
         "translations":  [
                              "to arise",
@@ -7028,7 +3745,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  839,
+        "id":  445,
         "word":  "Ã¼bernehmen",
         "translations":  [
                              "to take over",
@@ -7037,7 +3754,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  840,
+        "id":  446,
         "word":  "umgehen",
         "translations":  [
                              "to deal with",
@@ -7046,7 +3763,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  841,
+        "id":  447,
         "word":  "vorgehen",
         "translations":  [
                              "to proceed",
@@ -7055,7 +3772,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  842,
+        "id":  448,
         "word":  "abhÃ¤ngen",
         "translations":  [
                              "to depend on"
@@ -7063,7 +3780,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  843,
+        "id":  449,
         "word":  "angehÃ¶ren",
         "translations":  [
                              "to belong to"
@@ -7071,7 +3788,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  844,
+        "id":  450,
         "word":  "beitragen",
         "translations":  [
                              "to contribute"
@@ -7079,7 +3796,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  845,
+        "id":  451,
         "word":  "hinweisen",
         "translations":  [
                              "to point out",
@@ -7088,7 +3805,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  846,
+        "id":  452,
         "word":  "hinzufÃ¼gen",
         "translations":  [
                              "to add"
@@ -7096,7 +3813,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  847,
+        "id":  453,
         "word":  "zusammenfassen",
         "translations":  [
                              "to summarize"
@@ -7104,7 +3821,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  848,
+        "id":  454,
         "word":  "berÃ¼cksichtigen",
         "translations":  [
                              "to consider",
@@ -7113,7 +3830,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  849,
+        "id":  455,
         "word":  "beeinflussen",
         "translations":  [
                              "to influence",
@@ -7122,7 +3839,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  850,
+        "id":  456,
         "word":  "verbessern",
         "translations":  [
                              "to improve"
@@ -7130,7 +3847,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  851,
+        "id":  457,
         "word":  "vereinfachen",
         "translations":  [
                              "to simplify"
@@ -7138,7 +3855,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  852,
+        "id":  458,
         "word":  "vergrÃ¶ÃŸern",
         "translations":  [
                              "to enlarge",
@@ -7147,7 +3864,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  853,
+        "id":  459,
         "word":  "verringern",
         "translations":  [
                              "to reduce",
@@ -7156,7 +3873,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  854,
+        "id":  460,
         "word":  "ersetzen",
         "translations":  [
                              "to replace"
@@ -7164,7 +3881,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  855,
+        "id":  461,
         "word":  "ergÃ¤nzen",
         "translations":  [
                              "to complement",
@@ -7173,7 +3890,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  856,
+        "id":  462,
         "word":  "korrigieren",
         "translations":  [
                              "to correct"
@@ -7181,7 +3898,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  857,
+        "id":  463,
         "word":  "Ã¼berprÃ¼fen",
         "translations":  [
                              "to check",
@@ -7190,7 +3907,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  858,
+        "id":  464,
         "word":  "Ã¼bertragen",
         "translations":  [
                              "to transfer",
@@ -7199,7 +3916,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  859,
+        "id":  465,
         "word":  "anwenden",
         "translations":  [
                              "to apply",
@@ -7208,7 +3925,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  860,
+        "id":  466,
         "word":  "einsetzen",
         "translations":  [
                              "to deploy",
@@ -7218,7 +3935,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  861,
+        "id":  467,
         "word":  "umsetzen",
         "translations":  [
                              "to implement",
@@ -7227,7 +3944,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  862,
+        "id":  468,
         "word":  "auswÃ¤hlen",
         "translations":  [
                              "to select",
@@ -7236,7 +3953,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  863,
+        "id":  469,
         "word":  "bestimmen",
         "translations":  [
                              "to determine",
@@ -7245,7 +3962,7 @@
         "category":  "unregelmaessige_verben"
     },
     {
-        "id":  864,
+        "id":  470,
         "word":  "fehlschlagen",
         "translations":  [
                              "to fail"

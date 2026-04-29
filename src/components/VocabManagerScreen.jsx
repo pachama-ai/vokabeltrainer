@@ -4,16 +4,13 @@ import { getManageWords, updateWord, deleteWord, createCategory } from '../api/v
 import './CategoryScreen.css'
 
 const BUILTIN_CATS = [
-  { id: 'grundwortschatz',        label: 'Basic',      img: '/grundwortschatz.png',  color: 'rgba(68, 196, 186, 0.72)'  },
-  { id: 'aufbauwortschatz',       label: 'Advanced',   img: '/aufbauwortschatz.png', color: 'rgba(138, 162, 96, 0.68)'  },
-  { id: 'unregelmaessige_verben', label: 'Irregulars', img: '/irregular.png',        color: 'rgba(200, 148, 72, 0.72)'  },
+  { id: 'a1',                     label: 'A1',             color: '#5aab82' },
+  { id: 'a2',                     label: 'A2',             color: '#68b0e2' },
+  { id: 'b1',                     label: 'B1',             color: '#c4956a' },
+  { id: 'b2',                     label: 'B2',             color: '#b07891' },
+  { id: 'unregelmaessige_verben', label: 'Irregular Verbs', color: '#9b73c0', img: '/irregular.png' },
 ]
 
-const CAT_SIDEBAR_COLORS = {
-  grundwortschatz: '#c4956a',
-  aufbauwortschatz: '#5aab82',
-  unregelmaessige_verben: '#b07891',
-}
 const DEFAULT_CAT_COLOR = '#8da0c0'
 
 const PlaceholderIcon = () => (
@@ -206,21 +203,24 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
             </button>
             <span className="hs__mascot-lbl">Home</span>
           </div>
-          {sidebarCats.map(cat => (
-            <button
-              key={cat.id}
-              className="hs__cat-btn"
-              style={{ opacity: 0.55, cursor: 'default', background: CAT_SIDEBAR_COLORS[cat.id] ?? DEFAULT_CAT_COLOR }}
-              disabled
-              title={cat.label}
-            >
-              {cat.img
-                ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
-                : <PlaceholderIcon />}
-            </button>
-          ))}
-          <div className="hs__side-spacer" />
-          <button className="hs__cat-btn hs__add-btn" title="Add category" style={{ opacity: 0.45, cursor: 'default' }} disabled>+</button>
+          <div className="hs__cat-list">
+            {sidebarCats.map(cat => (
+              <button
+                key={cat.id}
+                className={`hs__cat-btn${filter === cat.id ? ' hs__cat-btn--on' : ''}`}
+                style={{ background: cat.color ?? DEFAULT_CAT_COLOR }}
+                onClick={() => { setFilter(cat.id); setOffset(0) }}
+                title={cat.label}
+              >
+                {cat.img
+                  ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
+                  : <span style={{ fontSize: cat.label.length <= 2 ? 17 : 11, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center', color: 'rgba(255,255,255,0.95)' }}>{cat.label}</span>}
+              </button>
+            ))}
+          </div>
+          <div className="hs__add-btn-wrap">
+            <button className="hs__cat-btn hs__add-btn" title="Add category" style={{ opacity: 0.45, cursor: 'default' }} disabled>+</button>
+          </div>
         </aside>
 
         {/* ── Main ── */}
@@ -338,7 +338,7 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
         </main>
 
         {/* ── Right sidebar ── */}
-        <aside className="hs__side hs__side--r">
+        <aside className="hs__side hs__side--r hs__side--r-test">
           {ACTION_BTNS.map(({ id, label, img, color }) => (
             id === 'manage' ? (
               <button key={id} className="hs__action-btn vm__action-active" title={label} style={{ background: color }}>
@@ -350,6 +350,8 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
               </button>
             )
           ))}
+          <div className="hs__side-spacer" />
+          <button className="hs__cancel-btn" onClick={onBack}>✕</button>
         </aside>
 
       </div>

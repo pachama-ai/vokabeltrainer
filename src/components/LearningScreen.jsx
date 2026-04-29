@@ -6,15 +6,27 @@ import './LearningScreen.css'
 import './CategoryScreen.css'
 
 const BUILTIN_CAT_IDS = [
-  'grundwortschatz',
-  'aufbauwortschatz',
+  'a1',
+  'a2',
+  'b1',
+  'b2',
   'unregelmaessige_verben',
 ]
 
+const CAT_BTNS = [
+  { id: 'a1',                     label: 'A1',             color: '#5aab82' },
+  { id: 'a2',                     label: 'A2',             color: '#68b0e2' },
+  { id: 'b1',                     label: 'B1',             color: '#c4956a' },
+  { id: 'b2',                     label: 'B2',             color: '#b07891' },
+  { id: 'unregelmaessige_verben', label: 'Irregular Verbs', color: '#9b73c0', img: '/irregular.png' },
+]
+
 const CAT_COLOR_MAP = {
-  grundwortschatz: '#c4956a',
-  aufbauwortschatz: '#5aab82',
-  unregelmaessige_verben: '#b07891',
+  a1: '#5aab82',
+  a2: '#68b0e2',
+  b1: '#c4956a',
+  b2: '#b07891',
+  unregelmaessige_verben: '#9b73c0',
 }
 const DEFAULT_CAT_COLOR = '#8da0c0'
 
@@ -157,7 +169,10 @@ export default function LearningScreen({ category, words: initialWords, counts, 
     if (!input.trim() || loading || !current) return
 
     // Determine answer translations based on direction
-    const answerTranslations = currentDir === 'en' ? [current.word] : current.translations
+    // Split by semicolon so any one of multiple meanings counts as correct
+    const answerTranslations = currentDir === 'en'
+      ? current.word.split(';').map(s => s.trim()).filter(Boolean)
+      : current.translations.flatMap(t => t.split(';').map(s => s.trim())).filter(Boolean)
     const correct = checkAnswer(input, answerTranslations)
     setFeedback(correct ? 'correct' : 'incorrect')
     setCorrectAnswer(answerTranslations[0])
@@ -196,11 +211,14 @@ export default function LearningScreen({ category, words: initialWords, counts, 
     if (e.key === 'Enter') handleSubmit()
   }
 
-  const dirLabel = currentDir === 'en' ? 'Englisch → Deutsch' : 'Deutsch → Englisch'
+  const dirLabel = currentDir === 'en' ? 'EN → DE' : 'DE → EN'
   const displayTotal = sessionLimit ?? cardsReviewedRef.current
   const levelTotal = localCounts.reduce((a, b) => a + b, 0)
 
-  const allCatIds = [...BUILTIN_CAT_IDS, ...customCats]
+  const allCatBtns = [
+    ...CAT_BTNS,
+    ...customCats.map(id => ({ id, label: id, color: DEFAULT_CAT_COLOR }))
+  ]
 
   const sidebar = (
     <>
@@ -208,20 +226,27 @@ export default function LearningScreen({ category, words: initialWords, counts, 
       <aside className="hs__side hs__side--locked">
         <div className="hs__mascot-wrap">
           <button className="hs__mascot-btn" title="Home" onClick={onBack}>
-            <AvatarIcon idx={avatarIdx} size={36} />
+            <AvatarIcon idx={avatarIdx} size={72} />
           </button>
           <span className="hs__mascot-lbl">Home</span>
         </div>
-        {allCatIds.map(id => (
-          <button
-            key={id}
-            className={`hs__cat-btn${activeCatId === id ? ' hs__cat-btn--on' : ''}`}
-            style={{ background: CAT_COLOR_MAP[id] ?? DEFAULT_CAT_COLOR }}
-            disabled
-          ><PlaceholderIcon /></button>
-        ))}
-        <div className="hs__side-spacer" />
-        <button className="hs__cat-btn hs__add-btn" disabled>+</button>
+        <div className="hs__cat-list">
+          {allCatBtns.map(cat => (
+            <button
+              key={cat.id}
+              className={`hs__cat-btn${activeCatId === cat.id ? ' hs__cat-btn--on' : ''}`}
+              style={{ background: cat.color }}
+              disabled
+            >
+              {cat.img
+                ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
+                : <span style={{ fontSize: cat.label.length <= 2 ? 17 : 11, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center', color: 'rgba(255,255,255,0.95)' }}>{cat.label}</span>}
+            </button>
+          ))}
+        </div>
+        <div className="hs__add-btn-wrap">
+          <button className="hs__cat-btn hs__add-btn" disabled>+</button>
+        </div>
       </aside>
     </>
   )
@@ -260,7 +285,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
                     <div key={w.id} className="ls__mistake-row">
                       <span className="ls__mistake-de">{w.word}</span>
                       <span className="ls__mistake-en">{w.translations?.[0] ?? ''}</span>
-                      <span className="ls__mistake-level">Stufe {w.level}</span>
+                      <span className="ls__mistake-level">Level {w.level}</span>
                     </div>
                   ))}
                 </div>
