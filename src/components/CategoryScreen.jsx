@@ -15,11 +15,11 @@ const LEVELS = [
 const LEVEL_ICONS = [] // unused – kept for potential future use
 
 const CAT_BTNS = [
-  { id: 'a1',                     label: 'A1', color: '#5aab82' },
-  { id: 'a2',                     label: 'A2', color: '#68b0e2' },
-  { id: 'b1',                     label: 'B1', color: '#c4956a' },
-  { id: 'b2',                     label: 'B2', color: '#b07891' },
-  { id: 'unregelmaessige_verben', label: 'Irregular Verbs', color: '#9b73c0', img: '/irregular.png' },
+  { id: 'a1',                     label: 'A1',            tooltip: 'A1 - Basic Vocabulary',      color: '#5aab82' },
+  { id: 'a2',                     label: 'A2',            tooltip: 'A2 - Elementary Vocabulary',  color: '#68b0e2' },
+  { id: 'b1',                     label: 'B1',            tooltip: 'B1 - Intermediate Vocabulary',color: '#c4956a' },
+  { id: 'b2',                     label: 'B2',            tooltip: 'B2 - Upper Intermediate',    color: '#b07891' },
+  { id: 'unregelmaessige_verben', label: 'Irregular Verbs', tooltip: 'Irregular Verbs',           color: '#9b73c0', img: '/irregular.png' },
 ]
 
 const CAT_COLOR_MAP = {
@@ -339,7 +339,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                   }}
                   onClick={() => setActiveCatId(cat.id)}
                   onContextMenu={isCustom ? (e) => { e.preventDefault(); setDeleteCatConfirm(cat.id) } : undefined}
-                  title={cat.label}
+                  title={cat.tooltip ?? cat.label}
                 >{cat.img
                   ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
                   : <span style={{ fontSize: cat.label.length <= 2 ? 17 : 11, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center', color: 'rgba(255,255,255,0.95)' }}>{cat.label}</span>
