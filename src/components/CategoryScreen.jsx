@@ -425,7 +425,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                         key={l.level}
                         className={`hs__lvl-btn${on ? ' hs__lvl-btn--on' : ''}${!hasWords ? ' hs__lvl-btn--empty' : ''}`}
                         style={!hasWords
-                          ? { borderColor: 'rgba(150,140,120,0.15)', background: 'transparent', color: 'rgba(150,140,120,0.25)', cursor: 'default' }
+                          ? { borderColor: 'rgba(150,140,120,0.45)', background: 'rgba(150,140,120,0.07)', color: 'rgba(120,110,90,0.55)', cursor: 'default' }
                           : on
                             ? { borderColor: l.color, background: l.color + '22', color: l.color }
                             : { borderColor: 'rgba(150,140,120,0.3)', background: 'transparent', color: 'rgba(120,120,120,0.6)' }
@@ -434,7 +434,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                         disabled={!hasWords}
                         title={!hasWords ? 'No words at this level' : `Level ${l.level}`}
                       >
-                        <span className="hs__lvl-dot" style={{ background: !hasWords ? 'rgba(150,140,120,0.15)' : on ? l.color : 'rgba(150,140,120,0.3)' }} />
+                        <span className="hs__lvl-dot" style={{ background: !hasWords ? 'rgba(150,140,120,0.4)' : on ? l.color : 'rgba(150,140,120,0.3)' }} />
                         <span className="hs__lvl-num">{l.level}</span>
                       </button>
                     )
