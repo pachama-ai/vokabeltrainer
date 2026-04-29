@@ -77,14 +77,14 @@ const LEVELS = [
 ]
 const LEVEL_ICONS = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣']
 
-function pickWord(words, lastId) {
+function pickWord(words, lastId, askedIds) {
   if (words.length === 0) return null
-  const weighted = words.flatMap((w) => {
-    const weight = Math.max(1, 6 - w.level)
-    return Array(weight).fill(w)
-  })
-  const pool = weighted.filter((w) => w.id !== lastId)
-  const source = pool.length > 0 ? pool : weighted
+  // exclude already asked words, fall back to full pool if all asked
+  const unasked = words.filter(w => !askedIds.has(w.id))
+  const pool = unasked.length > 0 ? unasked : words
+  // exclude lastId to avoid immediate repeat
+  const filtered = pool.filter(w => w.id !== lastId)
+  const source = filtered.length > 0 ? filtered : pool
   return source[Math.floor(Math.random() * source.length)]
 }
 
@@ -123,6 +123,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
   const inputRef = useRef(null)
   const sessionIdRef = useRef(null)
   const cardsReviewedRef = useRef(0)
+  const askedIdsRef = useRef(new Set())
 
   useEffect(() => {
     startSession(category)
@@ -150,7 +151,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
         return
       }
       const updatedWords = words.filter((w) => activeLevels.includes(w.level))
-      const next = pickWord(updatedWords, current?.id)
+      const next = pickWord(updatedWords, current?.id, askedIdsRef.current)
       if (!next) {
         setSessionDone(true)
         setAnswered(false)
@@ -178,6 +179,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
     setCorrectAnswer(answerTranslations[0])
     setAnswered(true)
     cardsReviewedRef.current += 1
+    if (current?.id) askedIdsRef.current.add(current.id)
     setSessionStats((s) => ({
       correct: s.correct + (correct ? 1 : 0),
       incorrect: s.incorrect + (correct ? 0 : 1),
