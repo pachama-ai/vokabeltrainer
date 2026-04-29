@@ -249,10 +249,11 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
   // ── Learn helpers ─────────────────────────────────────────────────────────
   function openLearn() {
     setLearnMode(true)
-    setLearnNewCountStr('10')
     setLearnTotalStr('')
     setLearnDir('both')
-    setLearnLevels([1, 2, 3, 4, 5])
+    const counts = allStats?.[activeCatId]?.counts ?? []
+    const available = [1,2,3,4,5].filter(l => (counts[l] ?? 0) > 0)
+    setLearnLevels(available.length > 0 ? available : [1,2,3,4,5])
   }
 
   function cycleLearnDir() {
@@ -275,7 +276,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
       return
     }
     const settings = {
-      newCount:  Math.max(0, parseInt(learnNewCountStr) || 0),
+      newCount:  0,
       total:     learnTotalStr === '' ? null : (parseInt(learnTotalStr) || null),
       direction: learnDir === 'de→en' ? ['de'] : learnDir === 'en→de' ? ['en'] : ['de', 'en'],
       levels:    learnLevels,
@@ -366,22 +367,6 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 <span className="hs__test-section-title">Study Settings</span>
               </div>
 
-              {/* New Words */}
-              <div className="hs__test-row">
-                <div className="hs__learn-label-wrap">
-                  <span className="hs__test-row-label">New Words</span>
-                  <span className="hs__learn-hint">Unknown words added to your session</span>
-                </div>
-                <input
-                  className="hs__test-num-input"
-                  type="number"
-                  min={0} max={200}
-                  value={learnNewCountStr}
-                  onChange={e => setLearnNewCountStr(e.target.value)}
-                />
-              </div>
-              <div className="hs__test-divider" />
-
               {/* Total */}
               <div className="hs__test-row">
                 <div className="hs__learn-label-wrap">
@@ -432,18 +417,24 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 </div>
                 <div className="hs__learn-levels">
                   {LEVELS.map(l => {
+                    const counts = allStats?.[activeCatId]?.counts ?? []
+                    const hasWords = (counts[l.level] ?? 0) > 0
                     const on = learnLevels.includes(l.level)
                     return (
                       <button
                         key={l.level}
-                        className={`hs__lvl-btn${on ? ' hs__lvl-btn--on' : ''}`}
-                        style={on
-                          ? { borderColor: l.color, background: l.color + '22', color: l.color }
-                          : { borderColor: 'rgba(150,140,120,0.3)', background: 'transparent', color: 'rgba(120,120,120,0.6)' }
+                        className={`hs__lvl-btn${on ? ' hs__lvl-btn--on' : ''}${!hasWords ? ' hs__lvl-btn--empty' : ''}`}
+                        style={!hasWords
+                          ? { borderColor: 'rgba(150,140,120,0.15)', background: 'transparent', color: 'rgba(150,140,120,0.25)', cursor: 'default' }
+                          : on
+                            ? { borderColor: l.color, background: l.color + '22', color: l.color }
+                            : { borderColor: 'rgba(150,140,120,0.3)', background: 'transparent', color: 'rgba(120,120,120,0.6)' }
                         }
-                        onClick={() => toggleLearnLevel(l.level)}
+                        onClick={() => hasWords && toggleLearnLevel(l.level)}
+                        disabled={!hasWords}
+                        title={!hasWords ? 'No words at this level' : `Level ${l.level}`}
                       >
-                        <span className="hs__lvl-dot" style={{ background: on ? l.color : 'rgba(150,140,120,0.3)' }} />
+                        <span className="hs__lvl-dot" style={{ background: !hasWords ? 'rgba(150,140,120,0.15)' : on ? l.color : 'rgba(150,140,120,0.3)' }} />
                         <span className="hs__lvl-num">{l.level}</span>
                       </button>
                     )
