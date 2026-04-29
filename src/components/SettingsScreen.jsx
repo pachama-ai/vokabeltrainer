@@ -686,37 +686,37 @@ export default function SettingsScreen({ onBack, onLogout }) {
             <span className="hs__mascot-lbl">Home</span>
           </div>
 
-          <div className="hs__cat-list">
-            {/* Settings (active) */}
-            <button
-              className={`hs__cat-btn st__nav-btn${activeTab !== 'privacy' && activeTab !== 'imprint' ? ' st__nav-btn--on' : ''}`}
-              style={{ background: '#8da0c0' }}
-              title="Settings"
-              onClick={() => setActiveTab('personal')}
-            >
-              <GearIcon />
-            </button>
+          {/* Settings (active) */}
+          <button
+            className={`hs__cat-btn st__nav-btn${activeTab !== 'privacy' && activeTab !== 'imprint' ? ' st__nav-btn--on' : ''}`}
+            style={{ background: '#8da0c0' }}
+            title="Settings"
+            onClick={() => setActiveTab('personal')}
+          >
+            <GearIcon />
+          </button>
 
-            {/* Privacy Policy */}
-            <button
-              className={`hs__cat-btn st__nav-btn${activeTab === 'privacy' ? ' st__nav-btn--on' : ''}`}
-              style={{ background: '#5aab82' }}
-              title="Privacy Policy"
-              onClick={() => setActiveTab('privacy')}
-            >
-              <FileTextIcon />
-            </button>
+          {/* Privacy Policy */}
+          <button
+            className={`hs__cat-btn st__nav-btn${activeTab === 'privacy' ? ' st__nav-btn--on' : ''}`}
+            style={{ background: '#5aab82' }}
+            title="Privacy Policy"
+            onClick={() => setActiveTab('privacy')}
+          >
+            <FileTextIcon />
+          </button>
 
-            {/* Imprint */}
-            <button
-              className={`hs__cat-btn st__nav-btn${activeTab === 'imprint' ? ' st__nav-btn--on' : ''}`}
-              style={{ background: '#c4956a' }}
-              title="Imprint"
-              onClick={() => setActiveTab('imprint')}
-            >
-              <BookIcon />
-            </button>
-          </div>
+          {/* Imprint */}
+          <button
+            className={`hs__cat-btn st__nav-btn${activeTab === 'imprint' ? ' st__nav-btn--on' : ''}`}
+            style={{ background: '#c4956a' }}
+            title="Imprint"
+            onClick={() => setActiveTab('imprint')}
+          >
+            <BookIcon />
+          </button>
+
+          <div className="st__side-spacer" />
 
           {/* Logout */}
           <button className="hs__cat-btn st__logout-btn" onClick={onLogout} title="Logout">
