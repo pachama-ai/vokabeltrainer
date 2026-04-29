@@ -74,9 +74,9 @@ const RetryIcon = () => (
 )
 
 const ACTION_BTNS = [
-  { id: 'learn',   label: 'Learn',  img: '/learn.png',  color: '#5b9ec9' },
-  { id: 'test',    label: 'Test',   img: '/test.png',   color: '#c0826e' },
-  { id: 'manage',  label: 'Manage', img: '/manage.png', color: '#4ca87a' },
+  { id: 'learn',   label: 'learn',  img: '/learn.png',  color: '#5b9ec9' },
+  { id: 'test',    label: 'test',   img: '/test.png',   color: '#c0826e' },
+  { id: 'manage',  label: 'manage', img: '/manage.png', color: '#4ca87a' },
 ]
 
 function RingChart({ pct, color, count, label }) {
