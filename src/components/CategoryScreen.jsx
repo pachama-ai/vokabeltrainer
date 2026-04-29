@@ -705,7 +705,6 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 }}
               >
                 <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
-                <span className="hs__action-lbl">{label}</span>
               </button>
             )
           ))}
