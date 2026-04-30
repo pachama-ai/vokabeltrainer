@@ -315,7 +315,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
             : isTestActive ? 'Vocabulary Test'
             : <span style={{ display: 'flex', alignItems: 'center', gap: 8, justifyContent: 'center' }}>
                 {activeCat.img && <img src={activeCat.img} alt="" style={{ width: 28, height: 28, objectFit: 'contain' }} />}
-                {activeCat.label} — Leitner Box
+                {activeCat.tooltip ?? activeCat.label}
               </span>}
         </h1>
         <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}>🔥 <span>0 Days</span></div>
