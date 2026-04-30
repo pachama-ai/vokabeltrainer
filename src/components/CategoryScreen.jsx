@@ -503,22 +503,29 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 </div>
                 <div className="hs__learn-levels">
                   {LEVELS.map(l => {
+                    // sum this level's count across all categories
+                    const totalForLevel = Object.values(allStats ?? {}).reduce((sum, s) => sum + (s?.counts?.[l.level] ?? 0), 0)
+                    const hasWords = totalForLevel > 0
                     const on = testLevels.includes(l.level)
                     return (
                       <button
                         key={l.level}
-                        className={`hs__lvl-btn${on ? ' hs__lvl-btn--on' : ''}`}
-                        style={on
-                          ? { borderColor: l.color, background: l.color + '22', color: l.color }
-                          : { borderColor: 'rgba(150,140,120,0.3)', background: 'transparent', color: 'rgba(120,120,120,0.6)' }
+                        className={`hs__lvl-btn${on ? ' hs__lvl-btn--on' : ''}${!hasWords ? ' hs__lvl-btn--empty' : ''}`}
+                        style={!hasWords
+                          ? { borderColor: 'rgba(150,140,120,0.45)', background: 'rgba(150,140,120,0.07)', color: 'rgba(120,110,90,0.55)', cursor: 'default' }
+                          : on
+                            ? { borderColor: l.color, background: l.color + '22', color: l.color }
+                            : { borderColor: 'rgba(150,140,120,0.3)', background: 'transparent', color: 'rgba(120,120,120,0.6)' }
                         }
-                        onClick={() => setTestLevels(prev =>
+                        onClick={() => hasWords && setTestLevels(prev =>
                           prev.includes(l.level)
                             ? prev.length > 1 ? prev.filter(x => x !== l.level) : prev
                             : [...prev, l.level]
                         )}
+                        disabled={!hasWords}
+                        title={!hasWords ? 'No words at this level' : `Level ${l.level}`}
                       >
-                        <span className="hs__lvl-dot" style={{ background: on ? l.color : 'rgba(150,140,120,0.3)' }} />
+                        <span className="hs__lvl-dot" style={{ background: !hasWords ? 'rgba(150,140,120,0.4)' : on ? l.color : 'rgba(150,140,120,0.3)' }} />
                         <span className="hs__lvl-num">{l.level}</span>
                       </button>
                     )
