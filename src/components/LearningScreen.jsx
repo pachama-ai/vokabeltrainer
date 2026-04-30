@@ -77,7 +77,7 @@ const LEVELS = [
 ]
 const LEVEL_ICONS = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣']
 
-function pickWord(words, lastId, askedIds) {
+function pickWord(words, lastId, askedIds = new Set()) {
   if (words.length === 0) return null
   // exclude already asked words, fall back to full pool if all asked
   const unasked = words.filter(w => !askedIds.has(w.id))
