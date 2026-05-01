@@ -681,7 +681,7 @@ export default function SettingsScreen({ onBack, onLogout }) {
         <aside className="hs__side">
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onBack} title="Home">
-              <AvatarIcon idx={avatarIdx} size={72} />
+              <AvatarIcon idx={avatarIdx} size={52} />
             </button>
             <span className="hs__mascot-lbl">Home</span>
           </div>
@@ -761,7 +761,7 @@ export default function SettingsScreen({ onBack, onLogout }) {
         <aside className="hs__side hs__side--r">
           {ST_ACTION_BTNS.map(({ id, label, img, color }) => (
             <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
-              <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
+              <img src={img} alt={label} />
             </button>
           ))}
         </aside>

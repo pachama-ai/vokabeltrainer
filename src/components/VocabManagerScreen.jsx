@@ -204,7 +204,7 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
         <aside className="hs__side">
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onBack} title="Back to Home">
-              <AvatarIcon idx={avatarIdx} size={72} />
+              <AvatarIcon idx={avatarIdx} size={52} />
             </button>
             <span className="hs__mascot-lbl">Home</span>
           </div>
@@ -218,8 +218,8 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
                 title={cat.label}
               >
                 {cat.img
-                  ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
-                  : <span style={{ fontSize: cat.label.length <= 2 ? 17 : 11, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center', color: 'rgba(255,255,255,0.95)' }}>{cat.label}</span>}
+                  ? <img src={cat.img} alt={cat.label} style={{ width: 32, height: 32, objectFit: 'contain' }} />
+                  : <span style={{ fontSize: cat.label.length <= 2 ? 13 : 9, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center', color: 'rgba(255,255,255,0.95)' }}>{cat.label}</span>}
               </button>
             ))}
           </div>
@@ -347,11 +347,11 @@ export default function VocabManagerScreen({ onBack, onSettings, customCats = []
           {ACTION_BTNS.map(({ id, label, img, color }) => (
             id === 'manage' ? (
               <button key={id} className="hs__action-btn vm__action-active" title={label} style={{ background: color }}>
-                <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
+                <img src={img} alt={label} />
               </button>
             ) : (
               <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
-                <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
+                <img src={img} alt={label} />
               </button>
             )
           ))}

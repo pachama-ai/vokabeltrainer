@@ -247,9 +247,6 @@ box-shadow:
 .hs__action-btn svg { width: 18px; height: 18px; }
 .hs__action-btn img { width: 26px; height: 26px; object-fit: contain; }
 .hs__action-btn:hover { transform: scale(1.06); filter: brightness(1.10); }
-.hs__action-btn:hover .hs__action-lbl {
-  color: rgba(255, 255, 255, 0.90);
-}
 .hs__action-lbl {
   font-size: 0.50rem;
   font-weight: 500;
