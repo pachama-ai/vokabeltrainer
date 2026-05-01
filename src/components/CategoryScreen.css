@@ -111,19 +111,19 @@ min-height: 0;
 
 /* Sidebars */
 .hs__side {
-width: 80px;
+width: 62px;
 flex-shrink: 0;
-background: rgba(252, 244, 234, 0.86);
+background: rgba(252, 248, 244, 0.80);
 backdrop-filter: blur(14px);
 -webkit-backdrop-filter: blur(14px);
-border-radius: 26px;
+border-radius: 22px;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 18px 0 14px;
+padding: 14px 0 12px;
 gap: 0;
-border: 1px solid rgba(255,255,255,0.68);
-box-shadow: 4px 4px 18px rgba(0,0,0,0.16), inset 0 1px 0 rgba(255,255,255,0.75);
+border: 1px solid rgba(255,255,255,0.60);
+box-shadow: 2px 2px 12px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.70);
 overflow: hidden;
 }
 
@@ -152,8 +152,8 @@ flex-shrink: 0;
 }
 
 .hs__mascot-btn {
-width: 72px;
-height: 72px;
+width: 52px;
+height: 52px;
 border-radius: 50%;
 border: 0;
 background: transparent;
@@ -175,31 +175,26 @@ color: var(--text-soft);
 }
 
 .hs__cat-btn {
-width: 54px;
-height: 54px;
+width: 40px;
+height: 40px;
 flex-shrink: 0;
 border-radius: 50%;
-border: 1px solid rgba(255,255,255,0.35);
-background: var(--cat-btn-bg);
-color: rgba(255, 255, 255, 0.92);
+border: 1.5px solid rgba(180,160,145,0.30);
+background: rgba(195, 182, 170, 0.32);
+color: rgba(90, 75, 65, 0.80);
 display: grid;
 place-items: center;
 cursor: pointer;
-transition: box-shadow 0.15s, transform 0.12s, filter 0.15s;
-box-shadow:
-  inset 3px 4px 9px rgba(0,0,0,0.32),
-  inset -1px -2px 5px rgba(255,255,255,0.22),
-  0 2px 4px rgba(0,0,0,0.12);
+transition: background 0.15s, transform 0.12s;
+box-shadow: none;
 }
-.hs__cat-btn:hover  { transform: scale(1.06); filter: brightness(1.10); }
+.hs__cat-btn:hover  { background: rgba(176, 120, 145, 0.22); transform: scale(1.06); }
 .hs__cat-btn--on    {
-  box-shadow:
-    0 0 0 3px rgba(255,255,255,0.95),
-    0 0 0 5px currentColor,
-    inset 3px 4px 9px rgba(0,0,0,0.32),
-    inset -1px -2px 5px rgba(255,255,255,0.22);
-  filter: brightness(1.08);
-  transform: scale(1.06);
+  background: #b07891;
+  border-color: #b07891;
+  color: rgba(255,255,255,0.95);
+  transform: scale(1.08);
+  box-shadow: 0 2px 8px rgba(176,120,145,0.35);
 }
 .hs__cat-btn--ph    {
   background: rgba(195, 188, 175, 0.65);

@@ -328,7 +328,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
         <aside className={`hs__side${isAnyActive ? ' hs__side--locked' : ''}`}>
           <div className="hs__mascot-wrap">
             <button className="hs__mascot-btn" onClick={onSettings} title="Settings">
-              <AvatarIcon idx={avatarIdx} size={72} />
+              <AvatarIcon idx={avatarIdx} size={52} />
             </button>
             <span className="hs__mascot-lbl">Settings</span>
           </div>
@@ -341,19 +341,12 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 <button
                   key={cat.id}
                   className={`hs__cat-btn${isActive ? ' hs__cat-btn--on' : ''}`}
-                  style={{
-                    background: cat.color ?? DEFAULT_CAT_COLOR,
-                    ...(isActive ? {
-                      outline: `3px solid ${cat.color ?? DEFAULT_CAT_COLOR}`,
-                      outlineOffset: '3px',
-                    } : {})
-                  }}
                   onClick={() => setActiveCatId(cat.id)}
                   onContextMenu={isCustom ? (e) => { e.preventDefault(); setDeleteCatConfirm(cat.id) } : undefined}
                   title={cat.tooltip ?? cat.label}
                 >{cat.img
-                  ? <img src={cat.img} alt={cat.label} style={{ width: 50, height: 50, objectFit: 'contain' }} />
-                  : <span style={{ fontSize: cat.label.length <= 2 ? 17 : 11, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center', color: 'rgba(255,255,255,0.95)' }}>{cat.label}</span>
+                  ? <img src={cat.img} alt={cat.label} style={{ width: 32, height: 32, objectFit: 'contain' }} />
+                  : <span style={{ fontSize: cat.label.length <= 2 ? 13 : 9, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center' }}>{cat.label}</span>
                 }</button>
               )
             })}
