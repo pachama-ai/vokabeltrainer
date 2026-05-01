@@ -654,7 +654,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                   {!detailLoading && detailStats && (
                     detailStats.top_failures.length === 0
                       ? <p className="hs__panel-empty">No mistakes yet — keep it up!</p>
-                      : <ol className="hs__fail-list">
+                      : <div className="hs__fail-list-wrap"><ol className="hs__fail-list">
                           {detailStats.top_failures.map((f, i) => (
                             <li key={i} className="hs__fail-row">
                               <span className="hs__fail-n">{i + 1}.</span>
@@ -663,7 +663,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                               <span className="hs__fail-count">{f.wrong_count}×</span>
                             </li>
                           ))}
-                        </ol>
+                        </ol></div>
                   )}
                 </div>
                 <div className="hs__panel">
@@ -693,22 +693,21 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
         <aside className={`hs__side hs__side--r${isAnyActive ? ' hs__side--r-test' : ''}`}>
           {ACTION_BTNS.map(({ id, label, img, color }) => (
             isAnyActive ? (
-              <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
-                <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
+              <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label}>
+                <img src={img} alt={label} />
               </button>
             ) : (
               <button
                 key={id}
                 className="hs__action-btn"
                 title={label}
-                style={{ background: color }}
                 onClick={() => {
                   if (id === 'learn')  openLearn()
                   if (id === 'test')   openTest()
                   if (id === 'manage') onManage?.(activeCatId)
                 }}
               >
-                <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
+                <img src={img} alt={label} />
               </button>
             )
           ))}
