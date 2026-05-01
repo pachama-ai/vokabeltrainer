@@ -232,11 +232,12 @@ export default function LearningScreen({ category, words: initialWords, counts, 
             <button
               key={cat.id}
               className={`hs__cat-btn${activeCatId === cat.id ? ' hs__cat-btn--on' : ''}`}
+              style={{ background: cat.color ?? DEFAULT_CAT_COLOR }}
               disabled
             >
               {cat.img
                 ? <img src={cat.img} alt={cat.label} style={{ width: 32, height: 32, objectFit: 'contain' }} />
-                : <span style={{ fontSize: cat.label.length <= 2 ? 13 : 9, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center' }}>{cat.label}</span>}
+                : <span style={{ fontSize: cat.label.length <= 2 ? 13 : 9, fontWeight: 700, letterSpacing: '0.02em', lineHeight: 1.1, textAlign: 'center', color: 'rgba(255,255,255,0.95)' }}>{cat.label}</span>}
             </button>
           ))}
         </div>
