@@ -22,6 +22,7 @@ export default function App() {
   const [allStats, setAllStats]         = useState(null)
   const [statsLoading, setStatsLoading] = useState(false)
   const [customCats, setCustomCats]     = useState([]) // extra Kategorien aus DB
+  const [daysStreak, setDaysStreak]     = useState(0)
 
   // Daten für LearningScreen / AddWordsDialog
   const [words, setWords]              = useState([])
@@ -50,10 +51,13 @@ export default function App() {
   async function loadAllStats() {
     setStatsLoading(true)
     try {
-      const [catRes, ...builtinStats] = await Promise.all([
+      const [catRes, globalStats, ...builtinStats] = await Promise.all([
         getCategories(),
+        getStats(),  // ohne category = globale Stats inkl. days_streak
         ...BUILTIN_CATS.map(c => getStats(c)),
       ])
+
+      setDaysStreak(globalStats.days_streak ?? 0)
 
       const extras = (catRes.categories ?? []).filter(c => !BUILTIN_CATS.includes(c))
       setCustomCats(extras)
@@ -233,6 +237,7 @@ export default function App() {
       allStats={allStats}
       loading={statsLoading || categoryLoading}
       customCats={customCats}
+      daysStreak={daysStreak}
       onSelectCategory={handleSelectCategory}
       onSettings={handleSettings}
       onAddCategory={() => setScreen('add-category')}

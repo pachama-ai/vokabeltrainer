@@ -104,7 +104,7 @@ function RingChart({ pct, color, count, label }) {
   )
 }
 
-export default function CategoryScreen({ allStats, loading, onSelectCategory, onSettings, onAddCategory, onManage, customCats = [], onDeleteCategory }) {
+export default function CategoryScreen({ allStats, loading, onSelectCategory, onSettings, onAddCategory, onManage, customCats = [], onDeleteCategory, daysStreak = 0 }) {
   const [activeCatId, setActiveCatId] = useState(CAT_BTNS[0].id)
   const [view, setView] = useState('overview') // 'overview' | 'detail'
   const [detailStats, setDetailStats] = useState(null)
@@ -318,7 +318,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 {activeCat.tooltip ?? activeCat.label}
               </span>}
         </h1>
-        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}>🔥 <span>0 Days</span></div>
+        <div className="hs__streak" style={isAnyActive ? { opacity: 0 } : {}}>🔥 <span>{daysStreak} {daysStreak === 1 ? 'Day' : 'Days'}</span></div>
       </header>
 
       {/* ── Body: 3 columns ─────────────────────────────── */}

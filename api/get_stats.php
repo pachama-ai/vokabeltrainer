@@ -45,11 +45,30 @@ try {
     $total    = array_sum($counts);
     $mastered = $counts[5];
 
+    // Tages-Streak aus users-Tabelle laden
+    $daysStreak = 0;
+    if (!$category) { // nur bei Gesamtabfrage
+        try {
+            $stmtS = $db->prepare('SELECT days_streak, last_study_date FROM users WHERE id = ?');
+            $stmtS->execute([$userId]);
+            $ud = $stmtS->fetch();
+            if ($ud) {
+                $today     = date('Y-m-d');
+                $yesterday = date('Y-m-d', strtotime('-1 day'));
+                // Streak nur anzeigen wenn heute oder gestern gelernt wurde
+                if ($ud['last_study_date'] === $today || $ud['last_study_date'] === $yesterday) {
+                    $daysStreak = (int)$ud['days_streak'];
+                }
+            }
+        } catch (PDOException $ignored) {}
+    }
+
     jsonResponse([
-        'counts'   => $counts,   // [stufe0, stufe1, ..., stufe5]
-        'total'    => $total,
-        'mastered' => $mastered,
-        'category' => $category,
+        'counts'      => $counts,
+        'total'       => $total,
+        'mastered'    => $mastered,
+        'category'    => $category,
+        'days_streak' => $daysStreak,
     ]);
 
 } catch (PDOException $e) {

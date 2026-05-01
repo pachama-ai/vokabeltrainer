@@ -105,10 +105,33 @@ try {
         ':wrong2'  => $wrongInc,
     ]);
 
+    // ── Tages-Streak aktualisieren ──────────────────────────────────────────
+    try {
+        $db->exec('ALTER TABLE users
+            ADD COLUMN IF NOT EXISTS days_streak    INT UNSIGNED NOT NULL DEFAULT 0,
+            ADD COLUMN IF NOT EXISTS last_study_date DATE DEFAULT NULL');
+    } catch (PDOException $ignored) {}
+
+    $today = date('Y-m-d');
+    $stmtU = $db->prepare('SELECT days_streak, last_study_date FROM users WHERE id = ?');
+    $stmtU->execute([$userId]);
+    $userData = $stmtU->fetch();
+    $lastDate   = $userData['last_study_date'] ?? null;
+    $daysStreak = (int)($userData['days_streak'] ?? 0);
+
+    if ($lastDate !== $today) {
+        $yesterday = date('Y-m-d', strtotime('-1 day'));
+        $daysStreak = ($lastDate === $yesterday) ? $daysStreak + 1 : 1;
+        $db->prepare('UPDATE users SET days_streak = ?, last_study_date = ? WHERE id = ?')
+           ->execute([$daysStreak, $today, $userId]);
+    }
+    // ───────────────────────────────────────────────────────────────────────
+
     jsonResponse([
         'word_id'        => $wordId,
         'new_level'      => $level,
         'correct_streak' => $streak,
+        'days_streak'    => $daysStreak,
     ]);
 
 } catch (PDOException $e) {
