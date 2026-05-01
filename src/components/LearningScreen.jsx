@@ -250,9 +250,9 @@ export default function LearningScreen({ category, words: initialWords, counts, 
 
   const rightSidebar = (
     <aside className="hs__side hs__side--r hs__side--r-test">
-      {ACTION_BTNS.map(({ id, label, img, color }) => (
-        <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
-          <img src={img} alt={label} style={{ width: 60, height: 60, objectFit: 'contain' }} />
+      {ACTION_BTNS.map(({ id, label, img }) => (
+        <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label}>
+          <img src={img} alt={label} />
         </button>
       ))}
       <div className="hs__side-spacer" />

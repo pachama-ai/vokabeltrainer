@@ -362,7 +362,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
         </aside>
 
         {/* Main content */}
-        <main className="hs__main">
+        <main className={`hs__main${view === 'detail' ? ' hs__main--detail' : ''}`}>
 
           {/* ── LEARN SETUP ── */}
           {learnMode && (
@@ -697,7 +697,7 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
         <aside className={`hs__side hs__side--r${isAnyActive ? ' hs__side--r-test' : ''}`}>
           {ACTION_BTNS.map(({ id, label, img, color }) => (
             isAnyActive ? (
-              <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label} style={{ background: color }}>
+              <button key={id} className="hs__action-btn hs__action-btn--dim" disabled title={label}>
                 <img src={img} alt={label} />
               </button>
             ) : (
@@ -705,7 +705,6 @@ export default function CategoryScreen({ allStats, loading, onSelectCategory, on
                 key={id}
                 className="hs__action-btn"
                 title={label}
-                style={{ background: color }}
                 onClick={() => {
                   if (id === 'learn')  openLearn()
                   if (id === 'test')   openTest()

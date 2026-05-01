@@ -124,7 +124,8 @@ padding: 14px 0 12px;
 gap: 0;
 border: 1px solid rgba(255,255,255,0.60);
 box-shadow: 2px 2px 12px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.70);
-overflow: hidden;
+overflow-x: hidden;
+overflow-y: visible;
 }
 
 /* Scrollable category list inside sidebar */
@@ -244,7 +245,7 @@ box-shadow:
     0 2px 3px rgba(0,0,0,0.10);
 }
 .hs__action-btn svg { width: 18px; height: 18px; }
-.hs__action-btn img { width: 22px; height: 22px; object-fit: contain; }
+.hs__action-btn img { width: 26px; height: 26px; object-fit: contain; }
 .hs__action-btn:hover { transform: scale(1.06); filter: brightness(1.10); }
 .hs__action-btn:hover .hs__action-lbl {
   color: rgba(255, 255, 255, 0.90);
@@ -291,6 +292,12 @@ border-radius: 26px;
 padding: 16px 20px;
 box-shadow: 0 2px 18px rgba(0,0,0,0.07);
 border: 1px solid rgba(255, 255, 255, 0.65);
+}
+.hs__main--detail {
+  max-width: none;
+  align-self: stretch;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
 /* Overview */
@@ -353,10 +360,13 @@ align-items: stretch;
 .hs__panel {
 flex: 1;
 min-height: 0;
-  background: rgba(255, 252, 246, 0.88);
+  background: rgba(255, 255, 255, 0.50);
   border-radius: 22px;
-  padding: 24px 28px;
-  box-shadow: 4px 4px 12px rgba(0,0,0,0.06);
+  padding: 20px 22px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
