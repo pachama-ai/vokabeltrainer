@@ -1032,6 +1032,8 @@ letter-spacing: 0.04em;
   display: flex;
   flex-direction: column;
   padding: 8px 0;
+  overflow-y: auto;
+  max-height: 55vh;
 }
 
 .ls__mistake-row {

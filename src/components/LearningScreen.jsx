@@ -265,10 +265,24 @@ export default function LearningScreen({ category, words: initialWords, counts, 
     </aside>
   )
 
+  const exitModal = showExitConfirm ? (
+    <div className="ls__modal-overlay">
+      <div className="ls__modal">
+        <h3>End study session?</h3>
+        <p>You will return to the start screen.</p>
+        <div className="ls__modal-btns">
+          <button className="ls__modal-btn--cancel" onClick={() => setShowExitConfirm(false)}>Continue</button>
+          <button className="ls__modal-btn--confirm" onClick={onBack}>End Session</button>
+        </div>
+      </div>
+    </div>
+  ) : null
+
   // ── MISTAKES LIST SCREEN ──────────────────────────────────────────────────
   if (sessionDone && showMistakes) {
     return (
       <div className="hs">
+        {exitModal}
         <header className="hs__header">
           <div />
           <h1 className="hs__title">Study Mode</h1>
@@ -308,6 +322,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
   if (sessionDone) {
     return (
       <div className="hs">
+        {exitModal}
         <header className="hs__header">
           <div />
           <h1 className="hs__title">Study Mode</h1>
@@ -371,6 +386,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
   if (!current) {
     return (
       <div className="hs">
+        {exitModal}
         <header className="hs__header">
           <div />
           <h1 className="hs__title">Study Mode</h1>
@@ -392,18 +408,7 @@ export default function LearningScreen({ category, words: initialWords, counts, 
 
   return (
     <div className="hs">
-      {showExitConfirm && (
-        <div className="ls__modal-overlay">
-          <div className="ls__modal">
-            <h3>End study session?</h3>
-            <p>You will return to the start screen.</p>
-            <div className="ls__modal-btns">
-              <button className="ls__modal-btn--cancel" onClick={() => setShowExitConfirm(false)}>Continue</button>
-              <button className="ls__modal-btn--confirm" onClick={onBack}>End Session</button>
-            </div>
-          </div>
-        </div>
-      )}
+      {exitModal}
 
       <header className="hs__header">
         <div />
